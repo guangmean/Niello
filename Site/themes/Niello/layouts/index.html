@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+{{ partial "head.html" . }}
+
+<body>
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        <div class="ads"></div>
+        <div class="home">
+            <div class="logo">
+                <h1>{{.Title}}</h1>
+            </div>
+            <div class="navigation">
+                <a href="/" class="current">HOME</a>
+            </div>
+            <div>
+            {{ range (.Paginate ( first 100 .Pages.ByPublishDate.Reverse )).Pages }}
+                <article>
+                    <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a></h3>
+                    <div class="less">
+                        <time>Published: {{ dateFormat "Monday, Jan 2, 2006" .Params.date }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read
+                    </div>
+                    <div>
+                        <em>{{ .Summary }}</em>
+                    </div>
+                    {{ if .Truncated }}
+                    <small><a href="{{ .RelPermalink }}">Read More &gt;&gt;</a></small>
+                    {{ else }}
+                    <small><a href="javascript:;"></a></small>
+                    {{ end }}
+                <article>
+            {{ end }}
+            </div>
+            <div class="pages">
+                {{ if .Paginator.HasPrev }}
+                <a href="{{ .Paginator.Prev.URL }}">&lt;&lt; Previous </a>&nbsp;|&nbsp;
+                {{ end }}
+                Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }} 
+                {{ if .Paginator.HasNext }}&nbsp;|&nbsp;
+                <a href="{{ .Paginator.Next.URL }}">Next &gt;&gt;</a>
+                {{ end }}
+            </div>
+            <div class="line-dotted"></div>
+            {{ partial "footer.html" . }}
+        </div>
+        <div class="ads"></div>
+    </div>
+
+
+  {{ partial "foot.html" }}
+</body>
+</html>

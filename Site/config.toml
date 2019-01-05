@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "New Hugo Theme - Diello"
+
+staticDir = ["static", "themes/Niello/static"]
+
+[params]
+copyright = "&#xA9; 2019 by guangmean. All Rights Reserved."

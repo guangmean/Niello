@@ -1,0 +1,7 @@
+<title>
+    {{- if eq .IsHome true -}}
+        {{ .Site.Title }}
+    {{- else -}}
+        {{ .Title }} - {{ .Site.Title }}
+    {{- end -}}
+</title>

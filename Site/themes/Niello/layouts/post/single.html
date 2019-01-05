@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+{{ partial "head.html" }}
+
+<body>
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        <div class="ads"></div>
+        <div class="home">
+            <div class="logo">
+                <h1>{{.Site.Title}}</h1>
+            </div>
+            <div class="navigation">
+                <a href="/">HOME</a>
+                <a href="/" class="current">ARTICLE</a>
+            </div>
+            <div>
+                <article>
+                    <h3>{{ .Title }}</h3>
+                    <div class="less">
+                        <time>Published: {{ dateFormat "Monday, Jan 2, 2006" .Params.date }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Using {{ .WordCount }} words
+                    </div>
+                    <div>
+                        <em>{{ .Content | safeHTML }}</em>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="less">Page link: <a href="{{ .Permalink }}" class="pagelink">{{ .Permalink }}</a></div>
+                    <div class="line-dotted"></div>
+                <article>
+            </div>
+            {{ partial "footer.html" . }}
+        </div>
+        <div class="ads"></div>
+    </div>
+
+
+  {{ partial "foot.html" }}
+</body>
+</html>
