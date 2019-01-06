@@ -13,7 +13,7 @@
         <div class="ads"></div>
         <div class="home">
             <div class="logo">
-                <h1>{{.Title}}</h1>
+                <h1><a href="/">{{.Title}}</a></h1>
             </div>
             <div class="navigation">
                 <a href="/" class="current">HOME</a>
@@ -25,9 +25,7 @@
                     <div class="less">
                         <time>Published: {{ dateFormat "Monday, Jan 2, 2006" .Params.date }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read
                     </div>
-                    <div>
-                        <em>{{ .Summary }}</em>
-                    </div>
+                    <div class="em">{{ .Summary }}</div>
                     {{ if .Truncated }}
                     <small><a href="{{ .RelPermalink }}">Read More &gt;&gt;</a></small>
                     {{ else }}

@@ -13,7 +13,7 @@
         <div class="ads"></div>
         <div class="home">
             <div class="logo">
-                <h1>{{.Site.Title}}</h1>
+                <h1><a href="/">{{.Site.Title}}</a></h1>
             </div>
             <div class="navigation">
                 <a href="/">HOME</a>
@@ -25,9 +25,7 @@
                     <div class="less">
                         <time>Published: {{ dateFormat "Monday, Jan 2, 2006" .Params.date }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Using {{ .WordCount }} words
                     </div>
-                    <div>
-                        <em>{{ .Content | safeHTML }}</em>
-                    </div>
+                    <div class="em">{{ .Content | safeHTML }}</div>
                     <br />
                     <br />
                     <div class="less">Page link: <a href="{{ .Permalink }}" class="pagelink">{{ .Permalink }}</a></div>
