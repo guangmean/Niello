@@ -14,7 +14,7 @@ Dark mode
 
 
 # Screenshot
-
+![HomePage Screenshot](https://raw.githubusercontent.com/guangmean/Niello/master/images/tn.png)
 
 # Installation
 
