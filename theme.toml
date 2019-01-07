@@ -3,11 +3,11 @@
 
 name = "Niello"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = "https://github.com/guangmean/Niello/blob/master/LICENSE"
 description = "A Dark Theme for Hugo"
 homepage = "https://github.com/guangmean/Niello"
-tags = []
-features = []
+tags = ["blog"]
+features = ["blog"]
 min_version = "0.41"
 
 [author]
