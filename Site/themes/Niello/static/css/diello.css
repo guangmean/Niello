@@ -162,3 +162,12 @@ footer {
     height          : 1px;
     border-bottom   : 1px dotted #333;
 }
+
+
+/******************highlight.js override*************/
+.hljs {
+    background-color    : #464646;
+    color               : #ccc;
+    font-family         : Museo100;
+    border-radius       : 10px;
+}
