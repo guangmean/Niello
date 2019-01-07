@@ -1,0 +1,173 @@
+@font-face {
+    font-family         : Museo100;
+    src                 : url('../fonts/Museo100-Regular.otf') format("opentype");
+}
+@font-face {
+    font-family         : Museo300;
+    src                 : url('../fonts/Museo300-Regular.otf') format("opentype");
+}
+@font-face {
+    font-family         : Museo300-Italic;
+    src                 : url('../fonts/Museo300-Italic.otf') format("opentype");
+}
+@font-face {
+    font-family         : Museo500;
+    src                 : url('../fonts/Museo500-Regular.otf') format("opentype");
+}
+
+html, body {
+    margin              : 0;
+    padding             : 0;
+    font-family         : Museo100;
+    font-size           : 18px;
+    color               : #ccc;
+    line-height         : 200%;
+    background-color    : #000;
+}
+
+h1 {
+    font-family         : Museo500;
+    font-size           : 30px;
+}
+
+h3 {
+    margin      : 0;
+    padding     : 0;
+    font-family : Museo300;
+    font-size   : 20px;
+}
+
+a {
+    color           : #fff;
+}
+
+h1 > a {
+    color                   : #ccc;
+    text-decoration         : none; 
+}
+
+h3 > a {
+    color                   : #ccc;
+    text-decoration         : underline;
+    text-decoration-color   : #de0066;
+    -webkit-text-decoration-color   : #de0066;
+}
+
+h3 > a:hover {
+    background-color: #de0066;
+}
+
+small > a{
+    display         : inline-flex;
+    width           : 100%;
+    justify-content :flex-end;
+    text-align      : right;
+    font-size       : 16px;
+    color           : #ff9800;
+    text-decoration : none;
+}
+
+small > a:hover {
+    color           : #de0066;
+    background-color: #000;
+}
+
+.em {
+    font-size   : 18px;
+} 
+
+footer {
+    display         : inline-flex;
+    justify-content : center;
+    padding         : 30px;
+    width           : 100%;
+    font-family     : Museo300;
+    font-size       : 18px;
+    color           : #999;
+}
+
+
+.flex-column {
+    display         : -webkit-flex;
+    display         : flex;
+    flex-flow       : column | nowrap;
+    justify-content : center;
+}
+
+.ads {
+    display         : -webkit-flex;
+    display         : flex;
+    flex-flow       : row | nowrap;
+    justify-content : center;
+    align-items     : flex-start;
+    padding         : 120px 60px;
+}
+
+.home {
+    flex-basis  : 60%;
+}
+
+.logo {
+    padding     : 20px 0 10px;
+}
+
+.navigation {
+    display         : -webkit-flex;
+    display         : flex;
+    flex-flow       : row | nowrap;
+    justify-content : flex-end;
+    margin          : 0 0 50px;
+    padding         : 0;
+    font-size       : 20px;
+    border-bottom   : 1px solid #333;
+    height          : 38px;
+}
+
+.navigation > a {
+    display         : inline-flex;
+    margin          : 0;
+    padding         : 0 20px;
+    height          : 100%;
+    color           : #fff;
+    text-decoration : none;
+}
+
+.navigation > a:hover {
+    border-bottom   : 3px solid #ff2388;
+}
+
+.navigation > .current {
+    border-bottom   : 3px solid #de0066;
+}
+
+.less {
+    color       : #666;
+    font-size   : 16px;
+}
+.pages {
+    padding     : 30px 0 10px;
+    font-size   : 18px;
+}
+.pages > a {
+    color           : #de0066;
+}
+
+.pagelink {
+    color       : #666;
+}
+
+.line-dotted {
+    margin          : 30px 0 10px;
+    width           : 100%;
+    height          : 1px;
+    border-bottom   : 1px dotted #333;
+}
+
+
+/******************highlight.js override*************/
+.hljs {
+    background-color    : #464646;
+    color               : #ccc;
+    font-family         : Museo100;
+    border-radius       : 10px;
+}
