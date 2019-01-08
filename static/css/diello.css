@@ -41,6 +41,10 @@ a {
     color           : #fff;
 }
 
+img {
+    max-width   : 480px;
+}
+
 h1 > a {
     color                   : #ccc;
     text-decoration         : none; 
