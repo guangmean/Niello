@@ -28,14 +28,15 @@ git clone https://github.com/guangmean/Niello.git themes/Niello
 This is an example config.toml file:
 
 ```toml
-baseURL = "http://example.org/"
+baseURL = "https://www.angularcorp.com/"
 languageCode = "en-us"
-title = "New Hugo Theme - Diello"
+title = "Application Deveopment"
 
 staticDir = ["static", "themes/Niello/static"]
 
 [params]
 copyright = "&#xA9; 2019 by guangmean. All Rights Reserved."
+google_ad_client = "ca-pub-******"
 ```
 
 # Demo
