@@ -2,8 +2,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     {{ partial "title.html" . }}
-    <meta name="keywords" content="{{ .Params.keywords }}">
-    <meta name="description" content="">
+    <meta name="keywords" content="{{ with .Keywords }} {{- delimit . ", " -}} {{ end }}">
+    <meta name="description" content="{{ with .Description }} {{- . -}} {{ end }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{.Site.BaseURL | relLangURL}}css/highlight.min.css">
     <link rel="stylesheet" href="{{.Site.BaseURL | relLangURL}}css/normalize.css">
