@@ -10,7 +10,7 @@
 
   <!-- Add your site or application content here -->
     <div class="flex-column">
-        <div class="ads"></div>
+        {{ partial "banner.html" . }}
         <div class="home">
             <div class="logo">
                 <h1><a href="/">{{.Site.Title}}</a></h1>
@@ -34,7 +34,7 @@
             </div>
             {{ partial "footer.html" . }}
         </div>
-        <div class="ads"></div>
+        {{ partial "banner.html" . }}
     </div>
 
 

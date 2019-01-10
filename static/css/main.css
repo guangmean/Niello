@@ -203,6 +203,36 @@ textarea {
     /* Style adjustments for viewports that meet the condition */
 }
 
+@media only screen and (max-width: 30em) {
+    /* Style adjustments for viewports that meet the condition */
+    html, body {
+        width   : 100vw;
+    }
+    .flex-column {
+        display         : -webkit-flex;
+        display         : flex;
+        flex-direction  : column;
+        flex-wrap       : nowrap;
+        justify-content : flex-start;
+    }
+    img {
+        max-width       : 90vw;
+    }
+    .ads {
+        display         : -webkit-flex;
+        display         : flex;
+        flex-direction  : column;
+        flex-wrap       : nowrap;
+        justify-content : center;
+        align-items     : center;
+        padding         : 0px;
+    }
+    .home {
+        flex-basis  : 98%;
+        padding     : 0 10px;
+    }
+}
+
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
