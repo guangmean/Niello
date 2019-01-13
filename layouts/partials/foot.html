@@ -7,9 +7,10 @@
 <script src="{{.Site.BaseURL | relLangURL}}js/vendor/highlight.min.js"></script>  
 <script>hljs.initHighlightingOnLoad();</script>
                                                        
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+{{ if .Site.Params.ga }}
 <script>                                             
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+ga('create', '{{- .Site.Params.ga -}}', 'auto'); ga('send', 'pageview')
 </script>                                            
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<script src="//www.google-analytics.com/analytics.js" async defer></script>
+{{ end }}
