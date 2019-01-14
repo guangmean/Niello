@@ -37,7 +37,7 @@ h3 {
     margin      : 0;
     padding     : 0;
     font-family : Museo300;
-    font-size   : 22px;
+    font-size   : 20px;
 }
 
 a {
@@ -80,7 +80,7 @@ small > a:hover {
 }
 
 .em {
-    font-size   : 20px;
+    font-size   : 18px;
 } 
 
 footer {
@@ -128,7 +128,7 @@ footer {
     justify-content : flex-end;
     margin          : 0 0 50px;
     padding         : 0;
-    font-size       : 22px;
+    font-size       : 20px;
     border-bottom   : 1px solid #333;
     height          : 38px;
 }
