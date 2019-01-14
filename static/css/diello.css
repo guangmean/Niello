@@ -176,7 +176,7 @@ footer {
 
 /******************highlight.js override*************/
 .hljs {
-    background-color    : #464646;
+    background          : rgba(51, 51, 51, 0.5);
     color               : #ccc;
     font-family         : Museo100;
     border-radius       : 10px;
