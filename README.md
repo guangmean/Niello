@@ -4,13 +4,17 @@ Niello is a simple and clean dark mode Theme for "Hugo - Static Site Generator"
 
 # Features
 
-Simple, clean
+Simple, Clean
 
-Syntax highlight with highlight.js
+Syntax Highlight with highlight.js
+
+Google Adsense
 
 Google Analytics
 
-Dark mode
+HTML5 Boilerplate
+
+Dark Mode
 
 
 # Screenshot
@@ -25,7 +29,7 @@ git clone https://github.com/guangmean/Niello.git themes/Niello
 ```
 
 # Configuration
-This is an example config.toml file:
+This is an example of site config.toml:
 
 ```toml
 baseURL = "https://www.angularcorp.com/"
@@ -37,7 +41,11 @@ staticDir = ["static", "themes/Niello/static"]
 [params]
 copyright = "&#xA9; 2019 by guangmean. All Rights Reserved."
 google_ad_client = "ca-pub-******"
+ga = "UA-******"
 ```
+
+# Google Adsense & Google Analytics
+Niello support Google Adsnese code by configure the google_ad_client param in [params] block and Google Analytics code by the ga param in the site config.toml as abover. 
 
 # Demo
 
