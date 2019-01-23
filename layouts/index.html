@@ -23,7 +23,7 @@
                 <article>
                     <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a></h3>
                     <div class="less">
-                        <time>Published: {{ dateFormat "Monday, Jan 2, 2006" .Params.date }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read
+                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read
                     </div>
                     <div class="em">{{ .Summary }}</div>
                     {{ if .Truncated }}

@@ -23,7 +23,7 @@
                 <article>
                     <h3>{{ .Title }}</h3>
                     <div class="less">
-                        <time>Published: {{ dateFormat "Monday, Jan 2, 2006" .Params.date }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Using {{ .WordCount }} words
+                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Using {{ .WordCount }} words
                     </div>
                     <div class="em">{{ .Content | safeHTML }}</div>
                     <br />
