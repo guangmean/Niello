@@ -39,6 +39,8 @@ title = "Application Deveopment"
 staticDir = ["static", "themes/Niello/static"]
 
 [params]
+keywords = ""
+description = ""
 copyright = "&#xA9; 2019 by guangmean. All Rights Reserved."
 google_ad_client = "ca-pub-******"
 ga = "UA-******"
