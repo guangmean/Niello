@@ -15,9 +15,7 @@
             <div class="logo">
                 <h1><a href="/">{{.Title}}</a></h1>
             </div>
-            <div class="navigation">
-                <a href="/" class="current">HOME</a>
-            </div>
+            {{ partial "nav.html" . }}
             <div>
             {{ range (.Paginate ( first 100 .Pages.ByPublishDate.Reverse )).Pages }}
                 <article>

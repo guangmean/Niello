@@ -15,10 +15,7 @@
             <div class="logo">
                 <h1><a href="/">{{.Site.Title}}</a></h1>
             </div>
-            <div class="navigation">
-                <a href="/">HOME</a>
-                <a href="/" class="current">ARTICLE</a>
-            </div>
+            {{ partial "nav.html" . }}
             <div>
                 <article>
                     <h3>{{ .Title }}</h3>

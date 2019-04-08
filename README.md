@@ -44,6 +44,18 @@ description = ""
 copyright = "&#xA9; 2019 by guangmean. All Rights Reserved."
 google_ad_client = "ca-pub-******"
 ga = "UA-******"
+
+[menu]
+    [[menu.niello]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+    [[menu.niello]]
+    name = "Contact"
+    url = "/post/contact/"
+    weight = 2
+    
 ```
 
 # Google Adsense & Google Analytics
