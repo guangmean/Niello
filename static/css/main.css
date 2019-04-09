@@ -231,6 +231,11 @@ textarea {
         flex-basis  : 98%;
         padding     : 0 16px;
     }
+
+    .hljs {
+        width       : 90vw;
+    }
+
 }
 
 @media print,
