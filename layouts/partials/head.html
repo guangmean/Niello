@@ -23,4 +23,7 @@
         });
     </script>
     {{ end }}
+    {{ if .Site.Params.sharethis }}
+    <script async src="https://platform-api.sharethis.com/js/sharethis.js#property={{- .Site.Params.sharethis -}}&product="sticky-share-buttons"></script>
+    {{ end }}
 </head>
