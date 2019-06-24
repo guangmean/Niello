@@ -63,7 +63,7 @@ sharethis = ""
 Niello support Google Adsnese code by configure the google_ad_client param in [params] block and Google Analytics code by the ga param in the site config.toml as abover. 
 
 # ShareThis
-Niello support share your content to other platforms by ShareThis.
+Niello support share your content to other platforms by [ShareThis](https://sharethis.com).
 
 # Demo
 
