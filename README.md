@@ -44,6 +44,7 @@ description = ""
 copyright = "&#xA9; 2019 by guangmean. All Rights Reserved."
 google_ad_client = "ca-pub-******"
 ga = "UA-******"
+sharethis = ""
 
 [menu]
     [[menu.niello]]
@@ -60,6 +61,9 @@ ga = "UA-******"
 
 # Google Adsense & Google Analytics
 Niello support Google Adsnese code by configure the google_ad_client param in [params] block and Google Analytics code by the ga param in the site config.toml as abover. 
+
+# ShareThis
+Niello support share your content to other platforms by ShareThis.
 
 # Demo
 

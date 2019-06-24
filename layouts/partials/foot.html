@@ -14,3 +14,7 @@ ga('create', '{{- .Site.Params.ga -}}', 'auto'); ga('send', 'pageview')
 </script>                                            
 <script src="//www.google-analytics.com/analytics.js" async defer></script>
 {{ end }}
+
+{{ if .Site.Params.sharethis }}
+<script async src="https://platform-api.sharethis.com/js/sharethis.js#property={{- .Site.Params.sharethis -}}&product="sticky-share-buttons"></script>
+{{ end }}
