@@ -10,9 +10,9 @@
     <meta name="keywords" content="{{ with .Keywords }} {{- delimit . ", " -}} {{ end }}">
     <meta name="description" content="{{ with .Description }} {{- . -}} {{ end }}">
     {{ end }}
-    <link rel="stylesheet" href="{{.Site.BaseURL | relLangURL}}css/highlight.min.css">
+    <link rel="stylesheet" href="{{.Site.BaseURL | relLangURL}}css/github-dark-dimmed.min.css">
     <link rel="stylesheet" href="{{.Site.BaseURL | relLangURL}}css/normalize.css">
-    <link rel="stylesheet" href="{{.Site.BaseURL | relLangURL}}css/diello.css">
+    <link rel="stylesheet" href="{{.Site.BaseURL | relLangURL}}css/niello.css">
     <link rel="stylesheet" href="{{.Site.BaseURL | relLangURL}}css/main.css">
     {{ if .Site.Params.google_ad_client }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

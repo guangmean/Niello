@@ -8,7 +8,7 @@ description = "A Dark Theme for Hugo"
 homepage = "https://github.com/guangmean/Niello"
 tags = ["blog", "Syntax highlighting", "Highlight.js", "Dark"]
 features = ["blog"]
-min_version = "0.41"
+min_version = "0.60.0"
 
 [author]
   name = "guangmean"
