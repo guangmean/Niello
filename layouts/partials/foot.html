@@ -14,3 +14,5 @@ ga('create', '{{- .Site.Params.ga -}}', 'auto'); ga('send', 'pageview')
 </script>                                            
 <script src="//www.google-analytics.com/analytics.js" async defer></script>
 {{ end }}
+
+<script src="{{.Site.BaseURL | relLangURL}}js/cookie.js"></script>
