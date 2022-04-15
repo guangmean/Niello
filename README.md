@@ -39,12 +39,12 @@ title = "Application Deveopment"
 staticDir = ["static", "themes/Niello/static"]
 
 [params]
-keywords = ""
-description = ""
-copyright = "&#xA9; 2019 by guangmean. All Rights Reserved."
-google_ad_client = "ca-pub-******"
-ga = "UA-******"
-sharethis = ""
+keywords = ""   //SEO keywords
+description = ""    //Site description
+copyright = "&#xA9; 2019 - 2022 by guangmean. All Rights Reserved."
+google_ad_client = "ca-pub-******"  //Optional, replace ca-pub-****** with your content
+ga = "UA-******" //Optional, replace UA-****** with your content
+sharethis = ""  //Optional, Add hou ShareThis appid here
 
 [menu]
     [[menu.niello]]
@@ -53,8 +53,8 @@ sharethis = ""
     weight = 1
 
     [[menu.niello]]
-    name = "Contact"
-    url = "/post/contact/"
+    name = "About"
+    url = "/about/"
     weight = 2
     
 ```
