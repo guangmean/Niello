@@ -19,7 +19,7 @@
             <div>
             {{ range (.Paginate ( first 100 .Site.RegularPages.ByPublishDate.Reverse )).Pages }}
                 <article>
-                    <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a></h3>
+					<h3><span class="listarrow">&#10132; <a href="{{ .RelPermalink }}">{{ .Title }}</a><span></h3>
                     <div class="less">
                         <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read
                     </div>

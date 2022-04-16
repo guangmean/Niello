@@ -20,9 +20,9 @@ html, body {
     padding             : 0;
     font-family         : Museo100;
     font-size           : 18px;
-    color               : #ccc;
+    color               : #adb5bd;
     line-height         : 200%;
-    background-color    : #000;
+    background-color    : #0b090a;
     width               : 100vw;
     max-width           : 100vw;
     overflow-x          : hidden;
@@ -34,14 +34,18 @@ h1 {
 }
 
 h3 {
-    margin      : 0;
-    padding     : 0;
-    font-family : Museo300;
-    font-size   : 20px;
+    margin      :0;
+    padding     :0;
+    font-family :Museo300;
+    font-size   :22px;
+}
+
+h3 > .listarrow {
+	color	:#e5383b;
 }
 
 a {
-    color           : #fff;
+    color           : #b1a7a6;
 }
 
 img {
@@ -49,19 +53,25 @@ img {
 }
 
 h1 > a {
-    color                   : #ccc;
+    color                   : #adb5bd;
     text-decoration         : none; 
 }
 
-h3 > a {
-    color                   : #ccc;
-    text-decoration         : underline;
-    text-decoration-color   : #de0066;
-    -webkit-text-decoration-color   : #de0066;
+
+h3 > span > a {
+	padding					:6px 8px;
+	border-radius			:6px;
+    color                   :#adb5bd;
+    text-decoration         :none;
+	text-underline-offset	:3px;
+    text-decoration-color   : #9d0208;
+    -webkit-text-decoration-color   : #9d0208;
+	border-radius:6px;
 }
 
-h3 > a:hover {
-    background-color: #de0066;
+h3 > span > a:hover {
+    background-color:#e5383b;
+	color			:#fff;
 }
 
 small > a{
@@ -70,12 +80,12 @@ small > a{
     justify-content :flex-end;
     text-align      : right;
     font-size       : 16px;
-    color           : #ff9800;
+    color           : #f48c06;
     text-decoration : none;
 }
 
 small > a:hover {
-    color           : #de0066;
+    color           : #ffba08;
     background-color: #000;
 }
 
@@ -90,9 +100,8 @@ footer {
     width           : 100%;
     font-family     : Museo300;
     font-size       : 18px;
-    color           : #999;
+    color           : #adb5bd;
 }
-
 
 .flex-column {
     display         : -webkit-flex;
@@ -129,7 +138,7 @@ footer {
     margin          : 0 0 50px;
     padding         : 0;
     font-size       : 20px;
-    border-bottom   : 1px solid #333;
+    border-bottom   : 1px solid #e5383b;
     height          : 38px;
 }
 
@@ -138,47 +147,52 @@ footer {
     margin          : 0;
     padding         : 0 20px;
     height          : 100%;
-    color           : #fff;
+    color           : #d3d3d3;
     text-decoration : none;
 }
 
 .navigation > a:hover {
-    border-bottom   : 3px solid #ff2388;
+	color	:#fff;
+	font-weight:bold;
 }
 
 .navigation > .current {
-    border-bottom   : 3px solid #de0066;
+	background-color:#e5383b;
+	color:#fff;
+	font-weight:bold;
 }
 
 .less {
-    color       : #666;
+    color       : #495057;
     font-size   : 16px;
 }
 .pages {
     padding     : 30px 0 10px;
     font-size   : 18px;
+    color       : #6c757d;
 }
 .pages > a {
-    color           : #de0066;
+    color           : #e5383b;
 }
 
 .pagelink {
-    color       : #666;
+    color       : #6c757d;
 }
 
 .line-dotted {
     margin          : 30px 0 10px;
     width           : 100%;
     height          : 1px;
-    border-bottom   : 1px dotted #333;
+    border-bottom   : 1px dashed #333;
 }
 
 
 /******************highlight.js override*************/
 .hljs {
-    background          : rgba(255, 255, 255, 0.2);
-    width               : 800px;
-    color               : #ccc;
-    font-family         : Museo100;
-    border-radius       : 16px;
+	width               :900px;
+	border-radius       :10px;
+}
+
+pre {
+	background:#0b090a !important;
 }
