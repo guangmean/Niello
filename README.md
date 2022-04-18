@@ -35,6 +35,7 @@ This is an example of site config.toml:
 baseURL = "https://www.angularcorp.com/"
 languageCode = "en-us"
 title = "Application Deveopment"
+disqusShortname = "yourDisqusShortname" // Add third-party comments system
 
 staticDir = ["static", "themes/Niello/static"]
 

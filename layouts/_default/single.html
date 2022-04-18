@@ -28,12 +28,14 @@
                     <div class="less">Page link: <a href="{{ .RelPermalink }}" class="pagelink">{{ .RelPermalink }}</a></div>
                     <div class="line-dotted"></div>
                 <article>
+				{{ if gt (len .Site.DisqusShortname) 2 }}
+					{{ template "_internal/disqus.html" . }}
+				{{ end }}
             </div>
             {{ partial "footer.html" . }}
         </div>
         {{ partial "banner.html" . }}
     </div>
-
 
   {{ partial "foot.html" . }}
 </body>
