@@ -187,6 +187,81 @@ footer {
 }
 
 
+// Taxonomy
+ul{
+	margin: 0;
+	padding: 0;
+}
+.tag-single {
+    margin:0;
+    padding:0;
+	display:flex;
+	flex-direction:row;
+}
+.tag-single > ul{
+	margin: 0;
+	padding: 0;
+}
+.tag-single > ul > li{
+	margin:0 6px 0 0;
+	padding: 0 20px;
+	line-height:26px;
+    list-style-type: none;
+	display:inline-flex;
+    font-size: 13px;
+    border: 1px solid rgba(49, 50, 57, 0.6);
+	border-radius       :13px;
+    text-align: center;
+	background-color: rgba(49, 50, 57, 0.3);
+}
+.tag-single > ul > li > a {
+	text-decoration : none;
+	color:#adb5bd;
+}
+.redot {
+	padding: 3px 10px;
+	background-color:#e5383b;
+	font-size:13px;
+	color:#FFF;
+	border-radius       :6px;
+}
+
+.tag {
+	margin:10px;
+	padding:0 20px;
+	display: inline-flex;
+	flex-direction: row;
+	border: 1px solid rgba(49, 50, 57, 0.6);
+	border-radius       :13px;
+	text-align: center;
+	background-color: rgba(49, 50, 57, 0.3);
+}
+.tag > a {
+	text-decoration : none;
+	color:#adb5bd;
+}
+
+.notfound {
+	display: flex;
+	flex-direction: column;
+}
+.notfound > h1 {
+	font-size	:128px;
+	align-self:center;
+}
+.notfound > h2, .notfound > h3 {
+	align-self:center;
+}
+.gohome {
+	margin: 30px 0 90px;
+	padding: 6px 32px;
+	background-color: #e5383b;
+	color: #FFF;
+	align-self:center;
+	border-radius  :18px;
+	text-decoration : none;
+}
+
 /******************highlight.js override*************/
 .hljs {
 	width               :900px;

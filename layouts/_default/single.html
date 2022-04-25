@@ -21,6 +21,14 @@
                     <h3>{{ .Title }}</h3>
                     <div class="less">
                         <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Using {{ .WordCount }} words
+						<div class="tag-single">
+							<time>Tags:&nbsp;</time>
+							<ul>
+								{{ range (.GetTerms "tags") }}
+								<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+								{{ end }}
+							</ul>
+						</div>
                     </div>
                     <div class="em">{{ .Content | safeHTML }}</div>
                     <br />

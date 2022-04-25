@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+{{ partial "head.html" . }}
+
+<body>
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        {{ partial "banner.html" . }}
+        <div class="home">
+            <div class="logo">
+                <h1><a href="/">{{.Title}}</a></h1>
+            </div>
+            {{ partial "nav.html" . }}
+            <div>
+			<h1>{{ len .Data.Terms }} Tags</h1>
+				{{ $data := .Data }}
+				{{ range .Data.Terms.ByCount }}
+				{{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
+				<div class="tag">
+				    <a href="{{ $termLink }}">{{ .Term }} ({{ .Count }})</a>
+				</div>
+				{{ end }}
+            </div>
+            <div class="line-dotted"></div>
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "banner.html" . }}
+		{{- partial "cookie.html" . -}}
+    </div>
+
+
+  {{ partial "foot.html" . }}
+</body>
+</html>

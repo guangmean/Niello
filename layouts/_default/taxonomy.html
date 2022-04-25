@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+{{ partial "head.html" . }}
+
+<body>
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        {{ partial "banner.html" . }}
+        <div class="home">
+            <div class="logo">
+                <h1><a href="/">{{.Title}}</a></h1>
+            </div>
+            {{ partial "nav.html" . }}
+            <div>
+            {{ range .Pages }}
+                <article>
+					<h3><span class="listarrow">&#10132; <a href="{{ .RelPermalink }}">{{ .Title }}</a><span></h3>
+                    <div class="less">
+                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read
+                    </div>
+                    <div class="em">{{ .Summary }}</div>
+                    {{ if .Truncated }}
+                    <small><a href="{{ .RelPermalink }}">Read More &gt;&gt;</a></small>
+                    {{ else }}
+                    <small><a href="javascript:;"></a></small>
+                    {{ end }}
+                <article>
+            {{ end }}
+            </div>
+            <div class="pages">
+                {{ if .Paginator.HasPrev }}
+                <a href="{{ .Paginator.Prev.URL }}">&lt;&lt; Previous </a>&nbsp;|&nbsp;
+                {{ end }}
+                Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }} 
+                {{ if .Paginator.HasNext }}&nbsp;|&nbsp;
+                <a href="{{ .Paginator.Next.URL }}">Next &gt;&gt;</a>
+                {{ end }}
+            </div>
+            <div class="line-dotted"></div>
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "banner.html" . }}
+		{{- partial "cookie.html" . -}}
+    </div>
+
+
+  {{ partial "foot.html" . }}
+</body>
+</html>
