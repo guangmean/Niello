@@ -1,0 +1,17 @@
+[home]
+other = "Home"
+
+[tag]
+other = "Tags"
+
+[article]
+other = "Article"
+
+[more]
+other = "Read More >>"
+
+[next]
+other = "Next >>"
+
+[previous]
+other = "<< Previous"

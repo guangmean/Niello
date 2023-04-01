@@ -1,0 +1,17 @@
+[home]
+other = "首页"
+
+[tag]
+other = "标签"
+
+[article]
+other = "文章"
+
+[more]
+other = "更多 >>"
+
+[next]
+other = "下一页 >>"
+
+[previous]
+other = "<< 上一页"
