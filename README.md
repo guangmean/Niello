@@ -1,6 +1,8 @@
 # Niello
 Niello is a simple and clean dark mode Theme for "Hugo - Static Site Generator"
 
+[Note: master branch is unstable, only tags version are stable.]
+
 
 # Features
 
@@ -29,12 +31,12 @@ git clone https://github.com/guangmean/Niello.git themes/Niello
 ```
 
 # Configuration
-This is an example of site config.toml:
+This is an example of site config.toml (Note: Nginx bypass based config):
 
 ```toml
 DefaultContentLanguage = "en"
 languageCode = "en-us"
-baseURL = "https://www.angularcorp.com"
+baseURL = "https://www.angularcorp.com/" # Must end with splash
 languageCode = "en-us"
 title = "{CodeTrace} - Discover Issues, Share Solutions."
 disqusShortname = "yourDisqusShortname" // Add third-party comments system
@@ -43,6 +45,21 @@ staticDir = ["static", "themes/Niello/static"]
 
 theme = "Niello"
 
+[languages]
+	[languages.en]
+		#baseURL = "Don't write baseURL here for each language, will cause issue."
+		title = "{CodeTrace} - Discover Issues, Share Solutions."
+		languageCode = "en-us"
+		LanguageName = "🇺🇸English"
+		contentDir = "content/en"
+		weight = 1
+	[languages.zh]
+		title = "{码途轨迹} - 发现问题，分享解决."
+        languageCode = "zh-cn"
+        LanguageName = "🇨🇳中文"
+        contentDir = "content/zh"
+        weight = 2
+        
 [params]
 keywords = ""   //SEO keywords
 description = ""    //Site description
