@@ -32,12 +32,16 @@ git clone https://github.com/guangmean/Niello.git themes/Niello
 This is an example of site config.toml:
 
 ```toml
-baseURL = "https://www.angularcorp.com/"
+DefaultContentLanguage = "en"
 languageCode = "en-us"
-title = "Application Deveopment"
+baseURL = "https://www.angularcorp.com"
+languageCode = "en-us"
+title = "{CodeTrace} - Discover Issues, Share Solutions."
 disqusShortname = "yourDisqusShortname" // Add third-party comments system
 
 staticDir = ["static", "themes/Niello/static"]
+
+theme = "Niello"
 
 [params]
 keywords = ""   //SEO keywords
@@ -48,15 +52,43 @@ ga = "UA-******" //Optional, replace UA-****** with your content
 sharethis = ""  //Optional, Add hou ShareThis appid here
 
 [menu]
-    [[menu.niello]]
+    # English
+    [[languages.en.menu.niello]]
+    identifier = "home"
     name = "Home"
-    url = "/"
-    weight = 1
+    url = "/" 
+    weight = 1 
 
-    [[menu.niello]]
-    name = "About"
-    url = "/about/"
-    weight = 2
+    [[languages.en.menu.niello]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/en/tags/"
+    weight = 2 
+
+    [[languages.en.menu.niello]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/en/post/contact/"
+    weight = 3 
+
+    # Chinese
+    [[languages.zh.menu.niello]]
+    identifier = "home"
+    name = "首页"
+    url = "/zh/"
+    weight = 1 
+
+    [[languages.zh.menu.niello]]
+    identifier = "tags"
+    name = "标签"
+    url = "/zh/tags/"
+    weight = 2 
+
+    [[languages.zh.menu.niello]]
+    identifier = "contact"
+    name = "关于"
+    url = "/zh/post/contact/"
+    weight = 3
     
 ```
 
