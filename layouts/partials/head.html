@@ -10,11 +10,11 @@
     <meta name="keywords" content="{{ with .Keywords }} {{- delimit . ", " -}} {{ end }}">
     <meta name="description" content="{{ with .Description }} {{- . -}} {{ end }}">
     {{ end }}
-    <link rel="stylesheet" href="{{ "css/github-dark-dimmed.min.css" | absURL }}">
-    <link rel="stylesheet" href="{{ "css/normalize.css" | absURL }}">
-    <link rel="stylesheet" href="{{ "css/niello.css" | absURL }}">
-	<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
-	<link rel="stylesheet" href="{{ "css/cookie.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/github-dark-dimmed.min.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/normalize.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/niello.css" | relURL }}">
+	<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+	<link rel="stylesheet" href="{{ "css/cookie.css" | relURL }}">
     {{ if .Site.Params.google_ad_client }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>

@@ -7,7 +7,7 @@
     {{ end }}
 
 	{{ range .Site.Languages }}
-    | <a href="{{ .Lang | absURL }}">{{ .LanguageName }}</a>
+    | <a href="{{ if eq .Lang "en" }} / {{ else }} /{{.Lang}} {{ end }}">{{ .LanguageName }}</a>
     {{ end }}
     </div>
 </footer>
