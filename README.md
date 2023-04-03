@@ -34,8 +34,9 @@ git clone https://github.com/guangmean/Niello.git themes/Niello
 This is an example of site config.toml (Note: Nginx bypass based config):
 
 ```toml
-DefaultContentLanguage = "en"
+defaultContentLanguage = "en"
 languageCode = "en-us"
+defaultContentLanguageInSubdir = true
 baseURL = "https://www.angularcorp.com/" # Must end with splash
 languageCode = "en-us"
 title = "{CodeTrace} - Discover Issues, Share Solutions."
@@ -73,7 +74,7 @@ sharethis = ""  //Optional, Add hou ShareThis appid here
     [[languages.en.menu.niello]]
     identifier = "home"
     name = "Home"
-    url = "/" 
+    url = "/en/" 
     weight = 1 
 
     [[languages.en.menu.niello]]
