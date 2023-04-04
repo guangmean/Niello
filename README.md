@@ -1,5 +1,5 @@
 # Niello
-Niello is a simple and clean dark mode Theme for "Hugo - Static Site Generator"
+Niello is a clean and elegant Hugo dark theme that is perfect for showcasing your content. It supports Google Analytics, Adsense, and other features to help you grow your online presence.
 
 [Note: master branch is unstable, only tags version are stable.]
 
@@ -66,7 +66,8 @@ keywords = ""   //SEO keywords
 description = ""    //Site description
 copyright = "&#xA9; 2019 - 2022 by guangmean. All Rights Reserved."
 google_ad_client = "ca-pub-******"  //Optional, replace ca-pub-****** with your content
-ga = "UA-******" //Optional, replace UA-****** with your content
+ga = "UA-******" //Optional, replace UA-****** with your Google Universal Analytics   
+ga4 = "G-******" //Optional, replace G-****** with your Google Analytics GA4
 sharethis = ""  //Optional, Add hou ShareThis appid here
 
 [menu]

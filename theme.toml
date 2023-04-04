@@ -4,7 +4,7 @@
 name = "Niello"
 license = "MIT"
 licenselink = "https://github.com/guangmean/Niello/blob/master/LICENSE"
-description = "A Dark Theme for Hugo"
+description = "A clean and elegant dark Theme for Hugo"
 homepage = "https://github.com/guangmean/Niello"
 tags = ["blog", "Syntax highlighting", "Highlight.js", "Dark"]
 features = ["blog"]
