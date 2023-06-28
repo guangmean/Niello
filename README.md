@@ -66,7 +66,7 @@ keywords = ""   //SEO keywords
 description = ""    //Site description
 copyright = "&#xA9; 2019 - 2022 by guangmean. All Rights Reserved."
 google_ad_client = "ca-pub-******"  //Optional, replace ca-pub-****** with your content
-ga = "UA-******" //Optional, replace UA-****** with your Google Universal Analytics   
+ga = "UA-******" // 【【【 Deprecated after July 1,2023 】】】, Optional, replace UA-****** with your Google Universal Analytics   
 ga4 = "G-******" //Optional, replace G-****** with your Google Analytics GA4
 sharethis = ""  //Optional, Add hou ShareThis appid here
 
@@ -111,7 +111,7 @@ sharethis = ""  //Optional, Add hou ShareThis appid here
     
 ```
 
-# Google Adsense & Google Analytics
+# Google Adsense & Google Analytics 4 (GA4)
 Niello support Google Adsnese code by configure the google_ad_client param in [params] block and Google Analytics code by the ga param in the site config.toml as abover. 
 
 # ShareThis

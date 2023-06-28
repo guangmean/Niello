@@ -6,24 +6,4 @@
 
 <script src="{{ "js/vendor/highlight.min.js" | relURL }}"></script>  
 <script>hljs.initHighlightingOnLoad();</script>
-                                                       
-{{ if .Site.Params.ga }}
-<script>                                             
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-ga('create', '{{- .Site.Params.ga -}}', 'auto'); ga('send', 'pageview')
-</script>                                            
-<script src="//www.google-analytics.com/analytics.js" async defer></script>
-{{ end }}
-
-{{ if .Site.Params.ga4 }}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga4 }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '{{ .Site.Params.ga4 }}');
-</script>
-{{ end }}
 <script src="{{ "js/cookie.js" | relURL }}"></script>

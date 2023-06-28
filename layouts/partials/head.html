@@ -24,6 +24,19 @@
         });
     </script>
     {{ end }}
+
+	{{ if .Site.Params.ga4 }}
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga4 }}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', '{{ .Site.Params.ga4 }}');
+	</script>
+	{{ end }}
+
     {{ if .Site.Params.sharethis }}
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property={{- .Site.Params.sharethis -}}&product=sticky-share-buttons" async="async"></script>
     {{ end }}
