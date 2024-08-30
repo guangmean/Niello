@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Crimson Pro';
+        font-style: normal;
+        font-display: "sans-serif";
+        src: url("/fonts/CrimsonPro.ttf") format("truetype");
+    }
+
+    html {
+        font-family: "Crimson Pro";
+        line-height: 200%;
+        font-display: "sans-serif";
+    }
+
+    h5 {
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 0.5em;
+    }
+
+    p>a {
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    p>img {
+        margin: 32px;
+        max-width: 80% !important;
+    }
+
+    p>strong>a {
+        color: green;
+        text-decoration: underline;
+    }
+
+    pre {
+        padding: 1rem;
+        overflow-x: auto;
+        font-size: 1.2rem;
+    }
+
+}
