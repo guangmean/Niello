@@ -1,0 +1,144 @@
+<aside id="sidebar"
+    class="w-full sm:w-96 mx-2 px-5 sm:px-8 pb-8 fixed inset-y-0 left-0 transform translate-x-full md:relative md:translate-x-0 flex-shrink-0 overflow-auto z-40 transition-transform duration-300 ease-in-out text-gray-500">
+
+    <img src="/img/close.webp" alt="Close Sidebar"
+        class="sm:hidden w-10 h-10 float-right mt-8 text-white bg-green-500 rounded-full cursor-pointer"
+        onclick="toggleSidebar()">
+
+    <!-- About -->
+    <div
+        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-16 sm:mt-5 text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+        </svg>
+        {{ i18n "intro" }}
+    </div>
+    <img src="/image/logo.webp?v={{ now.Unix }}" class="mx-auto w-96 h-80" alt="Logo" />
+    <p class="leading-8 text-center text-lg font-light mt-3">
+        Discover Issues, Share Solutions.</p>
+
+    <!-- Posts -->
+    <div
+        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-10 text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+        </svg>
+        {{ i18n "topost" }}
+    </div>
+    <ul class="text-lg">
+        {{ with $posts := .Site.RegularPages.ByPublishDate.Reverse.Limit 5 }}
+        {{ range $posts }}
+        <li class="my-2 leading-10 line-clamp-1 mb-1 font-light border-b border-b-white/10 border-dashed">
+            <a href="{{ .RelPermalink }}" class="py-5 hover:text-gray-300">{{ .LinkTitle }}</a>
+        </li>
+        {{ end }}
+        {{ else }}
+        <li class="my-2 leading-10 line-clamp-1 mb-1 font-light text-gray-600">
+            {{ i18n "emptypost"}}
+        </li>
+        {{ end }}
+    </ul>
+
+    <!-- Categories -->
+    <div
+        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-8 text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 0 1-1.125-1.125v-3.75ZM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-8.25ZM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-2.25Z" />
+        </svg>
+        {{ i18n "topcat" }}
+    </div>
+    <ul class="leading-10 text-lg">
+        {{ with $categories := .Site.Taxonomies.categories }}
+        {{ range $categories }}
+        <li class="mb-1 border-b border-b-gray-900 border-dashed font-light">
+            <a href="{{ .Page.RelPermalink }}" class="hover:text-gray-300">{{ .Page.Title }} <span
+                    class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">{{ .Count }}</span></a>
+        </li>
+        {{ end }}
+        {{ else }}
+        <li class="mb-1 font-light text-gray-600">{{ i18n "emptycat"}}</li>
+        {{ end }}
+
+    </ul>
+
+    <!-- Tags -->
+    <div
+        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-8 text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+        </svg>
+        {{ i18n "toptag" }}
+    </div>
+    <div class="flex flex-wrap gap-2 text-lg leading-8 pt-3">
+        {{ with $tags := .Site.Taxonomies.tags }}
+        {{ range $tags }}
+        <a href="{{ .Page.RelPermalink }}"><span
+                class="inline-block p-0 bg-gray-800 hover:bg-gray-900 border border-gray-800 text-gray-500 hover:text-gray-300 font-light mb-1 px-5 rounded-full">{{
+                .Page.Title }}&nbsp;&nbsp;{{ .Count }}</span></a>
+        {{ end }}
+        <!-- More tags... -->
+        {{ else }}
+        <span class="inline-block p-1 bg-gray-800  text-gray-600 font-light px-5 rounded-full">{{ i18n
+            "emptytag"}}</span>
+        <!-- No tags... -->
+        {{ end }}
+    </div>
+
+    <!-- Archive Analytics -->
+    <div
+        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-7 text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+        </svg>
+        {{ i18n "archive" }}
+    </div>
+    <ul class="leading-10 text-lg font-light">
+        {{ with $archives := .Site.RegularPages.GroupByDate "2006-01" "desc" }}
+        {{ range $item := $archives }}
+        <li class="mb-1 border-b border-b-white/10 border-dashed">
+            {{ $item.Key }}<span class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">{{ $item.Pages.Len}}</span>
+        </li>
+        {{ end }}
+        {{ else }}
+        <li class="mb-1 text-gray-600">
+            {{ i18n "emptyarchive"}}
+        </li>
+        {{ end }}
+
+
+    </ul>
+
+    <!-- Contact -->
+    <div
+        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-8 text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+        </svg>
+        {{ i18n "contact"}}
+    </div>
+    <div class="flex flex-row gap-2">
+        Email：developer@gopherloveapple.com
+    </div>
+</aside>
+
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        // 小屏幕时通过添加/移除 translate-x-full 来控制侧边栏显示隐藏
+        sidebar.classList.toggle('translate-x-full');
+        sidebar.classList.toggle('sm:translate-x-0');
+    }
+</script>

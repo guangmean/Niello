@@ -1,0 +1,21 @@
+<article class="flex flex-col lg:flex-row items-center py-5 lg:px-2 {{ if mod .index 2 }}bg-gray-800/50{{ end}}">
+    <div class="flex-none w-full lg:w-64 h-48 rounded-lg shadow-md bg-gray-900 shadow-gray-800">
+        {{ $image := partial "imagextractor.html" . }}
+        <img src="{{ $image }}" alt="Article Pic" class="w-full h-48 rounded-2xl object-cover" />
+    </div>
+    <div class="w-full lg:p-5 overflow-auto">
+        <h3 class="pt-2 lg:pt-0 line-clamp-1 text-2xl font-medium leading-10 text-gray-400 hover:text-gray-300">
+            <a href="{{ .context.RelPermalink }}">
+                {{ .context.LinkTitle }}
+            </a>
+        </h3>
+        <div class="flex flex-row items-center justify-start py-1 text-lg">
+            {{ if gt .context.PublishDate 0 }}
+            <time datetime="2025-03-16" class="text-gray-600">{{ .context.PublishDate.Format "2006-01-02 15:04" }}
+                |
+                {{ .context.ReadingTime }} minute read</time>
+            {{ end }}
+        </div>
+        <div class="line-clamp-3 text-xl font-light leading-8 lg:leading-9 text-gray-500">{{ .context.Summary }}</div>
+    </div>
+</article>

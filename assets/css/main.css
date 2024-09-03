@@ -14,6 +14,8 @@
         font-family: "Crimson Pro";
         line-height: 200%;
         font-display: "sans-serif";
+        color: #adb5bd;
+        background-color: #0b090a;
     }
 
     h5 {
@@ -38,7 +40,7 @@
     }
 
     p>strong>a {
-        color: green;
+        color: red;
         text-decoration: underline;
     }
 
@@ -46,6 +48,6 @@
         padding: 1rem;
         overflow-x: auto;
         font-size: 1.2rem;
+        background-color: #111827 !important;
     }
-
 }

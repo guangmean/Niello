@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<!-- Content -->
+<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2 sm:mt-6 lg:mx-0 lg:max-w-none lg:grid-cols-1">
+
+    {{ range $index, $element := (.Paginator 10).Pages }}
+
+    <!-- Article Preview -->
+    {{ partial "preview.html" (dict "context" . "index" $index) }}
+
+    {{ end }}
+    <!-- More posts... -->
+</div>
+
+<!-- Paginator -->
+{{ partial "pagination.html" . }}
+
+{{ end }}

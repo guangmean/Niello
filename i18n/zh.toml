@@ -15,3 +15,53 @@ other = "下一页 >>"
 
 [previous]
 other = "<< 上一页"
+
+
+
+[sitename]
+other = "{ 码途轨迹 }"
+
+[slogan]
+other = "发现问题，分享解决。"
+
+[search]
+other = "搜索"
+
+[searchplaceholder]
+other = "输入关键词..."
+
+[searching]
+other = "正在搜索..."
+
+[recommendpost]
+other = "推荐文章"
+
+[intro]
+other = "关于我们"
+
+[topost]
+other = "最近发布"
+
+[topcat]
+other = "热门分类"
+
+[toptag]
+other = "热门标签"
+
+[archive]
+other = "归档统计"
+
+[contact]
+other = "联系方式"
+
+[emptypost]
+other = "未发现常规内容"
+
+[emptycat]
+other = "未发现分类"
+
+[emptytag]
+other = "未发现标签"
+
+[emptyarchive]
+other = "未发现归档"

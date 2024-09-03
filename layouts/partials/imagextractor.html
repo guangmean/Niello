@@ -1,0 +1,50 @@
+<!-- Init -->
+{{ $page := .context.Page }}
+{{ $image := "" }}
+
+<!-- Taxonomy image, eg: categories or tags -->
+{{ if eq $page.Kind "term" }}
+{{ $pages := where site.RegularPages "Params.categories" "intersect" (slice .context.Title) }}
+{{ with first 1 $pages }}
+{{ $page = index . 0 }}
+{{ end }}
+{{ end }}
+
+<!-- Weather have featured image in front matter -->
+{{ with $page.Params.featuredImage }}
+{{ $image := . | absURL }}
+{{ end }}
+
+{{ if eq $image "" }}
+<!-- Remote image eg: https://xxx.com/abc.jpeg -->
+{{ $regex := `https:\/\/[^\s]+\.(jpg|jpeg|png|webp)` }}
+{{ $images := findRE $regex $page.Content }}
+{{ with index $images 0 }}
+{{ $image = . | safeURL }}
+{{ end }}
+{{ end }}
+
+{{ if eq $image "" }}
+<!-- Local image eg: ./abc.jpeg or /abc.png -->
+{{ $regex := `src=\"(\/[^\s]+\.(jpg|jpeg|png|webp))\"` }}
+{{ $images := findRE $regex $page.Content }}
+{{ with index $images 0 }}
+{{ $image = . | safeURL }}
+{{ end }}
+{{ end }}
+
+{{ if eq $image "" }}
+<!-- Inline image eg: data:image/jpeg;base64,... -->
+{{ $regex := `(data:image\/[a-z]+;base64,[^\"]+)` }}
+{{ $images := findRE $regex $page.Content }}
+{{ with index $images 0 }}
+{{ $image = . | safeURL }}
+{{ end }}
+{{ end }}
+
+<!-- Return a placeholder image if no images -->
+{{ if eq $image "" }}
+{{ $image = "/image/logo.webp" }}
+{{ end }}
+
+{{ return $image }}

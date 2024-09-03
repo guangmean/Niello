@@ -15,3 +15,51 @@ other = "Next >>"
 
 [previous]
 other = "<< Previous"
+
+[sitename]
+other = "{ Code Trace }"
+
+[slogan]
+other = "Discover Issues, Share Solutions."
+
+[search]
+other = "Search"
+
+[searchplaceholder]
+other = "Input Keywords..."
+
+[searching]
+other = "Searching..."
+
+[recommendpost]
+other = "Recommend Posts"
+
+[intro]
+other = "Intro"
+
+[topost]
+other = "Latest Post"
+
+[topcat]
+other = "Hot Categories"
+
+[toptag]
+other = "Top Tags"
+
+[archive]
+other = "Archive Analytics"
+
+[contact]
+other = "Contact"
+
+[emptypost]
+other = "No Regular Posts"
+
+[emptycat]
+other = "No Categories"
+
+[emptytag]
+other = "No Tags"
+
+[emptyarchive]
+other = "No Archives"

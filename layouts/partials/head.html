@@ -7,14 +7,12 @@
     <meta name="keywords" content="{{- .Site.Params.keywords -}}">
     <meta name="description" content="{{- .Site.Params.description -}}">
     {{ else }}
-    <meta name="keywords" content="{{ with .Keywords }} {{- delimit . ", " -}} {{ end }}">
+    <meta name="keywords" content="{{ with .Keywords }} {{- delimit . " , " -}} {{ end }}">
     <meta name="description" content="{{ with .Description }} {{- . -}} {{ end }}">
     {{ end }}
-    <link rel="stylesheet" href="{{ "css/github-dark-dimmed.min.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "css/normalize.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "css/niello.css" | relURL }}">
-	<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-	<link rel="stylesheet" href="{{ "css/cookie.css" | relURL }}">
+    <link rel="canonical" href="{{ .Page.Permalink }}" />
+    {{ partialCached "head/css.html" . }}
+    {{ partialCached "head/js.html" . }}
     {{ if .Site.Params.google_ad_client }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -25,19 +23,21 @@
     </script>
     {{ end }}
 
-	{{ if .Site.Params.ga4 }}
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga4 }}"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+    {{ if .Site.Params.ga4 }}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga4 }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-		gtag('config', '{{ .Site.Params.ga4 }}');
-	</script>
-	{{ end }}
+        gtag('config', '{{ .Site.Params.ga4 }}');
+    </script>
+    {{ end }}
 
     {{ if .Site.Params.sharethis }}
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property={{- .Site.Params.sharethis -}}&product=sticky-share-buttons" async="async"></script>
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property={{- .Site.Params.sharethis -}}&product=sticky-share-buttons"
+        async="async"></script>
     {{ end }}
 </head>

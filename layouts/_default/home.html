@@ -1,0 +1,150 @@
+{{ define "main" }}
+
+<div
+    class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-5">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
+        <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z" />
+    </svg>
+
+    {{ i18n "recommendpost" }}
+</div>
+<!-- Banner -->
+<div class="relative w-full h-auto sm:h-96 bg-gray-800 border border-gray-800 rounded-2xl overflow-hidden">
+    <div id="swiper" class="flex flex-row transition-transform duration-300 ease-in-out">
+        {{ range $index, $element := .Site.RegularPages.ByPublishDate.Limit 2 }}
+
+        <div class="relative w-full h-auto sm:h-96 flex-shrink-0">
+            <a href="{{ .RelPermalink }}" class="hover:cursor-pointer">
+                {{ $image := partial "imagextractor.html" (dict "context" .) }}
+                {{ if not (hasPrefix $image "data:image/") }}
+                {{ $image = print $image "?v=" (now.Unix) }}
+                {{ end }}
+                <img src="{{ $image }}" alt="Article Pic" class="w-full h-auto sm:h-96 object-scale-down rounded-lg">
+                <div
+                    class="absolute inset-x-0 bottom-0 h-auto pt-3 pb-5 overflow-hidden bg-gray-600/30 backdrop-blur-xl">
+                    <h3
+                        class="mt-2 py-2 line-clamp-1 text-center text-2xl font-medium leading-none text-gray-100 hover:text-gray-600">
+                        {{ if gt (len .Title) 0 }} {{ .Title }} {{ else }} - {{ end }}
+                    </h3>
+                </div>
+            </a>
+        </div>
+        {{ end }}
+        <!-- 添加更多图片 -->
+        <!-- 复制前几张图片用于循环 -->
+        {{ range $index, $element := .Site.RegularPages.ByPublishDate.Limit 2 }}
+        <div class="relative w-full h-auto sm:h-96 flex-shrink-0">
+            <a href="{{ .RelPermalink }}" class="hover:cursor-pointer">
+                {{ $image := partial "imagextractor.html" (dict "context" .) }}
+                {{ if not (hasPrefix $image "data:image/") }}
+                {{ $image = print $image "?v=" (now.Unix) }}
+                {{ end }}
+                <img src="{{ $image }}?v={{ now.Unix }}" class="w-full h-auto sm:h-96 object-scale-down rounded-lg" />
+                <div
+                    class="absolute inset-x-0 bottom-0 h-auto pt-3 pb-5 overflow-hidden bg-gray-100/10 backdrop-blur-xl">
+                    <h3
+                        class="mt-2 py-2 line-clamp-1 text-center text-2xl font-medium leading-none text-gray-400 hover:text-gray-100">
+                        {{ if gt (len .Title) 0 }} {{ .Title }} {{ else }} - {{ end }}
+                    </h3>
+                </div>
+            </a>
+        </div>
+        {{ end }}
+
+    </div>
+    <div id="prevBanner"
+        class="absolute top-1/3 left-0 w-8 h-32 bg-gray-100/10 backdrop-blur-2xl rounded-tr-3xl rounded-br-3xl hover:font-bold hover:cursor-pointer hover:bg-gray-400/10">
+        <a href="#" rel="nofollow"
+            class="absolute top-1/3 left-1/3 text-2xl font-medium text-gray-300 hover:text-gray-100 w-full h-full inline-block">&lt;</a>
+    </div>
+    <div id="nextBanner"
+        class="absolute top-1/3 right-0 w-8 h-32 bg-gray-100/10 backdrop-blur-2xl rounded-tl-3xl rounded-bl-3xl hover:font-bold hover:cursor-pointer hover:bg-gray-400/10">
+        <a href="#" rel="nofollow"
+            class="absolute top-1/3 left-1/3 text-2xl font-medium text-gray-300 hover:text-gray-100 w-full h-full inline-block">&gt;</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2 mt-3 sm:mt-6 lg:mx-0 lg:max-w-none lg:grid-cols-1">
+
+    {{ range $index, $element := (.Paginator 10).Pages }}
+
+    <!-- Article Preview -->
+    {{ partial "preview.html" (dict "context" . "index" $index) }}
+
+    {{ end }}
+    <!-- More posts... -->
+</div>
+
+<!-- Paginator -->
+{{ partial "pagination.html" . }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = document.getElementById('swiper')
+        let currentIndex = 0 // 当前显示的是第一张图片
+        const totalImages = swiper.children.length // 总图片数（包括复制的图片）
+        const originalTotal = totalImages - 2 // 原始图片数量
+        const slideWidth = swiper.offsetWidth // 每张图片的宽度
+        var interval = null // 定义一个变量用于存储定时器
+        // Next
+        function moveToNextSlide() {
+            currentIndex++
+            swiper.style.transition = 'transform 0.3s ease-in-out'
+            swiper.style.transform = `translateX(-${currentIndex * slideWidth}px)`
+
+            if (currentIndex >= originalTotal) {
+                setTimeout(function () {
+                    swiper.style.transition = 'none' // 去掉动画效果，瞬间跳转
+                    currentIndex = 0 // 重置到第一张图片
+                    swiper.style.transform = `translateX(0px)`
+                }, 800) // 等待当前滚动动画完成
+            }
+        }
+        // Previous
+        function moveToPreviousSlide() {
+            currentIndex--
+            swiper.style.transition = 'transform 0.3s ease-in-out'
+            if (currentIndex < 0) {
+                currentIndex = 0
+            }
+            swiper.style.transform = `translateX(-${currentIndex * slideWidth}px)`
+        }
+        // AutoPlay
+        function startAutoPlay() {
+            interval = setInterval(moveToNextSlide, 3000)
+        }
+        // Stop AutoPlay
+        function stopAutoPlay() {
+            clearInterval(interval)
+        }
+        // Mouse Enter
+        swiper.addEventListener('mouseenter', stopAutoPlay)
+        swiper.addEventListener('mouseleave', startAutoPlay)
+
+        document.getElementById('prevBanner').addEventListener('click', function () {
+            stopAutoPlay()
+            moveToPreviousSlide()
+            startAutoPlay()
+        })
+
+        document.getElementById('nextBanner').addEventListener('click', function () {
+            stopAutoPlay()
+            moveToNextSlide()
+            startAutoPlay()
+        })
+
+        // Start AutoPlay
+        startAutoPlay()
+
+    })
+
+
+
+</script>
+
+{{ end }}

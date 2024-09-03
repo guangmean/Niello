@@ -1,50 +1,30 @@
-<!doctype html>
-<html class="no-js" lang="">
+{{ define "main" }}
 
-{{ partial "head.html" . }}
+<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 lg:mx-0 lg:max-w-none lg:grid-cols-1">
+    <article class="flex max-w-full flex-col">
+        <!--
+    <img src="/img/lemon.webp" alt="" class="w-full h-96 object-cover rounded-lg">
+    -->
+        <div class="flex-1 pl-0">
+            <div class="group relative">
+                <h3 class="mt-5 text-3xl font-medium leading-10 text-gray-400 hover:text-gray-100">
+                    <a href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                    </a>
+                </h3>
+                <time datetime="2025-03-16" class="flex items-center py-2 text-xl text-gray-600">
+                    {{ .PublishDate.Format "2006-01-02 15:04" }}
+                    &nbsp;&nbsp;|&nbsp;&nbsp;{{ .ReadingTime }} minute read
+                </time>
 
-<body>
-    {{ `<!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->` | safeHTML }}
-
-  <!-- Add your site or application content here -->
-    <div class="flex-column">
-        {{ partial "banner.html" . }}
-        <div class="home">
-            <div class="logo">
-                <h1><a href="/">{{.Site.Title}}</a></h1>
+                <div
+                    class="mt-1 lg:pb-10 text-2xl leading-10 font-thin text-gray-500 overflow-hidden break-words article-body">
+                    {{
+                    .Content |
+                    safeHTML }}
+                </div>
             </div>
-            {{ partial "nav.html" . }}
-            <div>
-                <article>
-                    <h3>{{ .Title }}</h3>
-                    <div class="less">
-                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Using {{ .WordCount }} words
-						<div class="tag-single">
-							<time>Tags:&nbsp;</time>
-							<ul>
-								{{ range (.GetTerms "tags") }}
-								<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-								{{ end }}
-							</ul>
-						</div>
-                    </div>
-                    <div class="em">{{ .Content | safeHTML }}</div>
-                    <br />
-                    <br />
-                    <div class="less">Page link: <a href="{{ .RelPermalink }}" class="pagelink">{{ .RelPermalink }}</a></div>
-                    <div class="line-dotted"></div>
-                <article>
-				{{ if gt (len .Site.DisqusShortname) 2 }}
-					{{ template "_internal/disqus.html" . }}
-				{{ end }}
-            </div>
-            {{ partial "footer.html" . }}
         </div>
-        {{ partial "banner.html" . }}
-    </div>
-
-  {{ partial "foot.html" . }}
-</body>
-</html>
+    </article>
+</div>
+{{ end }}
