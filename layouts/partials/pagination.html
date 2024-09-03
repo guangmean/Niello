@@ -19,7 +19,7 @@
 
 {{- if in $validFormats $format }}
 {{- if gt $page.Paginator.TotalPages 1 }}
-<ul class="pagination pagination-{{ $format }} mx-2 mt-5 mb-10 text-2xl flex gap-1 sm:gap-5 font-light">
+<ul class="pagination pagination-{{ $format }} mx-2 my-10 text-2xl flex gap-1 sm:gap-5 font-light">
     {{- partial (printf "partials/inline/pagination/%s" $format) $page }}
 </ul>
 {{- end }}

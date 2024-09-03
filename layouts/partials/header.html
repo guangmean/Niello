@@ -4,24 +4,20 @@
             <h2 class="w-full text-center text-3xl sm:text-5xl font-crimson font-bold tracking-tight text-gray-300">
                 <a href="{{ site.BaseURL }}">{{ i18n "sitename" }}</a>
             </h2>
-            <div class="sm:hidden">
-                <img src="/img/menu.webp" class="w-10 h-10 text-white bg-green-500 rounded-full cursor-pointer"
-                    onclick="toggleSidebar()">
-            </div>
         </div>
         <p
             class="w-full text-center pl-1 pb-4 sm:pt-3 sm:pb-0 font-crimson font-normal text-xl sm:text-2xl leading-8 text-gray-500">
             {{ i18n "slogan" }}</p>
     </div>
 
-    <div class="relative w-1/2 h-12 my-5">
+    <div class="relative w-9/12 lg:w-1/2 h-12 my-5">
         <form action="/{{.Lang}}/search" method="get">
             <input
-                class="placeholder:italic placeholder:text-gray-300 w-full sm:min-w-96 h-12 rounded-full mt-1 pl-5 pr-5 border border-gray-600 text-black"
+                class="bg-gray-800 placeholder:italic placeholder:text-gray-600 w-full h-12 rounded-full mt-1 pl-5 pr-5 border border-gray-800 text-gray-100"
                 placeholder='{{ i18n "searchplaceholder" }}' type="text" name="q" id="search-query" />
 
             <button
-                class="absolute inset-y-2 right-1 w-28 h-10 font-light bg-red-500 hover:bg-red-600 rounded-full cursor-pointer"
+                class="absolute inset-y-2 right-1 w-28 h-10 font-light bg-gray-900 hover:bg-red-500 text-gray-500 hover:text-gray-100 rounded-full cursor-pointer"
                 type="submit">{{ i18n "search" }}</button>
         </form>
     </div>

@@ -1,9 +1,5 @@
 <aside id="sidebar"
-    class="w-full sm:w-96 mx-2 px-5 sm:px-8 pb-8 fixed inset-y-0 left-0 transform translate-x-full md:relative md:translate-x-0 flex-shrink-0 overflow-auto z-40 transition-transform duration-300 ease-in-out text-gray-500">
-
-    <img src="/img/close.webp" alt="Close Sidebar"
-        class="sm:hidden w-10 h-10 float-right mt-8 text-white bg-green-500 rounded-full cursor-pointer"
-        onclick="toggleSidebar()">
+    class="w-full sm:w-96 mx-2 px-5 sm:px-8 pb-8 relative flex-shrink-0 overflow-auto text-gray-500 lg:relative">
 
     <!-- About -->
     <div
@@ -133,12 +129,3 @@
         Email：developer@gopherloveapple.com
     </div>
 </aside>
-
-<script>
-    function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        // 小屏幕时通过添加/移除 translate-x-full 来控制侧边栏显示隐藏
-        sidebar.classList.toggle('translate-x-full');
-        sidebar.classList.toggle('sm:translate-x-0');
-    }
-</script>

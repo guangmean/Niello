@@ -11,11 +11,12 @@ Renders a menu for the given menu ID.
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-<nav>
-    <ul class="flex flex-col lg:flex-row justify-end mt-2 sm:mt-5 mb-5 pb-2 font-light text-xl lg:text-2xl gap-1">
-        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
-</nav>
+
+<ul
+    class="flex flex-col lg:flex-row justify-end mt-2 sm:mt-5 mb-5 pb-2 font-light text-xl lg:text-2xl gap-5 lg:gap-1 text-center">
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+</ul>
+
 {{- end }}
 
 {{- define "partials/inline/menu/walk.html" }}
@@ -23,7 +24,7 @@ Renders a menu for the given menu ID.
 {{- range .menuEntries }}
 {{- $attrs := dict "href" .URL }}
 {{- if $page.IsMenuCurrent .Menu . }}
-{{- $attrs = merge $attrs (dict "class" "active px-5 lg:px-10 py-3 font-light border-b-2 border-red-500"
+{{- $attrs = merge $attrs (dict "class" "active px-5 lg:px-10 py-3 font-light border-b-2 border-red-500 text-gray-100"
 "aria-current" "page")
 }}
 {{- else if $page.HasMenuCurrent .Menu .}}
