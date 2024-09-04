@@ -1,17 +1,36 @@
-<div class="navigation">
-    {{ if .Site.Menus.niello }}
-        {{ $inNav := 0 }}
-        {{ $currentPage := .RelPermalink }}
-        {{ range sort .Site.Menus.niello "Weight" "asc" }}
-        <a href="{{ .URL }}" class="{{ if eq $currentPage .URL }} {{ $inNav = 1 }}current{{ end}}">{{ .Name }}</a>
-        {{ end }}
-        {{ if eq $inNav 0  }}
-        <a href="javascript:void(0);" class="current">{{ i18n "article" }}</a>
-        {{ end }}
-    {{ else if eq .IsHome true }}
-    <a href="/" class="current">{{ i18n "home" }}</a>
-    {{ else }}
-    <a href="/" class="">{{ i18n "home" }}</a>
-	<a href="javascript:void(0);" class="current">{{ i18n "article" }}</a>
-    {{ end }}
+<div x-data="{ openMenu: false }" class="relative">
+    <nav class="flex flex-1 flex-col lg:flex-row items-center justify-between">
+        <a href="/">
+            <img src="/image/logo.webp" alt="site logo"
+                class="w-16 h-16 my-5 p-1 bg-gray-100 rounded-full cursor-pointer hover:scale-110" />
+        </a>
+        <div class="hidden lg:block" :class="{'hidden': !openMenu}">
+            {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+        </div>
+    </nav>
+    <div class="absolute top-8 right-5 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button @click="openMenu = !openMenu" type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-800 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="openMenu">
+            <!--
+      Icon when menu is closed.
+
+      Menu open: "hidden", Menu closed: "block"
+    -->
+            <svg x-show="!openMenu" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+      Icon when menu is open.
+
+      Menu open: "block", Menu closed: "hidden"
+    -->
+            <svg x-show="openMenu" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
 </div>

@@ -83,7 +83,7 @@
         {{ range $index, $tag := $sortedTags }}
         {{ if lt $index 20 }}
         <a href="{{ .Page.RelPermalink }}"><span
-                class="inline-block p-0 bg-gray-800 hover:bg-gray-900 border border-gray-800 text-gray-500 hover:text-gray-300 font-light mb-1 px-5 rounded-full">{{
+                class="inline-block p-0 bg-gray-800 hover:bg-gray-900 border border-gray-800 text-gray-500 hover:text-gray-300 font-light mb-1 px-5 rounded-full hover:scale-105">{{
                 .Page.Title }}&nbsp;&nbsp;{{ .Count }}</span></a>
         {{ end }}
         {{ end }}

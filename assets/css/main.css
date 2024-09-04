@@ -50,4 +50,21 @@
         font-size: 1.2rem;
         background-color: #111827 !important;
     }
+
+    .cookie-container {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        right: 0;
+        background: #161a1d;
+        color: #d3d3d3;
+        padding: 0 32px;
+        box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.38);
+
+        transition: 500ms;
+    }
+
+    .cookie-container.active {
+        bottom: 0;
+    }
 }
