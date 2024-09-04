@@ -16,17 +16,8 @@
 {{ end }}
 
 {{ if eq $image "" }}
-<!-- Remote image eg: https://xxx.com/abc.jpeg -->
-{{ $regex := `https:\/\/[^\s]+\.(jpg|jpeg|png|webp)` }}
-{{ $images := findRE $regex $page.Content }}
-{{ with index $images 0 }}
-{{ $image = . | safeURL }}
-{{ end }}
-{{ end }}
-
-{{ if eq $image "" }}
 <!-- Local image eg: ./abc.jpeg or /abc.png -->
-{{ $regex := `src=\"(\/[^\s]+\.(jpg|jpeg|png|webp))\"` }}
+{{ $regex := `(\/[^\s]+\.(jpg|jpeg|png|webp))` }}
 {{ $images := findRE $regex $page.Content }}
 {{ with index $images 0 }}
 {{ $image = . | safeURL }}
@@ -42,9 +33,18 @@
 {{ end }}
 {{ end }}
 
+{{ if eq $image "" }}
+<!-- Remote image eg: https://xxx.com/abc.jpeg -->
+{{ $regex := `https:\/\/[^\s]+\.(jpg|jpeg|png|webp)` }}
+{{ $images := findRE $regex $page.Content }}
+{{ with index $images 0 }}
+{{ $image = . | safeURL }}
+{{ end }}
+{{ end }}
+
 <!-- Return a placeholder image if no images -->
 {{ if eq $image "" }}
-{{ $image = "/image/logo.webp" }}
+{{ $image = "/image/common-writing-empty.webp" }}
 {{ end }}
 
 {{ return $image }}
