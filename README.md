@@ -7,9 +7,15 @@ Note: The master branch is unstable; please use tagged versions for a stable rel
 
 # Features
 
-Simple, Clean
+Simple and Clean
 
-Syntax Highlight
+Dark Mode
+
+Responsive
+
+Multiple Languages - i18n
+
+Content Search
 
 Google Adsense
 
@@ -17,11 +23,7 @@ Google Analytics
 
 Tailwind CSS
 
-Dark Mode
-
-Responsive
-
-Multiple Languages - i18n
+Syntax Highlight
 
 
 # Screenshot
