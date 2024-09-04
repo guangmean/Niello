@@ -5,9 +5,7 @@ Niello is a sleek and sophisticated Hugo dark theme, ideal for highlighting your
 Note: The master branch is unstable; please use tagged versions for a stable release.
 
 
-# Features
-
-Simple and Clean
+# Support Features
 
 Dark Mode
 
@@ -16,6 +14,8 @@ Responsive
 Multiple Languages - i18n
 
 Content Search
+
+Automatically extract images from an article
 
 Google Adsense
 
