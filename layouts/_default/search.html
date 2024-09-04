@@ -47,7 +47,7 @@
       inputBox.value = searchQuery || "";
       executeSearch(searchQuery, false);
     } else {
-      document.getElementById('search-results').innerHTML = '<p class="py-5 text-xl text-red-500">Please enter a word or phrase above to search.</p>';
+      document.getElementById('search-results').innerHTML = '<p class="py-5 text-xl text-red-500">{{ i18n "keywordmissing" }}</p>';
     }
   }
 
@@ -67,7 +67,7 @@
         if (result.length > 0) {
           populateResults(result);
         } else {
-          document.getElementById('search-results').innerHTML = '<p class=\"py-5 text-xl text-red-500\">No matches found</p>';
+          document.getElementById('search-results').innerHTML = '<p class=\"py-5 text-xl text-red-500\">{{ i18n "nomatch" }}</p>';
         }
         hide(document.querySelector('.search-loading'));
       })

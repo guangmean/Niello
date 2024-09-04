@@ -1,15 +1,6 @@
 [home]
 other = "首页"
 
-[tag]
-other = "标签"
-
-[article]
-other = "文章"
-
-[more]
-other = "更多 >>"
-
 [next]
 other = "下一页 >>"
 
@@ -32,6 +23,12 @@ other = "输入关键词..."
 
 [searching]
 other = "正在搜索..."
+
+[keywordmissing]
+other = "请输入搜索关键词!"
+
+[nomatch]
+other = "未找到相关内容!"
 
 [recommendpost]
 other = "推荐文章"

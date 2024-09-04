@@ -13,6 +13,8 @@
     <link rel="canonical" href="{{ .Page.Permalink }}" />
     {{ partialCached "head/css.html" . }}
     {{ partialCached "head/js.html" . }}
+
+    <!-- Google Adsense -->
     {{ if .Site.Params.google_ad_client }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -23,8 +25,8 @@
     </script>
     {{ end }}
 
+    <!-- Google GA4 -->
     {{ if .Site.Params.ga4 }}
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga4 }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -35,6 +37,7 @@
     </script>
     {{ end }}
 
+    <!-- ShareThis -->
     {{ if .Site.Params.sharethis }}
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property={{- .Site.Params.sharethis -}}&product=sticky-share-buttons"

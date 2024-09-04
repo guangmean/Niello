@@ -1,15 +1,6 @@
 [home]
 other = "Home"
 
-[tag]
-other = "Tags"
-
-[article]
-other = "Article"
-
-[more]
-other = "Read More >>"
-
 [next]
 other = "Next >>"
 
@@ -30,6 +21,12 @@ other = "Input Keywords..."
 
 [searching]
 other = "Searching..."
+
+[keywordmissing]
+other = "Please enter a word or phrase above to search."
+
+[nomatch]
+other = "No matches found"
 
 [recommendpost]
 other = "Recommend Posts"
