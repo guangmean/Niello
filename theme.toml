@@ -8,8 +8,8 @@ description = "A clean and elegant dark Theme for Hugo"
 homepage = "https://github.com/guangmean/Niello"
 demosite = "https://www.angularcorp.com"
 tags = ["dark", "blog", "responsive", "modern", "minimal", "personal", "clean", "classic"]
-features = ["google analytics", "google adsense", "highlight", "i18n", "multiple language", "social media", "disqus"]
-min_version = "0.60.0"
+features = ["google analytics", "google adsense", "search", "highlight", "i18n", "multiple language", "social media", "disqus"]
+min_version = "0.100.0"
 
 [author]
   name = "guangmean"
@@ -23,5 +23,5 @@ min_version = "0.60.0"
 
 [module]
   [module.hugoVersion]
-    min = "0.60.0"
-    max = "0.111.3"
+    min = "0.100.0"
+    max = "0.125.1"
