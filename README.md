@@ -4,6 +4,13 @@ Niello is a sleek and sophisticated Hugo dark theme, ideal for highlighting your
 
 Note: The master branch is unstable; please use tagged versions for a stable release.
 
+### We are excited to announce the release of version 3.0, featuring significant improvements and new features (2024-09-05). 
+
+Please note that this is a major update and may not be compatible with previous versions. 
+
+An updated version of Hugo is also required. 
+
+We recommend backing up your site before updating.
 
 # Support Features
 
@@ -109,6 +116,10 @@ ga4 = "G-******" //Optional, replace G-****** with your Google Analytics GA4
 sharethis = ""  //Optional, Add hou ShareThis appid here
     
 ```
+
+# Customizing the Theme
+
+If you plan to modify this theme, please note that it is built using TailwindCSS. Before making any changes, you will need to initialize TailwindCSS in your project. Make sure to follow the TailwindCSS setup instructions to properly configure your development environment.
 
 # Google Adsense & Google Analytics 4 (GA4)
 
