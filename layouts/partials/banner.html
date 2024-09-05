@@ -1,6 +1,6 @@
 <div class="relative lg:mx-0 w-full h-96 bg-gray-800 border border-gray-800 rounded-2xl overflow-hidden">
     <div id="swiper" class="flex flex-row transition-transform duration-300 ease-in-out">
-        {{ $pages := .Site.RegularPages.ByPublishDate.Limit 2 }}
+        {{ $pages := where site.RegularPages "Params.categories" "intersect" (slice "AI") }}
         {{ if gt (len $pages) 0 }}
         {{ $leading := first 1 $pages }}
         {{ $tailing := last 1 $pages }}
