@@ -60,3 +60,9 @@ other = "No Tags"
 
 [emptyarchive]
 other = "No Archives"
+
+[missing404title]
+other = "Page not found"
+
+[missing404body]
+other = "Sorry, we couldn’t find the page you’re looking for."

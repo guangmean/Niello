@@ -62,3 +62,9 @@ other = "未发现标签"
 
 [emptyarchive]
 other = "未发现归档"
+
+[missing404title]
+other = "抱歉"
+
+[missing404body]
+other = "页面不存在"
