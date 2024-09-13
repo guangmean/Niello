@@ -1,12 +1,12 @@
 # Niello
 
-Niello is a sleek and sophisticated Hugo dark theme, ideal for highlighting your content in a stylish manner. It comes equipped with essential features like Google Analytics and AdSense support, making it an excellent choice for expanding your online presence.
+Niello is a modern and feature-rich Hugo dark theme, designed to elegantly showcase your content. With a responsive layout that ensures a perfect browsing experience on any device, it also comes with built-in support for Google Analytics, AdSense ads, Disqus, content sharing, and search functionality, helping you effortlessly manage and enhance your online presence. Whether you're running a blog or a website, Niello offers a professional and efficient platform to elevate your online reach.
 
 Note: The master branch is unstable; please use tagged versions for a stable release.
 
 ### We are excited to announce the release of version 3.0, featuring significant improvements and new features (2024-09-05). 
 
-Please note that this is a major update and may not be compatible with previous versions. 
+Please note that 3.0.0 is a major update and may not be compatible with previous versions. 
 
 An updated version of Hugo is also required. 
 
@@ -46,7 +46,7 @@ git clone https://github.com/guangmean/Niello.git themes/Niello
 
 # Configuration
 
-Below is an example of the hugo.toml file for your site (previously known as config.toml):
+Below is an example of the hugo.toml file(previously config.toml) for your site:
 
 ```toml
 defaultContentLanguage = "en"
@@ -114,22 +114,43 @@ copyright = "&#xA9; 2019 - 2022 by guangmean. All Rights Reserved."
 google_ad_client = "ca-pub-******"  //Optional, replace ca-pub-****** with your content
 ga4 = "G-******" //Optional, replace G-****** with your Google Analytics GA4
 sharethis = ""  //Optional, Add hou ShareThis appid here
+
+[outputs]
+  home = ["HTML", "JSON"]
     
 ```
 
 # Customizing the Theme
 
-If you plan to modify this theme, please note that it is built using TailwindCSS. Before making any changes, you will need to initialize TailwindCSS in your project. Make sure to follow the TailwindCSS setup instructions to properly configure your development environment.
+If you plan to modify this theme, note that it is built with TailwindCSS. Before making changes, ensure you initialize TailwindCSS in your project and follow the setup instructions to properly configure your development environment.
+
+```shell
+cd themes/Niello
+
+npm install -D tailwindcss
+
+# Below cmd is not required
+npx tailwindcss init # This will create the tailwind.config.js which already included in Niello
+```
 
 # Google Adsense & Google Analytics 4 (GA4)
 
-Niello supports Google AdSense by configuring the googleadclient parameter in the [params] block and Google Analytics 4 (GA4) by setting the ga parameter in the config.toml file as shown above.
+Niello supports Google AdSense by configuring the googleadclient parameter in the [params] block and Google Analytics 4 (GA4) by setting the ga parameter in the hugo.toml file(previously config.toml), as shown above.
+
+# Search
+
+To enable the search functionality, you need to configure JSON output in the hugo.toml file by adding the following:
+
+```shell
+[outputs]
+  home = ["HTML", "JSON"]
+```
 
 # ShareThis
 
-Niello support share your content to other platforms by [ShareThis](https://sharethis.com).
+Niello supports sharing your content to other platforms via [ShareThis](https://sharethis.com).
 
-# Demo
+# Live Demo
 
 A full demo is available here:	[https://www.angularcorp.com](https://www.angularcorp.com) 
 
