@@ -18,7 +18,19 @@
         background-color: #0b090a;
     }
 
-    h5 {
+    article>h2 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-top: 1.5rem;
+    }
+
+    article>h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 1.2rem;
+    }
+
+    article>h5 {
         padding-top: 1rem;
         font-size: 1.2rem;
         font-weight: 500;
