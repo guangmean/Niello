@@ -84,3 +84,34 @@
         bottom: 0;
     }
 }
+
+@layer components {
+    .section-title {
+        @apply flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2
+        border-b border-b-white/10 mb-3 mt-5 text-gray-400
+    }
+
+    .aside-container {
+        @apply lg:max-w-80 flex flex-col overflow-auto text-gray-500
+    }
+
+    .aside-section-title {
+        @apply section-title
+    }
+
+    .aside-section-content-empty {
+        @apply my-2 leading-10 line-clamp-1 mb-1 font-light text-gray-600
+    }
+
+    .home-recommended-title {
+        @apply section-title
+    }
+
+    .list-container {
+        @apply flex flex-col space-y-8
+    }
+
+    .single-article {
+        @apply flex flex-col
+    }
+}

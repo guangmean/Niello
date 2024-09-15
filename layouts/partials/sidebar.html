@@ -1,9 +1,7 @@
-<aside id="sidebar"
-    class="w-full sm:w-96 mx-2 px-5 sm:px-8 pb-8 relative flex-shrink-0 overflow-auto text-gray-500 lg:relative">
+<aside id="sidebar" class="aside-container">
 
     <!-- About -->
-    <div
-        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-16 sm:mt-5 text-gray-400">
+    <div class="aside-section-title">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -11,13 +9,15 @@
         </svg>
         {{ i18n "intro" }}
     </div>
-    <img src="/image/logo.webp?v={{ now.Unix }}" class="mx-auto w-96 h-80" alt="Logo" />
+
+    <img src="/image/logo.webp?v={{ now.Unix }}" class="w-80 self-center" alt="Logo" />
+
     <p class="leading-8 text-center text-lg font-light mt-3">
-        {{ i18n "slogan" }}</p>
+        {{ i18n "slogan" }}
+    </p>
 
     <!-- Posts -->
-    <div
-        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-10 text-gray-400">
+    <div class="aside-section-title">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -25,23 +25,23 @@
         </svg>
         {{ i18n "topost" }}
     </div>
+
     <ul class="text-lg">
         {{ with $posts := .Site.RegularPages.ByPublishDate.Reverse.Limit 5 }}
         {{ range $posts }}
-        <li class="my-2 leading-10 line-clamp-1 mb-1 font-light border-b border-b-white/10 border-dashed">
+        <li class="leading-10 line-clamp-1 mb-3 font-light border-b border-b-white/10 border-dashed">
             <a href="{{ .RelPermalink }}" class="py-5 hover:text-gray-300">{{ .LinkTitle }}</a>
         </li>
         {{ end }}
         {{ else }}
-        <li class="my-2 leading-10 line-clamp-1 mb-1 font-light text-gray-600">
+        <li class="aside-section-content-empty">
             {{ i18n "emptypost"}}
         </li>
         {{ end }}
     </ul>
 
     <!-- Categories -->
-    <div
-        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-8 text-gray-400">
+    <div class="aside-section-title">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -61,14 +61,15 @@
         {{ end }}
         {{ end }}
         {{ else }}
-        <li class="mb-1 font-light text-gray-600">{{ i18n "emptycat"}}</li>
+        <li class="aside-section-content-empty">
+            {{ i18n "emptycat"}}
+        </li>
         {{ end }}
 
     </ul>
 
     <!-- Tags -->
-    <div
-        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-8 text-gray-400">
+    <div class="aside-section-title">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -89,15 +90,15 @@
         {{ end }}
         <!-- More tags... -->
         {{ else }}
-        <span class="inline-block p-1 bg-gray-800  text-gray-600 font-light px-5 rounded-full">{{ i18n
-            "emptytag"}}</span>
+        <span class="aside-section-content-empty inline-block bg-gray-800 px-4 rounded-full">
+            {{ i18n "emptytag"}}
+        </span>
         <!-- No tags... -->
         {{ end }}
     </div>
 
     <!-- Archive Analytics -->
-    <div
-        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-7 text-gray-400">
+    <div class="aside-section-title">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -116,15 +117,14 @@
         {{ end }}
         {{ end }}
         {{ else }}
-        <li class="mb-1 text-gray-600">
+        <li class="aside-section-content-empty">
             {{ i18n "emptyarchive"}}
         </li>
         {{ end }}
     </ul>
 
     <!-- Contact -->
-    <div
-        class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-8 text-gray-400">
+    <div class="aside-section-title">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
