@@ -1,4 +1,4 @@
-<article class="flex flex-col lg:flex-row items-center py-5 px-5 lg:px-2 {{ if mod .index 2 }}bg-gray-800/50{{ end}}">
+<article class="flex flex-col lg:flex-row items-center {{ if mod .index 2 }}bg-gray-800/50{{ end}}">
     <div class="flex-none w-full lg:w-64 h-48 rounded-lg shadow-md bg-gray-900 shadow-gray-800">
         {{ $image := partial "imagextractor.html" . }}
         <img src="{{ $image }}" alt="Article Pic" class="w-full h-48 rounded-2xl object-cover" />

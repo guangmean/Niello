@@ -1,8 +1,7 @@
 {{ define "main" }}
 
 <!-- Icon -->
-<div
-    class="flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-5">
+<div class="home-recommended-title">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round"
@@ -18,7 +17,7 @@
 {{ partial "banner.html" . }}
 
 <!-- Posts Content -->
-<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2 mt-3 sm:mt-6 lg:mx-0 lg:max-w-none lg:grid-cols-1">
+<div class="flex flex-col space-y-8 mt-8">
 
     {{ range $index, $element := (.Paginator 10).Pages }}
 
