@@ -1,6 +1,7 @@
 <!-- Init -->
 {{ $page := .context.Page }}
 {{ $image := "" }}
+{{ $alt := "" }}
 
 <!-- Taxonomy image, eg: categories or tags -->
 {{ if eq $page.Kind "term" }}
@@ -17,10 +18,11 @@
 
 {{ if eq $image "" }}
 <!-- Local image eg: ./abc.jpeg or /abc.png -->
-{{ $regex := `(\/[^\s]+\.(jpg|jpeg|png|webp))` }}
-{{ $images := findRE $regex $page.Content }}
-{{ with index $images 0 }}
-{{ $image = . | safeURL }}
+{{ $regex := `img[\s]+alt="([^"]+)"[\s]+src="([^"]+)"` }}
+{{ $matches := findRESubmatch $regex $page.Content }}
+{{ range $matches }}
+{{ $image = index . 2 | safeURL }}
+{{ $alt = index . 1 | safeHTML }}
 {{ end }}
 {{ end }}
 
@@ -47,4 +49,6 @@
 {{ $image = "/image/common-writing-empty.webp" }}
 {{ end }}
 
-{{ return $image }}
+{{ $result := dict "url" $image "alt" $alt }}
+
+{{ return $result }}

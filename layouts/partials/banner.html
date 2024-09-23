@@ -11,10 +11,12 @@
         <div class="relative w-full h-96 flex-shrink-0">
             <a href="{{ .RelPermalink }}" class="hover:cursor-pointer">
                 {{ $image := partial "imagextractor.html" (dict "context" .) }}
-                {{ if not (hasPrefix $image "data:image/") }}
-                {{ $image = print $image "?v=" (now.Unix) }}
+                {{ if not (hasPrefix $image.url "data:image/") }}
+                <img src="{{ $image.url }}" alt="{{ $image.alt}}" class="w-full h-96 object-cover rounded-lg">
+                {{ else }}
+                <img src="{{ $image.url }}?v={{ now.Unix }}" alt="{{ $image.alt}}"
+                    class="w-full h-96 object-cover rounded-lg">
                 {{ end }}
-                <img src="{{ $image }}" alt="Article Pic" class="w-full h-96 object-cover rounded-lg">
                 <div
                     class="absolute inset-x-0 bottom-0 h-auto pt-3 pb-5 overflow-hidden bg-gray-600/30 backdrop-blur-xl">
                     <h3
