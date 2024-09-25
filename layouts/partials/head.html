@@ -11,6 +11,7 @@
     <meta name="description" content="{{ with .Description }} {{- . -}} {{ end }}">
     {{ end }}
     <link rel="canonical" href="{{ .Page.Permalink }}" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     {{ partialCached "head/css.html" . }}
     {{ partialCached "head/js.html" . }}
 
