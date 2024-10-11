@@ -66,3 +66,6 @@ other = "Page not found"
 
 [missing404body]
 other = "Sorry, we couldn’t find the page you’re looking for."
+
+[articlelink]
+other = "Page link"

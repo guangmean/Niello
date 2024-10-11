@@ -18,25 +18,25 @@
         background-color: #0b090a;
     }
 
-    article>h2 {
-        font-size: 1.8rem;
+    article h2 {
+        font-size: 1.5rem;
         font-weight: 500;
         margin-top: 1.5rem;
     }
 
-    article>h3 {
-        font-size: 1.5rem;
+    article h3 {
+        font-size: 1.3rem;
         font-weight: 500;
         margin-top: 1.2rem;
     }
 
-    article>h5 {
+    article h5 {
         padding-top: 1rem;
         font-size: 1.2rem;
         font-weight: 500;
     }
 
-    article>p {
+    article p {
         padding: 0.5rem 0;
     }
 
@@ -46,18 +46,18 @@
         padding-left: 1.5rem;
     }
 
-    p>a {
+    p a {
         text-decoration: underline;
         font-style: italic;
     }
 
-    p>img {
+    p img {
         padding: 1.5rem 0;
     }
 
-    p>strong>a {
-        color: red;
-        text-decoration: underline;
+    p strong {
+        font-size: 1.2rem;
+        color: rgb(150, 56, 56);
     }
 
     pre {
@@ -87,8 +87,7 @@
 
 @layer components {
     .section-title {
-        @apply flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2
-        border-b border-b-white/10 mb-3 mt-5 text-gray-400
+        @apply flex flex-row items-center justify-start gap-x-2 text-2xl font-normal pb-2 border-b border-b-white/10 mb-3 mt-5 text-gray-400
     }
 
     .aside-container {

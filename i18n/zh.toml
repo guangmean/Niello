@@ -68,3 +68,6 @@ other = "抱歉"
 
 [missing404body]
 other = "页面不存在"
+
+[articlelink]
+other = "文章链接"
