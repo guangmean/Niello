@@ -113,4 +113,24 @@
     .single-article {
         @apply flex flex-col
     }
+
+    .archive-container {
+        @apply flex flex-col space-y-2 mb-8
+    }
+
+    .archive-container h3 {
+        @apply text-5xl font-light text-gray-400
+    }
+
+    .archive-container ul {
+        @apply m-0 px-5
+    }
+
+    .archive-container li {
+        @apply text-2xl font-extralight line-clamp-1 leading-10 text-gray-500
+    }
+
+    .archive-container a {
+        @apply hover:underline hover:text-gray-300
+    }
 }

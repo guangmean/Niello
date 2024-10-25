@@ -22,7 +22,10 @@
     {{ range $index, $element := (.Paginator 10).Pages }}
 
     <!-- Post Preview -->
+    {{ if not (in .Params.categories "archives") }}
     {{ partial "preview.html" (dict "context" . "index" $index) }}
+    {{ end }}
+
 
     {{ end }}
 </div>

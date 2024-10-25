@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<!-- Content -->
+{{ range (.Site.RegularPages.GroupByDate "2006") }}
+<div class="archive-container">
+    <h3>{{ .Key }}</h3>
+    {{ range .Pages.GroupByDate (i18n "archivefmt") }}
+    <div class="px-5 pt-5 text-lg text-gray-400">{{ .Key }} <span
+            class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">{{
+            .Len
+            }}</span>
+    </div>
+    <ul>
+        {{ range (where .Pages "Type" "post") }}
+        <li>
+            {{ .PublishDate.Format (i18n "archivefmt") }}
+            -
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+</div>
+{{ end }}
+
+{{ end }}

@@ -107,12 +107,18 @@
         {{ i18n "archive" }}
     </div>
     <ul class="leading-10 text-lg font-light">
-        {{ with $archives := .Site.RegularPages.GroupByDate "2006-01" "desc" }}
+        {{ $fmt := "Jan, 2006" }}
+        {{ if eq $.Site.Language.Lang "zh" }}
+        {{ $fmt = "2006年01月" }}
+        {{ end }}
+        {{ with $archives := .Site.RegularPages.GroupByDate $fmt "desc" }}
         {{ $sortedArchives := sort $archives ".Key" "desc" }}
         {{ range $index, $item := $sortedArchives }}
-        {{ if lt $index 36 }}
+        {{ if lt $index 18 }}
         <li class="mb-1 border-b border-b-white/10 border-dashed">
-            {{ $item.Key }}<span class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">{{ $item.Pages.Len}}</span>
+            <a href="/{{ $.Site.Language.Lang }}/archives">{{ $item.Key }}<span
+                    class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">{{
+                    $item.Pages.Len}}</span></a>
         </li>
         {{ end }}
         {{ end }}
