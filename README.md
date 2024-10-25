@@ -32,6 +32,8 @@ Tailwind CSS
 
 Syntax Highlight
 
+Archives
+
 
 # Screenshot
 ![Theme Screenshot](https://raw.githubusercontent.com/guangmean/Niello/master/images/theme_sc_home.png)
@@ -144,6 +146,37 @@ To enable the search functionality, you need to configure JSON output in the hug
 ```shell
 [outputs]
   home = ["HTML", "JSON"]
+```
+
+# Archives(Options)
+
+To enable the archives functionality, you need to manually add an archives.md file to the content root directory:
+
+```shell
+|--- content
+|-------| archives.md
+```
+
+or multilingual exampl:
+
+```shell
+|--- content
+|-------| en	
+|----------| archives.md # English
+|-------| zh	
+|----------| archives.md # Chinese
+```
+The content should be as follows:
+
+```shell
++++
+title = 'Archives'
+date = 2024-10-25T09:16:03+08:00
+draft = false
+categories = ["archives"]
+layout = "archives"
++++
+
 ```
 
 # ShareThis
