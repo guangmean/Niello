@@ -8,10 +8,10 @@ other = "Next >>"
 other = "<< Previous"
 
 [sitename]
-other = "{ Code Trace }"
+other = "Niello - Hugo Theme"
 
 [slogan]
-other = "Discover Issues, Share Solutions."
+other = "Your site slogan."
 
 [search]
 other = "Search"
