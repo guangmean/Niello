@@ -29,6 +29,8 @@ Note: Only releases based on tags are considered stable versions.
 ## Screenshot
 ![Theme Screenshot](https://raw.githubusercontent.com/guangmean/Niello/master/images/theme_sc_home.png)
 
+---
+
 ## Installation
 
 To install the Niello theme, run the following command in the root directory of your Hugo site:
@@ -36,6 +38,8 @@ To install the Niello theme, run the following command in the root directory of 
 ```shell
 git clone https://github.com/guangmean/Niello.git themes/Niello
 ```
+
+---
 
 ## Configuration
 
@@ -108,6 +112,8 @@ sharethis = ""  //Optional, Add hou ShareThis appid here
     
 ```
 
+---
+
 ## Overriding Theme i18n Keys
 
 If you need to customize certain translation keys without modifying theme files, you can override the theme's i18n keys at the site level. Simply create an `i18n` folder in your site’s root directory and add the keys you want to override there.
@@ -118,7 +124,8 @@ To override `sitename`, `siteslogan`, `siteseokeywords` and `siteseodescription`
 2. Inside the `i18n` folder, create the appropriate language file (e.g., `en.toml`).
 3. Add the following content to override the theme's i18n keys:
 
-   ```toml
+```shell
+
    # File path: i18n/en.toml
    [sitename]
    other = "Site Name"
@@ -131,24 +138,33 @@ To override `sitename`, `siteslogan`, `siteseokeywords` and `siteseodescription`
 
    [siteseodescription]
    other = "Site Home SEO Description"
+   
 ```
+
+---
 
 ## Customizing the Theme by Editing Source Code
 
 If you plan to modify this theme, note that it is built with TailwindCSS. Before making changes, ensure you initialize TailwindCSS in your project and follow the setup instructions to properly configure your development environment.
 
 ```shell
+
 cd themes/Niello
 
 npm install -D tailwindcss
 
 # Below cmd is not required
 npx tailwindcss init # This will create the tailwind.config.js which already included in Niello
+
 ```
+
+---
 
 ## Google Adsense & Google Analytics 4 (GA4)
 
 Niello supports Google AdSense by configuring the googleadclient parameter in the [params] block and Google Analytics 4 (GA4) by setting the ga parameter in the hugo.toml file(previously config.toml), as shown above.
+
+---
 
 ## Search
 
@@ -158,6 +174,8 @@ To enable the search functionality, you need to configure JSON output in the hug
 [outputs]
   home = ["HTML", "JSON"]
 ```
+
+---
 
 ## Archives(Options)
 
@@ -190,13 +208,19 @@ layout = "archives"
 
 ```
 
+---
+
 ## ShareThis
 
 Niello supports sharing your content to other platforms via [ShareThis](https://sharethis.com).
 
+---
+
 ## Live Demo
 
 A full demo is available here:	[https://www.angularcorp.com](https://www.angularcorp.com) 
+
+---
 
 ## Buy a Coffee for Me
 
