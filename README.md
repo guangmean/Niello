@@ -1,44 +1,35 @@
-# Niello
+# Niello - Advanced Hugo Dark Theme
 
-Niello is a modern and feature-rich Hugo dark theme, designed to elegantly showcase your content. With a responsive layout that ensures a perfect browsing experience on any device, it also comes with built-in support for Google Analytics, AdSense ads, Disqus, content sharing, and search functionality, helping you effortlessly manage and enhance your online presence. Whether you're running a blog or a website, Niello offers a professional and efficient platform to elevate your online reach.
+---
 
-Note: The master branch is unstable; please use tagged versions for a stable release.
+Niello is a modern and feature-rich Hugo theme, designed to elegantly showcase your content with a sleek dark aesthetic. With its responsive design, Niello adapts perfectly to all screen sizes for a smooth browsing experience. The theme comes equipped with Google Analytics, AdSense support, Disqus comments, social sharing, and built-in search functionality, making it easy to manage and expand your online presence.
 
-### We are excited to announce the release of version 3.0, featuring significant improvements and new features (2024-09-05). 
+Note: Only releases based on tags are considered stable versions.
 
-Please note that 3.0.0 is a major update and may not be compatible with previous versions. 
+---
 
-An updated version of Hugo is also required. 
+## Key Features
+- **Dark Mode**: Offers a sleek dark theme for enhanced readability and visual appeal.
+- **Responsive Design**: Adapts seamlessly to any screen size for a smooth browsing experience.
+- **Multi-language Support (i18n)**: Ready for global audiences with built-in internationalization.
+- **Content Search**: Easily locate articles with integrated search functionality.
+- **Automatic Image Extraction**: Automatically pulls images from articles for a richer presentation.
+- **Monetization**:
+  - **Google AdSense**: Supports ads for easy site monetization.
+  - **Google Analytics**: Track site performance and user engagement.
 
-We recommend backing up your site before updating.
+- **Enhanced Styling**:
+  - **Tailwind CSS**: Powered by Tailwind for fast and flexible styling.
+  - **Syntax Highlighting**: Provides clear code display for technical content.
 
-# Support Features
+- **Organized Archives**: Displays past posts by date, making content easier to navigate. 
 
-Dark Mode
+--- 
 
-Responsive
-
-Multiple Languages - i18n
-
-Content Search
-
-Automatically extract images from an article
-
-Google Adsense
-
-Google Analytics
-
-Tailwind CSS
-
-Syntax Highlight
-
-Archives
-
-
-# Screenshot
+## Screenshot
 ![Theme Screenshot](https://raw.githubusercontent.com/guangmean/Niello/master/images/theme_sc_home.png)
 
-# Installation
+## Installation
 
 To install the Niello theme, run the following command in the root directory of your Hugo site:
 
@@ -46,17 +37,14 @@ To install the Niello theme, run the following command in the root directory of 
 git clone https://github.com/guangmean/Niello.git themes/Niello
 ```
 
-# Configuration
+## Configuration
 
 Below is an example of the hugo.toml file(previously config.toml) for your site:
 
 ```toml
-defaultContentLanguage = "en"
-languageCode = "en-us"
-defaultContentLanguageInSubdir = true
 baseURL = "https://www.angularcorp.com/" # Must end with splash
-languageCode = "en-us"
-title = "{CodeTrace} - Discover Issues, Share Solutions."
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 disqusShortname = "yourDisqusShortname" // Add third-party comments system
 
 staticDir = ["static", "themes/Niello/static"]
@@ -110,9 +98,7 @@ theme = "Niello"
 			weight = 4
         
 [params]
-keywords = ""   //SEO keywords
-description = ""    //Site description
-copyright = "&#xA9; 2019 - 2022 by guangmean. All Rights Reserved."
+copyright = "&#xA9; 2019 - 2024 by guangmean. All Rights Reserved."
 google_ad_client = "ca-pub-******"  //Optional, replace ca-pub-****** with your content
 ga4 = "G-******" //Optional, replace G-****** with your Google Analytics GA4
 sharethis = ""  //Optional, Add hou ShareThis appid here
@@ -122,7 +108,32 @@ sharethis = ""  //Optional, Add hou ShareThis appid here
     
 ```
 
-# Customizing the Theme
+## Overriding Theme i18n Keys
+
+If you need to customize certain translation keys without modifying theme files, you can override the theme's i18n keys at the site level. Simply create an `i18n` folder in your site’s root directory and add the keys you want to override there.
+
+To override `sitename`, `siteslogan`, `siteseokeywords` and `siteseodescription` from the theme’s i18n file, follow these steps:
+
+1. In your site’s root directory, create an `i18n` folder if it doesn’t already exist.
+2. Inside the `i18n` folder, create the appropriate language file (e.g., `en.toml`).
+3. Add the following content to override the theme's i18n keys:
+
+   ```toml
+   # File path: i18n/en.toml
+   [sitename]
+   other = "Site Name"
+
+   [siteslogan]
+   other = "Site Slogan"
+
+   [siteseokeywords]
+   other = "Site Home SEO Keywords"
+
+   [siteseodescription]
+   other = "Site Home SEO Description"
+```
+
+## Customizing the Theme by Editing Source Code
 
 If you plan to modify this theme, note that it is built with TailwindCSS. Before making changes, ensure you initialize TailwindCSS in your project and follow the setup instructions to properly configure your development environment.
 
@@ -135,11 +146,11 @@ npm install -D tailwindcss
 npx tailwindcss init # This will create the tailwind.config.js which already included in Niello
 ```
 
-# Google Adsense & Google Analytics 4 (GA4)
+## Google Adsense & Google Analytics 4 (GA4)
 
 Niello supports Google AdSense by configuring the googleadclient parameter in the [params] block and Google Analytics 4 (GA4) by setting the ga parameter in the hugo.toml file(previously config.toml), as shown above.
 
-# Search
+## Search
 
 To enable the search functionality, you need to configure JSON output in the hugo.toml file by adding the following:
 
@@ -148,7 +159,7 @@ To enable the search functionality, you need to configure JSON output in the hug
   home = ["HTML", "JSON"]
 ```
 
-# Archives(Options)
+## Archives(Options)
 
 To enable the archives functionality, you need to manually add an archives.md file to the content root directory:
 
@@ -179,15 +190,15 @@ layout = "archives"
 
 ```
 
-# ShareThis
+## ShareThis
 
 Niello supports sharing your content to other platforms via [ShareThis](https://sharethis.com).
 
-# Live Demo
+## Live Demo
 
 A full demo is available here:	[https://www.angularcorp.com](https://www.angularcorp.com) 
 
-# Buy a Coffee for Me
+## Buy a Coffee for Me
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I1NFXI2)
 
