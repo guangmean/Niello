@@ -1,17 +1,14 @@
-[home]
-other = "Home"
-
-[next]
-other = "Next >>"
-
-[previous]
-other = "<< Previous"
-
 [sitename]
 other = "Niello - Hugo Theme"
 
-[slogan]
+[siteslogan]
 other = "Your site slogan."
+
+[siteseokeywords]
+other = "SEO keywords"
+
+[siteseodescription]
+other = "SEO description"
 
 [search]
 other = "Search"
@@ -27,6 +24,15 @@ other = "Please enter a word or phrase above to search."
 
 [nomatch]
 other = "No matches found"
+
+[home]
+other = "Home"
+
+[next]
+other = "Next >>"
+
+[previous]
+other = "<< Previous"
 
 [recommendpost]
 other = "Recommend Posts"

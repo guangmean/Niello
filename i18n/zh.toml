@@ -1,19 +1,14 @@
-[home]
-other = "首页"
-
-[next]
-other = "下一页 >>"
-
-[previous]
-other = "<< 上一页"
-
-
-
 [sitename]
 other = "Niello - Hugo Theme 模版"
 
-[slogan]
+[siteslogan]
 other = "您的站点宣传语。"
+
+[siteseokeywords]
+other = "SEO keywords"
+
+[siteseodescription]
+other = "SEO description"
 
 [search]
 other = "搜索"
@@ -29,6 +24,15 @@ other = "请输入搜索关键词!"
 
 [nomatch]
 other = "未找到相关内容!"
+
+[home]
+other = "首页"
+
+[next]
+other = "下一页 >>"
+
+[previous]
+other = "<< 上一页"
 
 [recommendpost]
 other = "推荐文章"

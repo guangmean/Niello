@@ -3,13 +3,18 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
     {{ partial "title.html" . }}
-    {{ if eq .IsHome true }}
-    <meta name="keywords" content="{{- .Site.Params.keywords -}}">
-    <meta name="description" content="{{- .Site.Params.description -}}">
-    {{ else }}
-    <meta name="keywords" content="{{ with .Keywords }} {{- delimit . " , " -}} {{ end }}">
-    <meta name="description" content="{{ with .Description }} {{- . -}} {{ end }}">
+    {{ $keywords := i18n "siteseokeywords" }}
+    {{ $description := i18n "siteseodescription" }}
+    {{ if not .IsHome }}
+    {{ with .Keywords }}
+    {{ $keywords = delimit . " , " }}
     {{ end }}
+    {{ with .Description }}
+    {{ $description = . }}
+    {{ end }}
+    {{ end }}
+    <meta name="keywords" content="{{ $keywords }}">
+    <meta name="description" content="{{ $description }}">
     <link rel="canonical" href="{{ .Page.Permalink }}" />
     <link rel="icon" href="/favicon.ico?v={{ now.Unix }}" type="image/x-icon">
     {{ partialCached "head/css.html" . }}
