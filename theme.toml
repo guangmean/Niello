@@ -7,8 +7,8 @@ licenselink = "https://github.com/guangmean/Niello/blob/master/LICENSE"
 description = "A clean and elegant dark Theme for Hugo"
 homepage = "https://github.com/guangmean/Niello"
 demosite = "https://www.angularcorp.com"
-tags = ["dark", "blog", "responsive", "modern", "minimal", "personal", "clean", "classic"]
-features = ["google analytics", "google adsense", "search", "highlight", "i18n", "multiple language", "social media", "disqus"]
+tags = ["dark", "blog", "responsive", "modern", "minimal", "personal", "clean", "classic", "dark mode"]
+features = ["google analytics", "google adsense", "search", "highlight", "i18n", "multiple language", "social media", "disqus", "tailwind"]
 min_version = "0.100.0"
 
 [author]
