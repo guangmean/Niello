@@ -111,6 +111,10 @@
         @apply flex flex-col space-y-8
     }
 
+    .list-container-rows {
+        @apply columns-2 lg:columns-4 space-y-5
+    }
+
     .single-article {
         @apply flex flex-col
     }

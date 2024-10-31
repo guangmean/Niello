@@ -3,9 +3,17 @@
 {{ $image := "" }}
 {{ $alt := "" }}
 
-<!-- Taxonomy image, eg: categories or tags -->
+<!-- Taxonomy image, eg: categories -->
 {{ if eq $page.Kind "term" }}
 {{ $pages := where site.RegularPages "Params.categories" "intersect" (slice .context.Title) }}
+{{ with first 1 $pages }}
+{{ $page = index . 0 }}
+{{ end }}
+{{ end }}
+
+<!-- Taxonomy image, eg: tags -->
+{{ if eq $page.Kind "term" }}
+{{ $pages := where site.RegularPages "Params.tags" "intersect" (slice .context.Title) }}
 {{ with first 1 $pages }}
 {{ $page = index . 0 }}
 {{ end }}

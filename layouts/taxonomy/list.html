@@ -1,12 +1,22 @@
 {{ define "main" }}
 
 <!-- Content -->
-<div class="list-container">
+{{ $page := 10 }}
+{{ if eq .Kind "taxonomy" }}
+{{ $page = 20 }}
+{{ end }}
 
-    {{ range $index, $element := (.Paginator 10).Pages }}
+<div class="{{ if eq .Kind "taxonomy" }}list-container-rows{{ else }}list-container{{ end }}">
+    {{ range $index, $element := (.Paginator $page).Pages }}
 
+    {{ if eq .Kind "term" }}
+    <!-- Taxonomy Preview -->
+    {{ partial "masonry.html" (dict "context" . "index" $index) }}
+    {{ else }}
     <!-- Article Preview -->
     {{ partial "preview.html" (dict "context" . "index" $index) }}
+    {{ end }}
+
 
     {{ end }}
     <!-- More posts... -->
