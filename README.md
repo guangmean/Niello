@@ -222,6 +222,15 @@ A full demo is available here:	[https://www.angularcorp.com](https://www.angular
 
 ---
 
+## How to run the exampleSite
+
+Run the following command in your site root directory to launch the example site
+
+```shell
+hugo server --source themes/Niello/exampleSite --themesDir ../.. --theme Niello
+```
+---
+
 ## Buy a Coffee for Me
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I1NFXI2)
