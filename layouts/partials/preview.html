@@ -22,6 +22,6 @@
                 {{ .context.ReadingTime }} minute read</time>
             {{ end }}
         </div>
-        <div class="line-clamp-3 text-xl font-light leading-8 lg:leading-9 text-gray-500">{{ .context.Summary }}</div>
+        <div class="line-clamp-3 text-xl font-light leading-8 lg:leading-9 text-gray-500">{{ .context.Summary | plainify }}</div>
     </div>
 </article>

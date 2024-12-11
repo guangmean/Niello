@@ -28,7 +28,7 @@
             .Permalink }}</a>
     </div>
     <div class="my-10 py-5 border-t border-dashed border-t-white/10 text-xl text-gray-600">
-        {{ if gt (len .Site.DisqusShortname) 2 }}
+        {{ if gt (len .Site.Config.Services.Disqus.Shortname) 2 }}
         {{ template "_internal/disqus.html" . }}
         {{ end }}
     </div>

@@ -35,6 +35,16 @@
 {{ end }}
 
 {{ if eq $image "" }}
+<!-- Local image eg: ./abc.jpeg or /abc.png -->
+{{ $regex := `img[\s]+src="([^"]+)"[\s]+alt="([^"]+)"` }}
+{{ $matches := findRESubmatch $regex $page.Content }}
+{{ range $matches }}
+{{ $image = index . 1 | safeURL }}
+{{ $alt = index . 2 | safeHTML }}
+{{ end }}
+{{ end }}
+
+{{ if eq $image "" }}
 <!-- Inline image eg: data:image/jpeg;base64,... -->
 {{ $regex := `(data:image\/[a-z]+;base64,[^\"]+)` }}
 {{ $images := findRE $regex $page.Content }}
