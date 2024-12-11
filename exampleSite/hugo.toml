@@ -1,0 +1,53 @@
+baseURL = "https://www.example.com/"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+disqusShortname = "guangmean"   # Optional
+
+staticDir = ["static", "themes/Niello/static"]
+
+theme = "Niello"
+
+[languages]
+	[languages.en]
+		languageCode = "en-us"
+		LanguageName = "🇺🇸EN"
+		contentDir = "content/en"
+		weight = 1
+		[[languages.en.menus.main]]
+			name = 'exampleHome'
+			pageRef = '/'
+			weight = 1
+		[[languages.en.menus.main]]
+			name = 'exampleCategories'
+			pageRef = '/categories'
+			weight = 2
+		[[languages.en.menus.main]]
+			name = 'exampleTags'
+			pageRef = '/tags'
+			weight = 3
+	[languages.zh]
+        languageCode = "zh-cn"
+        LanguageName = "🇨🇳CN"
+        contentDir = "content/zh"
+        weight = 2
+		[[languages.zh.menus.main]]
+			name = 'example首页'
+			pageRef = '/'
+			weight = 1
+		[[languages.zh.menus.main]]
+			name = 'example文章分类'
+			pageRef = '/categories'
+			weight = 2
+		[[languages.zh.menus.main]]
+			name = 'example标签'
+			pageRef = '/tags'
+			weight = 3
+
+[params]
+copyright = "&#xA9; 2019 ~ 2024 by www.example.com All Rights Reserved."
+google_ad_client = "******"
+ga4 = "******"
+sharethis = "******"
+
+[outputs]
+  home = ["HTML", "JSON"]   # Optional - JSON just for search
