@@ -1,6 +1,10 @@
 <div class="relative lg:mx-0 w-full h-96 bg-gray-800 border border-gray-800 rounded-2xl overflow-hidden">
     <div id="swiper" class="flex flex-row transition-transform duration-300 ease-in-out">
-        {{ $pages := where site.RegularPages "Params.categories" "intersect" .Site.Params.bannershowcase.categories | first .Site.Params.bannershowcase.limit }}
+
+        {{ $bannershowcasecategories := default (slice "AI") .Site.Params.bannershowcase.categories }}
+        {{ $limit := default 2 .Site.Params.bannershowcase.limit }}
+
+        {{ $pages := where site.RegularPages "Params.categories" "intersect" $bannershowcasecategories | first $limit }}
         {{ if gt (len $pages) 0 }}
         {{ $leading := first 1 $pages }}
         {{ $tailing := last 1 $pages }}
