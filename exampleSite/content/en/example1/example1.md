@@ -25,3 +25,7 @@ Content should be placed within the language directory, for example, English.
 |---content/zh
 |---content/de
 ```
+
+## Example 1 Image
+
+![Example1 Image](/example/example1.png)

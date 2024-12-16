@@ -44,9 +44,16 @@ theme = "Niello"
 			weight = 3
 
 [params]
+[params.google]
+	google_ad_client = "******"
+	ga4 = "******"
+[params.bannershowcase]
+	categories = ["Example 1 - EN"]
+	limit = 2
+[params.email]
+	contact = "example@gmail.com"
+
 copyright = "&#xA9; 2019 ~ 2024 by www.example.com All Rights Reserved."
-google_ad_client = "******"
-ga4 = "******"
 sharethis = "******"
 
 [outputs]
