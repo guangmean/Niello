@@ -139,6 +139,6 @@
         {{ i18n "contact"}}
     </div>
     <div class="flex flex-row gap-2">
-        Email：angularcorp@outlook.com
+        Email：{{ .Site.Params.email.contact | safeHTML }}
     </div>
 </aside>

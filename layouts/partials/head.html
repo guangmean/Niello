@@ -21,7 +21,7 @@
     {{ partialCached "head/js.html" . }}
 
     <!-- Google Adsense -->
-    {{ if .Site.Params.google_ad_client }}
+    {{ if .Site.Params.google.google_ad_client }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
@@ -32,7 +32,7 @@
     {{ end }}
 
     <!-- Google GA4 -->
-    {{ if .Site.Params.ga4 }}
+    {{ if .Site.Params.google.ga4 }}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga4 }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
