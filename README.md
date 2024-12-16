@@ -178,10 +178,12 @@ To enable the search functionality, you need to configure JSON output in the hug
 And a search folder with an _index.md file under the content directory is required, for example: content/en/search/_index.md
 
 +++
-title = "Search Results"
-date = 2024-12-13T15:00:00+08:00
-draft = false
-layout = "search"
+
+title = "Search Results"  
+date = 2024-12-13T15:00:00+08:00  
+draft = false  
+layout = "search"  
+
 +++
 
 With this setup, the search URL will be /en/search/?q=keywords
