@@ -23,6 +23,7 @@ Note: Only releases based on tags are considered stable versions.
   - **Syntax Highlighting**: Provides clear code display for technical content.
 
 - **Organized Archives**: Displays past posts by date, making content easier to navigate. 
+- **Ignore Some Categories**: Hide the posts that you don’t want to show. 
 
 --- 
 
@@ -222,6 +223,16 @@ layout = "archives"
 ```
 
 ---
+
+## Ignore Posts(Options)
+
+Hide the posts that you don’t want to show in list and categories.
+
+```shell
+[params]
+[params.ignore]
+	categories = ["policy", "terms", "cookie", "archives"]
+```
 
 ## ShareThis
 
