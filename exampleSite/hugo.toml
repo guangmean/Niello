@@ -52,6 +52,8 @@ theme = "Niello"
 	limit = 2
 [params.email]
 	contact = "example@gmail.com"
+[params.ignore]
+	categories = ["policy", "terms", "cookie", "archives"]
 
 copyright = "&#xA9; 2019 ~ 2024 by www.example.com All Rights Reserved."
 sharethis = "******"

@@ -72,5 +72,17 @@
                 hreflang="en-us"
                 href="http://localhost:1313/en/tags/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/en/categories/archives/</loc>
+    <lastmod>2024-10-25T09:16:03+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/archives/</loc>
+    <lastmod>2024-10-25T09:16:03+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/categories/cookie/</loc>
+    <lastmod>2024-10-25T09:16:03+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/cookie/</loc>
+    <lastmod>2024-10-25T09:16:03+08:00</lastmod>
   </url>
 </urlset>

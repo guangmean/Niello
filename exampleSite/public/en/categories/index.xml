@@ -15,5 +15,19 @@
       <guid>http://localhost:1313/en/categories/example-1---en/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Archives</title>
+      <link>http://localhost:1313/en/categories/archives/</link>
+      <pubDate>Fri, 25 Oct 2024 09:16:03 +0800</pubDate>
+      <guid>http://localhost:1313/en/categories/archives/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cookie</title>
+      <link>http://localhost:1313/en/categories/cookie/</link>
+      <pubDate>Fri, 25 Oct 2024 09:16:03 +0800</pubDate>
+      <guid>http://localhost:1313/en/categories/cookie/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
