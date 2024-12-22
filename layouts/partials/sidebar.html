@@ -27,8 +27,8 @@
     </div>
 
     <ul class="text-lg">
-        {{ with $posts := .Site.RegularPages.ByPublishDate.Reverse.Limit 5 }}
-        {{ range $posts }}
+        {{ range .Site.RegularPages.ByPublishDate.Reverse.Limit 5 }}
+        {{ if not (intersect .Params.categories site.Params.ignore.categories) }}
         <li class="leading-10 line-clamp-1 mb-3 font-light border-b border-b-white/10 border-dashed">
             <a href="{{ .RelPermalink }}" class="py-5 hover:text-gray-300">{{ .LinkTitle }}</a>
         </li>
@@ -54,10 +54,12 @@
         {{ $sortedCategories := sort $categories ".Count" "desc" }}
         {{ range $index, $category := $sortedCategories }}
         {{ if lt $index 10 }}
+        {{ if not (or (in site.Params.ignore.categories .Page.Title) (in site.Params.ignore.categories (lower .Page.Title))) }}
         <li class="mb-1 border-b border-b-gray-900 border-dashed font-light">
             <a href="{{ .Page.RelPermalink }}" class="hover:text-gray-300">{{ .Page.Title }} <span
                     class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">{{ .Count }}</span></a>
         </li>
+        {{ end }}
         {{ end }}
         {{ end }}
         {{ else }}

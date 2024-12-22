@@ -22,7 +22,7 @@
     {{ range $index, $element := (.Paginator 10).Pages }}
 
     <!-- Post Preview -->
-    {{ if not (in .Params.categories "archives") }}
+    {{ if not (intersect .Params.categories site.Params.ignore.categories) }}
     {{ partial "preview.html" (dict "context" . "index" $index) }}
     {{ end }}
 
