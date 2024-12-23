@@ -226,12 +226,31 @@ layout = "archives"
 
 ## Ignore Posts(Options)
 
-Hide the posts that you don’t want to show in list and categories.
+To exclude posts like cookie.md, privacy.md, and terms.md, configure the site parameters as follows:
 
 ```shell
 [params]
 [params.ignore]
-	categories = ["policy", "terms", "cookie", "archives"]
+	categories = ["privacy", "terms", "archives", "cookie"]
+```
+The content structure is as follows, and posts to be ignored must have categories specified in their front matter.
+
+```shell	
+|---content/en
+			|---cookie.md
+			|---privacy.md
+			|---terms.md
+			|
+			|---/example1
+					|---example1-1.md
+					|---example1-2.md
+			|---/example2
+					|---example2-1.md
+					|---example2-2.md
+					|---example2-3.md
+|---content/fr
+|---content/zh
+|---content/de
 ```
 
 ## ShareThis
