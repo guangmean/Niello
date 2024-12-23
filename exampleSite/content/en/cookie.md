@@ -7,4 +7,4 @@ categories = ["cookie"]
 
 Example cookies content from content/en/cookie.md file.
 
-[Privacy Policy Link](/privacy/) and [Cookie Policy Link](/cookies/)
+[Privacy](/privacy/) and [Terms](/terms/)
