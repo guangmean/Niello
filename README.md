@@ -103,9 +103,18 @@ theme = "Niello"
 			weight = 4
         
 [params]
-copyright = "&#xA9; 2019 - 2024 by guangmean. All Rights Reserved."
-google_ad_client = "ca-pub-******"  //Optional, replace ca-pub-****** with your content
-ga4 = "G-******" //Optional, replace G-****** with your Google Analytics GA4
+[params.google]
+	google_ad_client = "ca-pub-******"  //Optional, replace ca-pub-****** with your content
+	ga4 = "G-******" //Optional, replace G-****** with your Google Analytics GA4
+[params.bannershowcase]
+	categories = ["AI"]
+	limit = 2
+[params.email]
+	contact = "angularcorp@outlook.com"
+[params.ignore]
+	categories = ["privacy", "terms", "archives", "cookie"]
+
+copyright = "&#xA9; 2019 ~ 2024 by guangmean. All Rights Reserved."
 sharethis = ""  //Optional, Add hou ShareThis appid here
 
 [outputs]
