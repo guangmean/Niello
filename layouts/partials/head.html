@@ -25,7 +25,7 @@
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "{{ .Site.Params.google_ad_client }}",
+            google_ad_client: "{{ .Site.Params.google.google_ad_client }}",
             enable_page_level_ads: true
         });
     </script>
@@ -39,7 +39,7 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', '{{ .Site.Params.ga4 }}');
+        gtag('config', '{{ .Site.Params.google.ga4 }}');
     </script>
     {{ end }}
 
