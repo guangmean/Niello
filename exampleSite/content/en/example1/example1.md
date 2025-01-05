@@ -58,3 +58,18 @@ The content structure is as follows, and posts to be ignored must have categorie
 ## Example 1 Image
 
 ![Example1 Image](/example/example1.png)
+
+![Example1 Image](/example/example2.jpg)
+
+<img src="https://img.freepik.com/free-photo/realistic-deer-with-nature-background_23-2150364116.jpg" alt="Deer" />
+
+<img src="https://img.freepik.com/free-photo/realistic-deer-with-nature-background_23-2150364117.jpg" alt="Deer" />
+
+## Example 1 List Sytle
+
+- Item 1
+- Item 2
+  - Sub Item 2.1
+  - Sub Item 2.2
+* Item 3
++ Item 4

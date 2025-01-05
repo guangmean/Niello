@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on </title>
+    <link>http://localhost:1313/en/categories/</link>
+    <description>Recent content in Categories on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Dec 2024 08:16:03 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy</title>
+      <link>http://localhost:1313/en/categories/privacy/</link>
+      <pubDate>Mon, 23 Dec 2024 08:16:03 +0800</pubDate>
+      <guid>http://localhost:1313/en/categories/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terms</title>
+      <link>http://localhost:1313/en/categories/terms/</link>
+      <pubDate>Mon, 23 Dec 2024 08:16:03 +0800</pubDate>
+      <guid>http://localhost:1313/en/categories/terms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Example 1 - EN</title>
+      <link>http://localhost:1313/en/categories/example-1---en/</link>
+      <pubDate>Wed, 11 Dec 2024 09:34:12 +0800</pubDate>
+      <guid>http://localhost:1313/en/categories/example-1---en/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Archives</title>
+      <link>http://localhost:1313/en/categories/archives/</link>
+      <pubDate>Fri, 25 Oct 2024 09:16:03 +0800</pubDate>
+      <guid>http://localhost:1313/en/categories/archives/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cookie</title>
+      <link>http://localhost:1313/en/categories/cookie/</link>
+      <pubDate>Fri, 25 Oct 2024 09:16:03 +0800</pubDate>
+      <guid>http://localhost:1313/en/categories/cookie/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
