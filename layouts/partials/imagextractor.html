@@ -28,9 +28,9 @@
 <!-- Local image eg: ./abc.jpeg or /abc.png -->
 {{ $regex := `img[\s]+alt="([^"]+)"[\s]+src="([^"]+)"` }}
 {{ $matches := findRESubmatch $regex $page.Content }}
-{{ range $matches }}
-{{ $image = index . 2 | safeURL }}
-{{ $alt = index . 1 | safeHTML }}
+{{ with index $matches 0 }}
+  {{ $image = index . 2 | safeURL }}
+  {{ $alt = index . 1 | safeHTML }}
 {{ end }}
 {{ end }}
 
@@ -38,9 +38,9 @@
 <!-- Local image eg: ./abc.jpeg or /abc.png -->
 {{ $regex := `img[\s]+src="([^"]+)"[\s]+alt="([^"]+)"` }}
 {{ $matches := findRESubmatch $regex $page.Content }}
-{{ range $matches }}
-{{ $image = index . 1 | safeURL }}
-{{ $alt = index . 2 | safeHTML }}
+{{ with index $matches 0 }}
+  {{ $image = index . 1 | safeURL }}
+  {{ $alt = index . 2 | safeHTML }}
 {{ end }}
 {{ end }}
 
