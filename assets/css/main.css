@@ -40,14 +40,20 @@
         padding: 0.5rem 0;
     }
 
-    article ul, ol {
-        list-style: normal;
+    article ul {
+        list-style: disc;
         margin: 1.1rem 0;
         padding-left: 1.5rem;
     }
 
-    ol {
-        list-style: normal;
+    article ul ul {
+        list-style: circle;
+        margin: 1.1rem 0;
+        padding-left: 1.5rem;
+    }
+
+    article ol {
+        list-style: decimal;
         margin: 1.1rem 0;
         padding-left: 1.5rem;
     }
