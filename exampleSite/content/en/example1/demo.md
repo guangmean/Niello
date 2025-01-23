@@ -1,12 +1,14 @@
 +++
-title = 'Example1 Title - EN'
-date = 2024-12-11T09:34:12+08:00
-categories = ["Example 1 - EN"]
-tags = ["eg1 - en"]
+title = 'Niello Theme'
+date = 2025-01-08T09:32:11+08:00
+categories = ["Development", "Design"]
+tags = ["Go", "Mac"]
 keywords = ["SEO", "Keywords", "Here"]
 description = "SEO Description Here"
 draft = false
 +++
+
+Niello is a modern and feature-rich Hugo theme, designed to elegantly showcase your content with a sleek dark aesthetic. With its responsive design, Niello adapts perfectly to all screen sizes for a smooth browsing experience. The theme comes equipped with Google Analytics, AdSense support, Disqus comments, social sharing, and built-in search functionality, making it easy to manage and expand your online presence.
 
 ## Example 1 Content - EN
 
@@ -57,7 +59,7 @@ The content structure is as follows, and posts to be ignored must have categorie
 
 ## Example 1 Image
 
-![Example1 Image](/example/example1.png)
+
 
 ![Example1 Image](/example/example2.jpg)
 

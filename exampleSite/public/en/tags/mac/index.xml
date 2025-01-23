@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on </title>
+    <link>http://localhost:1313/en/tags/mac/</link>
+    <description>Recent content in Mac on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jan 2025 09:32:11 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Niello Theme</title>
+      <link>http://localhost:1313/en/example1/demo/</link>
+      <pubDate>Wed, 08 Jan 2025 09:32:11 +0800</pubDate>
+      <guid>http://localhost:1313/en/example1/demo/</guid>
+      <description>&lt;p&gt;Niello is a modern and feature-rich Hugo theme, designed to elegantly showcase your content with a sleek dark aesthetic. With its responsive design, Niello adapts perfectly to all screen sizes for a smooth browsing experience. The theme comes equipped with Google Analytics, AdSense support, Disqus comments, social sharing, and built-in search functionality, making it easy to manage and expand your online presence.&lt;/p&gt;&#xA;&lt;h2 id=&#34;example-1-content---en&#34;&gt;Example 1 Content - EN&lt;/h2&gt;&#xA;&lt;p&gt;Content should be placed within the language directory, for example, English.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

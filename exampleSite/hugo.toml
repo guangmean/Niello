@@ -14,15 +14,15 @@ theme = "Niello"
 		contentDir = "content/en"
 		weight = 1
 		[[languages.en.menus.main]]
-			name = 'exampleHome'
+			name = 'Home'
 			pageRef = '/'
 			weight = 1
 		[[languages.en.menus.main]]
-			name = 'exampleCategories'
+			name = 'Categories'
 			pageRef = '/categories'
 			weight = 2
 		[[languages.en.menus.main]]
-			name = 'exampleTags'
+			name = 'Tags'
 			pageRef = '/tags'
 			weight = 3
 	[languages.zh]
@@ -48,14 +48,14 @@ theme = "Niello"
 	google_ad_client = "******"
 	ga4 = "******"
 [params.bannershowcase]
-	categories = ["Example 1 - EN"]
+	categories = ["Design"]
 	limit = 2
 [params.email]
-	contact = "example@gmail.com"
+	contact = "niello@gmail.com"
 [params.ignore]
 	categories = ["privacy", "terms", "archives", "cookie"]
 
-copyright = "&#xA9; 2019 ~ 2024 by www.example.com All Rights Reserved."
+copyright = "&#xA9; 2019 ~ 2025 by www.angularcorp.com All Rights Reserved."
 sharethis = "******"
 
 [outputs]

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-us"
+    dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+    <title>
+    
+    Niello Theme - Niello Theme
+    
+</title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta name="keywords" content="SEO , Keywords , Here">
+    <meta name="description" content="SEO Description Here">
+    <link rel="canonical" href="http://localhost:1313/en/example1/demo/" />
+    <link rel="icon" href="/favicon.ico?v=1736300723" type="image/x-icon">
+    
+<link rel="stylesheet" href="/css/app.css">
+    
+<script src="/js/main.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
+
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=%2a%2a%2a%2a%2a%2a" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '******');
+    </script>
+    
+
+    
+    
+</head><body>
+    <div class="
+        mx-auto max-w-[calc(120rem)]
+        min-h-screen
+        2xl:px-[calc(16rem)]
+        xl:px-24
+        md:px-8
+        px-4
+    ">
+
+        <div x-data="{ openMenu: false }" class="relative">
+    <nav class="flex flex-1 flex-col lg:flex-row items-center justify-between">
+        <a href="/">
+            <img src="/image/logo.webp" alt="site logo"
+                class="w-16 h-16 my-5 p-1 bg-gray-100 rounded-full cursor-pointer hover:scale-110" />
+        </a>
+        <div class="hidden lg:block" :class="{'hidden': !openMenu}">
+            
+
+
+
+
+
+
+<ul
+    class="flex flex-col lg:flex-row justify-end mt-2 sm:mt-5 mb-5 pb-2 font-light text-xl lg:text-2xl gap-5 lg:gap-1 text-center">
+    
+
+
+
+
+
+
+
+
+<li>
+    <a    class="px-5 lg:px-10 py-3 font-light hover:border-b-2 hover:border-red-500"     href="/en/"  >Home</a>
+    
+</li>
+
+
+
+
+
+
+
+<li>
+    <a    class="px-5 lg:px-10 py-3 font-light hover:border-b-2 hover:border-red-500"     href="/en/categories/"  >Categories</a>
+    
+</li>
+
+
+
+
+
+
+
+<li>
+    <a    class="px-5 lg:px-10 py-3 font-light hover:border-b-2 hover:border-red-500"     href="/en/tags/"  >Tags</a>
+    
+</li>
+
+
+</ul>
+
+
+
+
+        </div>
+    </nav>
+    <div class="absolute top-8 right-5 flex items-center lg:hidden">
+        
+        <button @click="openMenu = !openMenu" type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-800 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="openMenu">
+            
+            <svg x-show="!openMenu" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            
+            <svg x-show="openMenu" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+        <header class="flex flex-col w-full items-center justify-center text-white pt-8 pb-8">
+    <div class="w-full">
+        <div class="flex flex-1 flex-row justify-between">
+            <h2 class="w-full text-center text-3xl sm:text-5xl font-crimson font-bold tracking-tight text-gray-300">
+                <a href="http://localhost:1313/">Niello Theme</a>
+            </h2>
+        </div>
+        <p
+            class="w-full text-center pl-1 pb-4 sm:pt-3 sm:pb-0 font-crimson font-normal text-xl sm:text-2xl leading-8 text-gray-500">
+            Sleek Dark Mode, Responsive Design, Perfect on Any Device.</p>
+    </div>
+
+    <div class="relative w-9/12 lg:w-1/2 h-12 my-5">
+        <form action="/en/search" method="get">
+            <input
+                class="bg-gray-800 placeholder:italic placeholder:text-gray-600 w-full h-12 rounded-full mt-1 pl-5 pr-5 border border-gray-800 text-gray-100"
+                placeholder='Input Keywords...' type="text" name="q" id="search-query" />
+
+            <button
+                class="absolute inset-y-2 right-1 w-28 h-10 font-light bg-gray-900 hover:bg-red-500 text-gray-500 hover:text-gray-100 rounded-full cursor-pointer"
+                type="submit">Search</button>
+        </form>
+    </div>
+
+    
+    <div class="w-full flex flex-row justify-start text-gray-500 text-lg px-1 border-l-4 border-l-red-500">
+        <ul class="flex flex-row gap-x-2">
+            <li class="">
+                <a href="/" class="hover:text-gray-100">Home</a>
+            </li>
+            
+            <li>
+                &gt;&nbsp;&nbsp;<a href="/en/example1/demo/" class="hover:text-gray-100">Niello Theme</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="w-full h-2 border-b border-b-gray-600/50 border-dashed font-light text-gray-300">
+    </div>
+    
+
+</header>
+
+        <div class="
+            flex flex-col overflow-hidden
+            xl:px-0
+            lg:flex-row lg:space-x-8
+        ">
+            <main class="w-full overflow-hidden">
+                
+
+<article class="single-article">
+    
+    <div class="group relative">
+        <h1 class="text-3xl font-medium leading-10 text-gray-400 hover:text-gray-100">
+            <a href="/en/example1/demo/">
+                Niello Theme
+            </a>
+        </h1>
+        <time datetime="2025-03-16" class="flex items-center py-2 text-xl text-gray-600">
+            2025-01-08 09:32
+            &nbsp;&nbsp;|&nbsp;&nbsp;1 minute read
+        </time>
+
+        <div
+            class="mt-1 lg:pb-10 px-2 text-2xl leading-10 font-thin text-gray-500 overflow-hidden break-words article-body">
+            <p>Niello is a modern and feature-rich Hugo theme, designed to elegantly showcase your content with a sleek dark aesthetic. With its responsive design, Niello adapts perfectly to all screen sizes for a smooth browsing experience. The theme comes equipped with Google Analytics, AdSense support, Disqus comments, social sharing, and built-in search functionality, making it easy to manage and expand your online presence.</p>
+<h2 id="example-1-content---en">Example 1 Content - EN</h2>
+<p>Content should be placed within the language directory, for example, English.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>|---content/en
+</span></span><span style="display:flex;"><span>			|---/example1
+</span></span><span style="display:flex;"><span>					|---example1-1.md
+</span></span><span style="display:flex;"><span>					|---example1-2.md
+</span></span><span style="display:flex;"><span>			|---/example2
+</span></span><span style="display:flex;"><span>					|---example2-1.md
+</span></span><span style="display:flex;"><span>					|---example2-2.md
+</span></span><span style="display:flex;"><span>					|---example2-3.md
+</span></span><span style="display:flex;"><span>|---content/fr
+</span></span><span style="display:flex;"><span>|---content/zh
+</span></span><span style="display:flex;"><span>|---content/de
+</span></span></code></pre></div><h2 id="example-1-ignore-posts">Example 1 Ignore Posts</h2>
+<p>To exclude posts like cookie.md, privacy.md, and terms.md, configure the site parameters as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>params<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>params.ignore<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>	categories <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;privacy&#34;</span>, <span style="color:#e6db74">&#34;terms&#34;</span>, <span style="color:#e6db74">&#34;archives&#34;</span>, <span style="color:#e6db74">&#34;cookie&#34;</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>The content structure is as follows, and posts to be ignored must have categories specified in their front matter.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>|---content/en
+</span></span><span style="display:flex;"><span>			|---cookie.md
+</span></span><span style="display:flex;"><span>			|---privacy.md
+</span></span><span style="display:flex;"><span>			|---terms.md
+</span></span><span style="display:flex;"><span>			|
+</span></span><span style="display:flex;"><span>			|---/example1
+</span></span><span style="display:flex;"><span>					|---example1-1.md
+</span></span><span style="display:flex;"><span>					|---example1-2.md
+</span></span><span style="display:flex;"><span>			|---/example2
+</span></span><span style="display:flex;"><span>					|---example2-1.md
+</span></span><span style="display:flex;"><span>					|---example2-2.md
+</span></span><span style="display:flex;"><span>					|---example2-3.md
+</span></span><span style="display:flex;"><span>|---content/fr
+</span></span><span style="display:flex;"><span>|---content/zh
+</span></span><span style="display:flex;"><span>|---content/de
+</span></span></code></pre></div><h2 id="example-1-image">Example 1 Image</h2>
+<p><img alt="Example1 Image" src="/example/example2.jpg"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="example-1-list-sytle">Example 1 List Sytle</h2>
+<ul>
+<li>Item 1</li>
+<li>Item 2
+<ul>
+<li>Sub Item 2.1</li>
+<li>Sub Item 2.2</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Item 3</li>
+</ul>
+<ul>
+<li>Item 4</li>
+</ul>
+<ol>
+<li>Item 1
+<ol>
+<li>Item 1.1</li>
+<li>Item 1.2</li>
+</ol>
+</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ol>
+
+        </div>
+    </div>
+    <div class="text-gray-500 text-lg">
+        Page link:&nbsp;<a href="http://localhost:1313/en/example1/demo/"
+            class="border-b border-b-gray-500 hover:text-gray-400">http://localhost:1313/en/example1/demo/</a>
+    </div>
+    <div class="my-10 py-5 border-t border-dashed border-t-white/10 text-xl text-gray-600">
+        
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guangmean" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+    </div>
+</article>
+
+
+            </main>
+
+            <aside id="sidebar" class="aside-container">
+
+    
+    <div class="aside-section-title">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+        </svg>
+        About
+    </div>
+
+    <img src="/image/logo.webp?v=1736300723" class="w-80 self-center" alt="Logo" />
+
+    <p class="leading-8 text-center text-lg font-light mt-3">
+        
+    </p>
+
+    
+    <div class="aside-section-title">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+        </svg>
+        Latest Post
+    </div>
+
+    <ul class="text-lg">
+        
+        
+        <li class="leading-10 line-clamp-1 mb-3 font-light border-b border-b-white/10 border-dashed">
+            <a href="/en/example1/demo2/" class="py-5 hover:text-gray-300">Niello Theme</a>
+        </li>
+        
+        
+        
+        <li class="leading-10 line-clamp-1 mb-3 font-light border-b border-b-white/10 border-dashed">
+            <a href="/en/example1/demo/" class="py-5 hover:text-gray-300">Niello Theme</a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <div class="aside-section-title">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 0 1-1.125-1.125v-3.75ZM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-8.25ZM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 0 1-1.125-1.125v-2.25Z" />
+        </svg>
+        Hot Categories
+    </div>
+    <ul class="leading-10 text-lg">
+        
+        
+        
+        
+        
+        <li class="mb-1 border-b border-b-gray-900 border-dashed font-light">
+            <a href="/en/categories/design/" class="hover:text-gray-300">Design <span
+                    class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">2</span></a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="mb-1 border-b border-b-gray-900 border-dashed font-light">
+            <a href="/en/categories/development/" class="hover:text-gray-300">Development <span
+                    class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">2</span></a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    </ul>
+
+    
+    <div class="aside-section-title">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+        </svg>
+        Top Tags
+    </div>
+    <div class="flex flex-wrap gap-2 text-lg leading-8 pt-3 pl-1">
+        
+        
+        
+        
+        <a href="/en/tags/go/"><span
+                class="inline-block p-0 bg-gray-800 hover:bg-gray-900 border border-gray-800 text-gray-500 hover:text-gray-300 font-light mb-1 px-5 rounded-full hover:scale-105">Go&nbsp;&nbsp;2</span></a>
+        
+        
+        
+        <a href="/en/tags/mac/"><span
+                class="inline-block p-0 bg-gray-800 hover:bg-gray-900 border border-gray-800 text-gray-500 hover:text-gray-300 font-light mb-1 px-5 rounded-full hover:scale-105">Mac&nbsp;&nbsp;1</span></a>
+        
+        
+        
+        <a href="/en/tags/swift/"><span
+                class="inline-block p-0 bg-gray-800 hover:bg-gray-900 border border-gray-800 text-gray-500 hover:text-gray-300 font-light mb-1 px-5 rounded-full hover:scale-105">Swift&nbsp;&nbsp;1</span></a>
+        
+        
+        
+        
+    </div>
+
+    
+    <div class="aside-section-title">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+        </svg>
+        Archive Analytics
+    </div>
+    <ul class="leading-10 text-lg font-light">
+        
+        
+        
+        
+        
+        
+        <li class="mb-1 border-b border-b-white/10 border-dashed">
+            <a href="/en/archives">Oct, 2024<span
+                    class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">2</span></a>
+        </li>
+        
+        
+        
+        <li class="mb-1 border-b border-b-white/10 border-dashed">
+            <a href="/en/archives">Jan, 2025<span
+                    class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">2</span></a>
+        </li>
+        
+        
+        
+        <li class="mb-1 border-b border-b-white/10 border-dashed">
+            <a href="/en/archives">Dec, 2024<span
+                    class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">2</span></a>
+        </li>
+        
+        
+        
+    </ul>
+
+    
+    <div class="aside-section-title">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+        </svg>
+        Contact
+    </div>
+    <div class="flex flex-row gap-2">
+        Email：niello@gmail.com
+    </div>
+</aside>
+        </div>
+
+        <footer class="p-5 text-xl text-center mt-8 pt-8 pb-8 border-t border-gray-100/10">
+    <div class="text-gray-500">
+        
+        &#xA9; 2019 - 2023 by <a class="hover:text-gray-100" href="https://github.com/guangmean/Niello"
+            target="_blank">guangmean</a>. All Rights
+        Reserved.
+        
+
+        
+        | <a class="hover:text-gray-100" href=" /en ">🇺🇸EN</a>
+        
+        | <a class="hover:text-gray-100" href=" /zh ">🇨🇳CN</a>
+        
+    </div>
+</footer>
+
+        <div class="cookie-container text-center py-12 text-2xl font-thin text-gray-500">
+  
+  <p>
+    <p>Example cookies content from content/en/cookie.md file.</p>
+<p><a href="/en/privacy/">Privacy</a> and <a href="/en/terms/">Terms</a></p>
+
+  </p>
+  
+  
+  <button class="cookie-btn w-32 h-22 mt-5 py-2 bg-red-600 text-white rounded-full hover:scale-110">
+    Okay
+  </button>
+</div>
+<script src="/js/cookie.js"></script>
+
+    </div>
+</body>
+
+</html>
