@@ -54,9 +54,10 @@ theme = "Niello"
 	contact = "niello@gmail.com"
 [params.ignore]
 	categories = ["privacy", "terms", "archives", "cookie"]
-
-copyright = "&#xA9; 2019 ~ 2025 by www.angularcorp.com All Rights Reserved."
-sharethis = "******"
+[params.license]
+	copyright = "&#xA9; 2019 ~ 2025 by www.angularcorp.com All Rights Reserved."
+[params.share]
+	sharethis = "******"
 
 [outputs]
   home = ["HTML", "JSON"]   # Optional - JSON just for search

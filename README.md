@@ -113,9 +113,10 @@ theme = "Niello"
 	contact = "angularcorp@outlook.com"
 [params.ignore]
 	categories = ["privacy", "terms", "archives", "cookie"]
-
-copyright = "&#xA9; 2019 ~ 2024 by guangmean. All Rights Reserved."
-sharethis = ""  //Optional, Add hou ShareThis appid here
+[params.license]
+	copyright = "&#xA9; 2019 ~ 2025 by guangmean. All Rights Reserved."
+[params.share]
+	sharethis = "******"  //Optional, Add hou ShareThis appid here
 
 [outputs]
   home = ["HTML", "JSON"]

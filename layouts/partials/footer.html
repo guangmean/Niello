@@ -1,9 +1,9 @@
 <footer class="p-5 text-xl text-center mt-8 pt-8 pb-8 border-t border-gray-100/10">
     <div class="text-gray-500">
-        {{ if .Site.Params.copyright }}
-        {{ .Site.Params.copyright | safeHTML }}
+        {{ if .Site.Params.license.copyright }}
+        {{ .Site.Params.license.copyright | safeHTML }}
         {{ else }}
-        &#xA9; 2019 - 2023 by <a class="hover:text-gray-100" href="https://github.com/guangmean/Niello"
+        &#xA9; 2019 - 2025 by <a class="hover:text-gray-100" href="https://github.com/guangmean/Niello"
             target="_blank">guangmean</a>. All Rights
         Reserved.
         {{ end }}
