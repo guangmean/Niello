@@ -12,7 +12,7 @@
         {{ $pages = $pages | append $leading }}
         <!-- Range Posts-->
         {{ range $index, $element := $pages }}
-        <div class="relative w-full h-96 flex-shrink-0">
+        <div class="relative w-full h-96 shrink-0">
             <a href="{{ .RelPermalink }}" class="hover:cursor-pointer">
                 {{ $image := partial "imagextractor.html" (dict "context" .) }}
                 {{ if not (hasPrefix $image.url "data:image/") }}
