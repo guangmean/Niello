@@ -1,29 +1,27 @@
-# Niello - Advanced Hugo Dark Theme
+# Niello - Hugo Dark Theme with Ongoing Updates
 
 ---
 
-Niello is a modern and feature-rich Hugo theme, designed to elegantly showcase your content with a sleek dark aesthetic. With its responsive design, Niello adapts perfectly to all screen sizes for a smooth browsing experience. The theme comes equipped with Google Analytics, AdSense support, Disqus comments, social sharing, and built-in search functionality, making it easy to manage and expand your online presence.
-
-Note: Only releases based on tags are considered stable versions.
+Niello is a modern and feature-rich Hugo theme, designed to elegantly showcase your content with a sleek dark aesthetic. Built with TailwindCSS for clean and scalable styling, its responsive design adapts perfectly to all screen sizes for a smooth browsing experience. The theme comes equipped with Google Analytics, AdSense support, Disqus comments, social sharing, and built-in search functionality, making it easy to manage and expand your online presence.
 
 ---
 
 ## Key Features
-- **Dark Mode**: Offers a sleek dark theme for enhanced readability and visual appeal.
-- **Responsive Design**: Adapts seamlessly to any screen size for a smooth browsing experience.
-- **Multi-language Support (i18n)**: Ready for global audiences with built-in internationalization.
-- **Content Search**: Easily locate articles with integrated search functionality.
-- **Automatic Image Extraction**: Automatically pulls images from articles for a richer presentation.
-- **Monetization**:
-  - **Google AdSense**: Supports ads for easy site monetization.
-  - **Google Analytics**: Track site performance and user engagement.
+- [x] Offers a sleek dark theme for enhanced readability and visual appeal.
+- [x] Responsive Design, adapts seamlessly to any screen size for a smooth browsing experience.
+- [x] Multi-language Support (i18n), ready for global audiences with built-in internationalization.
+- [x] Content Search, easily locate articles with integrated search functionality.
+- [x] Automatic Image Extraction, automatically pulls images from articles for a richer presentation.
+- [x] Monetization:
+  - [x] Google AdSense, supports ads for easy site monetization.
+  - [x] Google Analytics, track site performance and user engagement.
 
-- **Enhanced Styling**:
-  - **Tailwind CSS**: Powered by Tailwind for fast and flexible styling.
-  - **Syntax Highlighting**: Provides clear code display for technical content.
+- [x] Enhanced Styling:
+  - [x] Tailwind CSS, based on Tailwind for fast and flexible styling.
+  - [x] Syntax Highlighting, provides clear code display for technical content.
 
-- **Organized Archives**: Displays past posts by date, making content easier to navigate. 
-- **Ignore Some Categories**: Hide the posts that you don’t want to show. 
+- [x] Organized Archives, displays past posts by date, making content easier to navigate. 
+- [x] Ignore Some Categories, hide the posts that you don’t want to show. 
 
 --- 
 
