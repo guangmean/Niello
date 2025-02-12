@@ -1,4 +1,4 @@
-<article class="relative w-50 h-60 rounded-lg overflow-hidden">
+<article class="relative w-full h-60 rounded-lg overflow-hidden">
     {{ $image := partial "imagextractor.html" . }}
     {{ if not (hasPrefix $image.url "data:image/") }}
     <img src="{{ $image.url }}?v={{ now.Unix }}" alt="{{ $image.alt }}" class="w-full h-full object-cover" />
