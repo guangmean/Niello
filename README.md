@@ -79,10 +79,10 @@ theme = "Niello"
 			weight = 4
 	[languages.zh]
 		title = "{码途轨迹} - 发现问题，分享解决."
-        languageCode = "zh-cn"
-        LanguageName = "🇨🇳CN"
-        contentDir = "content/zh"
-        weight = 2
+        	languageCode = "zh-cn"
+        	LanguageName = "🇨🇳CN"
+        	contentDir = "content/zh"
+        	weight = 2
 		[[languages.zh.menus.main]]
 			name = '首页'
 			pageRef = '/'
@@ -245,17 +245,17 @@ The content structure is as follows, and posts to be ignored must have categorie
 
 ```shell	
 |---content/en
-			|---cookie.md
-			|---privacy.md
-			|---terms.md
-			|
-			|---/example1
-					|---example1-1.md
-					|---example1-2.md
-			|---/example2
-					|---example2-1.md
-					|---example2-2.md
-					|---example2-3.md
+	    |---cookie.md
+	    |---privacy.md
+	    |---terms.md
+	    |
+	    |---/example1
+			|---example1-1.md
+			|---example1-2.md
+	    |---/example2
+			|---example2-1.md
+			|---example2-2.md
+			|---example2-3.md
 |---content/fr
 |---content/zh
 |---content/de
