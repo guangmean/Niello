@@ -160,10 +160,7 @@ If you plan to modify this theme, note that it is built with TailwindCSS. Before
 
 cd themes/Niello
 
-npm install -D tailwindcss
-
-# Below cmd is not required
-npx tailwindcss init # This will create the tailwind.config.js which already included in Niello
+npm install tailwindcss @tailwindcss/cli
 
 ```
 
