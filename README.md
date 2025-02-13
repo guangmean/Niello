@@ -48,7 +48,6 @@ Below is an example of the hugo.toml file(previously config.toml) for your site:
 baseURL = "https://www.angularcorp.com/" # Must end with splash
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
-disqusShortname = "yourDisqusShortname" // Add third-party comments system
 
 staticDir = ["static", "themes/Niello/static"]
 
@@ -114,7 +113,9 @@ theme = "Niello"
 [params.license]
 	copyright = "&#xA9; 2019 ~ 2025 by guangmean. All Rights Reserved."
 [params.share]
-	sharethis = "******"  //Optional, Add hou ShareThis appid here
+	sharethis = "******"  // Optional, Add hou ShareThis appid here
+[params.disqus]
+	shortname = "******"	// Optional, Disqus Short Name
 
 [outputs]
   home = ["HTML", "JSON"]
