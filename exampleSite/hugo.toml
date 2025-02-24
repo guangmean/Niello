@@ -1,7 +1,6 @@
 baseURL = "https://www.example.com/"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
-disqusShortname = "guangmean"   # Optional
 
 staticDir = ["static", "themes/Niello/static"]
 
@@ -51,13 +50,15 @@ theme = "Niello"
 	categories = ["Design"]
 	limit = 2
 [params.email]
-	contact = "niello@gmail.com"
+	contact = "angularcorp@outlook.com"
 [params.ignore]
 	categories = ["privacy", "terms", "archives", "cookie"]
 [params.license]
-	copyright = "&#xA9; 2019 ~ 2025 by www.angularcorp.com All Rights Reserved."
+	copyright = "&#xA9; 2019 ~ 2025 by <a href='https://www.angularcorp.com/'>www.angularcorp.com</a> All Rights Reserved."
 [params.share]
 	sharethis = "******"
+[params.disqus]
+	shortname = "guangmean"
 
 [outputs]
   home = ["HTML", "JSON"]   # Optional - JSON just for search
