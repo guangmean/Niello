@@ -1,8 +1,8 @@
 <div x-data="{ openMenu: false }" class="relative">
     <nav class="flex flex-1 flex-col lg:flex-row items-center justify-between">
         <a href="/">
-            <img src="/image/logo.webp?v={{ now.Unix }}" alt="site logo"
-                class="w-16 h-16 my-5 p-1 bg-gray-100 rounded-full cursor-pointer hover:scale-110" />
+            <img src="/image/logo.webp?v={{ now.Unix }}" alt="Logo"
+                class="w-16 h-16 my-5 p-1 bg-gray-100 rounded-full object-cover cursor-pointer hover:scale-110" />
         </a>
         <div class="hidden lg:block" :class="{'hidden': !openMenu}">
             {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
