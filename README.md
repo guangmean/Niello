@@ -49,7 +49,7 @@ baseURL = "https://www.angularcorp.com/" # Must end with splash
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 
-staticDir = ["static", "themes/Niello/static"]
+staticDir = ["themes/Niello/static", "static"]
 
 theme = "Niello"
 
@@ -115,7 +115,7 @@ theme = "Niello"
 [params.share]
 	sharethis = "******"  // Optional, Add hou ShareThis appid here
 [params.disqus]
-	shortname = "******"	// Optional, Disqus Short Name
+	shortname = "******"	// Optional, Disqus Comment Short Name
 
 [outputs]
   home = ["HTML", "JSON"]
