@@ -16,7 +16,7 @@
     <meta name="keywords" content="{{ $keywords }}">
     <meta name="description" content="{{ $description }}">
     <link rel="canonical" href="{{ .Page.Permalink }}" />
-    <link rel="icon" href="/favicon.ico?v={{ now.Unix }}" type="image/x-icon">
+    <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico?v={{ now.Unix }}" type="image/x-icon">
     {{ partialCached "head/css.html" . }}
     {{ partialCached "head/js.html" . }}
 
