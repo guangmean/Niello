@@ -114,8 +114,7 @@
         {{ $fmt = "2006年01月" }}
         {{ end }}
         {{ with $archives := .Site.RegularPages.GroupByDate $fmt "desc" }}
-        {{ $sortedArchives := sort $archives ".Key" "desc" }}
-        {{ range $index, $item := $sortedArchives }}
+        {{ range $index, $item := $archives }}
         {{ if lt $index 18 }}
         <li class="mb-1 border-b border-b-white/10 border-dashed">
             <a href="/{{ $.Site.Language.Lang }}/archives">{{ $item.Key }}<span
