@@ -850,6 +850,10 @@
         box-shadow: 0 8px 20px rgba(0,0,0,0.45);
       }
 
+      .aside-container {
+        color: var(--color-gray-400);
+      }
+
       .aside-container p {
         color: var(--color-gray-400);
       }
@@ -865,7 +869,7 @@
 
       .aside-container ul.text-lg li a {
         display: block;
-        color: var(--color-gray-300);
+        color: var(--color-gray-400);
         padding: 0;
         transition: color .16s ease;
       }
@@ -921,7 +925,7 @@
 
       /* contact */
       .aside-container .flex.flex-row.gap-2 {
-        color: var(--color-gray-300);
+        color: var(--color-gray-400);
         padding: .5rem;
         border-radius: 8px;
         background: color-mix(in oklab, var(--color-gray-900) 30%, transparent);
