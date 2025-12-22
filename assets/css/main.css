@@ -8,6 +8,289 @@
   --color-dark-200: #0b090a;
 }
 
+/* Search results: card border, padding, hover effect (scoped, template unchanged) */
+@layer components {
+  /* Target the per-result container rendered into #search-results (ids like summary-0) */
+  #search-results > div[id^="summary-"] {
+    border-radius: 12px;
+    padding: 1rem 1.05rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(2,6,23,0.01));
+    border: 1px solid rgba(148,163,184,0.06);
+    border-style: solid;
+    box-shadow: 0 8px 24px rgba(2,6,23,0.03);
+    transition: transform .16s ease, box-shadow .16s ease, border-color .12s ease, background .12s ease;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Remove the template's dashed bottom border visual by ensuring a full card border */
+  #search-results > div[id^="summary-"] {
+    border-bottom: 1px solid rgba(148,163,184,0.06);
+  }
+
+  #search-results > div[id^="summary-"]:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgba(2,6,23,0.06);
+    border-color: rgba(148,163,184,0.12);
+    background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(2,6,23,0.02));
+  }
+
+  /* Keep internal spacing but reduce the strong divider that template added */
+  #search-results > div[id^="summary-"] h3 {
+    margin-top: 0;
+  }
+
+  /* Slightly soften the snippet text and ensure consistent spacing */
+  #search-results > div[id^="summary-"] .line-clamp-3 {
+    margin-top: 0.35rem;
+  }
+}
+
+/* Taxonomy / List page visual refinements */
+@layer components {
+  /* Standard vertical list container (article previews) */
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .list-container article {
+    border-radius: 12px;
+    border: 1px solid rgba(148,163,184,0.06);
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(2,6,23,0.01));
+    padding: 0.35rem;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .12s ease;
+    overflow: hidden;
+  }
+
+  .list-container article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(2,6,23,0.04);
+    border-color: rgba(148,163,184,0.12);
+  }
+
+  .list-container article .w-full.lg\:w-64 img {
+    transition: transform .5s cubic-bezier(.2,.9,.28,1);
+    will-change: transform;
+  }
+
+  .list-container article:hover .w-full.lg\:w-64 img {
+    transform: scale(1.04);
+  }
+
+  /* Taxonomy (masonry/term) grid */
+  .list-container-rows {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .list-container-rows article {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .22s ease, box-shadow .22s ease;
+    box-shadow: 0 8px 24px rgba(2,6,23,0.03);
+  }
+
+  .list-container-rows article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(2,6,23,0.06);
+  }
+
+  /* Improve overlay legibility for masonry items */
+  .list-container-rows article .absolute {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(2,6,23,0.62) 100%);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .list-container-rows article h3 a {
+    color: var(--color-gray-50);
+    text-shadow: 0 1px 12px rgba(2,6,23,0.45);
+    transition: color .14s ease, transform .18s ease;
+  }
+
+  .list-container-rows article:hover h3 a {
+    transform: translateY(-2px);
+  }
+
+  /* Small helper: reduce visual noise between stacked articles on small screens */
+  @media (max-width: 1024px) {
+    .list-container article + article {
+      border-top: 1px solid rgba(148,163,184,0.04);
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+    }
+  }
+}
+
+/* Recommend Posts: container border and toggle button visuals */
+@layer components {
+  /* Subtle rounded card around the recommended list */
+  .home-recommended-list {
+    border-radius: 14px;
+    padding: 0.5rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+    border: 1px solid rgba(148,163,184,0.08); /* very subtle neutral border */
+    box-shadow: 0 6px 20px rgba(2,6,23,0.03);
+    transition: box-shadow .22s ease, transform .18s ease;
+  }
+
+  .home-recommended-list:hover {
+    box-shadow: 0 12px 36px rgba(2,6,23,0.045);
+  }
+
+  /* Make title sit neatly with a small badge-like divider */
+  .home-recommended-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0 0.25rem 0.5rem 0.25rem;
+    border-bottom: 1px solid rgba(148,163,184,0.06);
+    margin-bottom: 0.5rem;
+  }
+
+  /* Toggle controls (if present) — pill buttons with active state */
+  .home-recommended-controls {
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .home-recommended-toggle {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid rgba(148,163,184,0.08);
+    background: rgba(255,255,255,0.015);
+    color: var(--color-gray-300);
+    padding: 6px 10px;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: transform .14s ease, background .14s ease, box-shadow .14s ease, border-color .14s ease;
+  }
+
+  .home-recommended-toggle:hover {
+    transform: translateY(-2px);
+    border-color: rgba(148,163,184,0.16);
+    background: rgba(255,255,255,0.03);
+  }
+
+  .home-recommended-toggle:active {
+    transform: translateY(0);
+  }
+
+  /* Active/selected toggle — use subtle gradient and inner shadow */
+  .home-recommended-toggle.is-active,
+  .home-recommended-toggle.active {
+    background: linear-gradient(180deg, rgba(99,102,241,0.09), rgba(79,70,229,0.06));
+    border-color: rgba(79,70,229,0.22);
+    color: white; /* text brightness cap earlier will map white down if needed */
+    box-shadow: 0 6px 18px rgba(79,70,229,0.06), inset 0 -1px 0 rgba(255,255,255,0.02);
+  }
+
+  /* Ensure icons inside toggles stay aligned */
+  .home-recommended-toggle svg {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0.95;
+  }
+}
+
+/* Make dashed borders render as subtle solid lines for a cleaner look */
+@layer components {
+  .border-dashed {
+    border-style: solid !important;
+    border-color: color-mix(in oklab, var(--color-white) 6%, transparent) !important;
+    border-width: 1px !important;
+  }
+
+  /* Specific: thin divider used in header */
+  header .border-b.border-dashed {
+    border-bottom-style: solid !important;
+    border-bottom-color: color-mix(in oklab, var(--color-gray-600) 40%, transparent) !important;
+  }
+}
+
+/* Cap brightest neutral text to text-gray-300 */
+@layer base {
+  :root, html {
+    /* remap white and very light grays to gray-300 for text purposes */
+    --color-white: var(--color-gray-300);
+    --color-gray-50: var(--color-gray-300);
+    --color-gray-100: var(--color-gray-300);
+    --color-gray-200: var(--color-gray-300);
+  }
+
+  /* Also override common utility classes to ensure they don't render brighter text */
+  .text-white,
+  .text-gray-50,
+  .text-gray-100,
+  .text-gray-200 {
+    color: var(--color-gray-300) !important;
+  }
+
+  /* Hover variants that compile to selectors like .hover\:text-gray-100:hover */
+  .hover\:text-gray-100:hover,
+  .hover\:text-gray-50:hover,
+  .hover\:text-gray-200:hover,
+  .hover\:text-white:hover {
+    color: var(--color-gray-300) !important;
+  }
+}
+
+/* Search box visual polish (header) */
+@layer components {
+  header .relative input[type="text"] {
+    @apply w-full h-12 rounded-full px-5 pr-32 bg-gradient-to-br from-gray-800/60 to-gray-900/40 text-gray-100 border border-gray-800;
+    box-shadow: inset 0 6px 16px rgba(2,6,23,0.6), 0 6px 18px rgba(0,0,0,0.25);
+    transition: box-shadow .22s ease, transform .18s ease, background-color .18s ease;
+    backdrop-filter: none;
+  }
+
+  header .relative input[type="text"]::placeholder {
+    color: color-mix(in oklab, var(--color-gray-600) 85%, transparent);
+    opacity: 0.95;
+    font-style: italic;
+  }
+
+  header .relative input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 8px 20px rgba(2,6,23,0.7), 0 8px 30px rgba(217,70,70,0.08);
+    transform: translateY(-2px);
+  }
+
+  header .relative button[type="submit"] {
+    @apply absolute right-1 top-1/2 -translate-y-1/2 w-28 h-10 rounded-full font-medium text-gray-100;
+    background: linear-gradient(180deg, #ff6b6b, #d93f3f);
+    box-shadow: 0 8px 24px rgba(217,70,70,0.18);
+    border: 1px solid color-mix(in oklab, var(--color-white) 6%, transparent);
+    transition: transform .18s ease, box-shadow .18s ease, opacity .14s ease;
+  }
+
+  header .relative button[type="submit"]:hover {
+    transform: scale(1.02);
+    box-shadow: 0 14px 40px rgba(217,70,70,0.22);
+    color: #fff;
+  }
+
+  @media (max-width: 40rem) {
+    header .relative input[type="text"] {
+      @apply h-12 px-4 pr-28;
+    }
+    header .relative button[type="submit"] {
+      @apply w-24 h-10 right-1;
+    }
+  }
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -172,4 +455,524 @@
     .cookie-container.active {
         bottom: 0;
     }
+}
+
+/* Top navigation visual enhancements - UI only */
+@layer components {
+  .relative > nav {
+    @apply py-3 px-4 lg:px-12 items-center gap-4;
+    background: linear-gradient(90deg, rgba(255,255,255,0.035), rgba(255,255,255,0));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid color-mix(in oklab, var(--color-white) 6%, transparent);
+    box-shadow: 0 6px 20px rgba(2,6,23,0.55);
+    border-radius: 12px;
+    background-clip: padding-box;
+    position: relative;
+    z-index: 40;
+    overflow: visible;
+  }
+
+  /* logo polishing */
+  .relative > nav a img {
+    @apply w-14 h-14 lg:w-16 lg:h-16 p-2 rounded-full object-cover;
+    background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,255,255,0.65));
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    transition: transform .28s ease, box-shadow .28s ease;
+  }
+
+  .relative > nav a img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+  }
+
+  /* primary menu items */
+  .relative > nav ul > li > a {
+    color: var(--color-gray-300);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    transition: color .22s ease, background-color .22s ease, transform .22s ease;
+    letter-spacing: .02em;
+    display: inline-block;
+  }
+
+  .relative > nav ul > li > a:hover {
+    color: var(--color-gray-100);
+    background-color: color-mix(in oklab, var(--color-gray-400) 8%, transparent);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .relative > nav ul > li > a.active,
+  .relative > nav ul > li > a[aria-current="page"] {
+    color: var(--color-white);
+    font-weight: 600;
+    border-bottom: none !important;
+    box-shadow: inset 0 -2px 0 var(--color-red-500), 0 8px 30px rgba(217,70,70,0.04);
+  }
+
+  /* dropdown menu */
+  .relative > nav ul li ul {
+    position: absolute;
+    margin-top: .5rem;
+    left: 0;
+    min-width: 180px;
+    background: color-mix(in oklab, var(--color-gray-900) 70%, transparent);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: .5rem;
+    padding: .25rem 0;
+    box-shadow: 0 12px 30px rgba(2,6,23,0.7);
+    border: 1px solid color-mix(in oklab, var(--color-white) 4%, transparent);
+    z-index: 60;
+    display: none;
+  }
+
+  .relative > nav ul li:hover > ul {
+    display: block;
+  }
+
+  .relative > nav ul li ul li a {
+    display: block;
+    padding: .5rem 1rem;
+    color: var(--color-gray-300);
+  }
+
+  .relative > nav ul li ul li a:hover {
+    background: color-mix(in oklab, var(--color-gray-800) 40%, transparent);
+    color: var(--color-white);
+  }
+
+  /* mobile menu button refinement */
+  .relative > .absolute button {
+    border-radius: .5rem;
+    transition: background-color .18s ease, transform .18s ease;
+  }
+  .relative > .absolute button:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Fix mobile menu button being covered / blurred by nav backdrop */
+  .relative > .absolute {
+    z-index: 80;
+    position: relative;
+  }
+
+  .relative > .absolute button {
+    position: relative;
+    z-index: 90;
+    background: rgba(255,255,255,0.02);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: 1px solid color-mix(in oklab, var(--color-white) 4%, transparent);
+    padding: .4rem;
+  }
+}
+
+/* Recommend Posts UI enhancements */
+@layer components {
+  .home-recommended-title {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    color: var(--color-gray-200);
+    font-size: 1.375rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid color-mix(in oklab, var(--color-white) 6%, transparent);
+    margin-top: 1.25rem;
+    margin-bottom: .75rem;
+  }
+
+  .home-recommended-title svg {
+    color: var(--color-red-500);
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: none;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.45));
+  }
+
+  /* Card-style previews */
+  .home-recommended-list article {
+    background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005));
+    border: 1px solid color-mix(in oklab, var(--color-white) 3%, transparent);
+    padding: .6rem;
+    border-radius: 12px;
+    transition: transform .26s cubic-bezier(.2,.9,.3,1), box-shadow .26s cubic-bezier(.2,.9,.3,1);
+    box-shadow: 0 10px 22px rgba(3,6,22,0.45);
+    overflow: hidden;
+  }
+
+  .home-recommended-list article:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+  }
+
+  .home-recommended-list article .w-full.lg\:w-64 {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .home-recommended-list article img {
+    transition: transform .5s ease, filter .4s ease;
+  }
+
+  .home-recommended-list article:hover img {
+    transform: scale(1.06);
+    filter: brightness(.95) saturate(1.05);
+  }
+
+  .home-recommended-list h3 a {
+    color: var(--color-gray-100);
+    transition: color .18s ease, text-shadow .18s ease;
+  }
+
+  .home-recommended-list h3 a:hover {
+    color: var(--color-white);
+    text-shadow: 0 6px 18px rgba(217,70,70,0.08);
+  }
+
+  .home-recommended-list time {
+    color: var(--color-gray-500);
+    font-size: .95rem;
+  }
+
+  .home-recommended-list .line-clamp-3 {
+    color: var(--color-gray-400);
+    font-size: 1.05rem;
+  }
+
+  /* Alternate left accent for large screens */
+  @media (min-width: 64rem) {
+    .home-recommended-list article:nth-child(odd) {
+      border-left: 4px solid color-mix(in oklab, var(--color-red-500) 30%, transparent);
+    }
+    .home-recommended-list article:nth-child(even) {
+      border-left: 4px solid color-mix(in oklab, var(--color-gray-800) 30%, transparent);
+    }
+  }
+}
+
+/* Pagination visual polish */
+@layer components {
+  .pagination {
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 0;
+  }
+
+  .pagination .page-item {
+    list-style: none;
+  }
+
+  .pagination .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 .75rem;
+    color: var(--color-gray-300);
+    background: transparent;
+    border-radius: 9999px;
+    transition: background-color .18s ease, color .18s ease, transform .12s ease, box-shadow .18s ease;
+    border: 1px solid transparent;
+    font-weight: 500;
+  }
+
+  .pagination .page-item:hover .page-link {
+    background: color-mix(in oklab, var(--color-gray-400) 8%, transparent);
+    color: var(--color-gray-100);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+  }
+
+  /* Remove duplicate circular background from li hover (template adds hover:bg). Keep single background on the inner .page-link */
+  .pagination .page-item:hover {
+    background: transparent !important;
+  }
+
+  .pagination .page-item.disabled .page-link,
+  .pagination .page-item .page-link[aria-disabled="true"] {
+    opacity: .45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .pagination .page-item.active .page-link,
+  .pagination .page-item.active {
+    background: linear-gradient(180deg, #ff6b6b, #d93f3f);
+    color: #fff !important;
+    box-shadow: 0 12px 30px rgba(217,70,70,0.18);
+    border: 1px solid color-mix(in oklab, var(--color-white) 6%, transparent);
+    transform: translateY(-2px);
+  }
+
+  /* If template applies bg utilities on the outer li, neutralize it so only .page-link shows background */
+  .pagination .page-item.active {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure the inner link receives the pill padding */
+  .pagination .page-item.active .page-link {
+    padding: 0 .9rem !important;
+  }
+
+  /* narrow screens: reduce sizes */
+  @media (max-width: 40rem) {
+    .pagination .page-link { min-width: 34px; height: 34px; padding: 0 .5rem; }
+    .pagination { gap: .35rem; }
+  }
+}
+
+    /* Sidebar visual enhancements */
+    @layer components {
+      .aside-container {
+        @apply lg:mx-0 lg:my-5 lg:block;
+        padding: .75rem;
+        border-radius: 12px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.002));
+        border: 1px solid color-mix(in oklab, var(--color-white) 3%, transparent);
+        box-shadow: 0 12px 30px rgba(2,6,23,0.5);
+      }
+
+      @media (min-width: 64rem) {
+        .aside-container {
+          position: sticky;
+          top: 6rem;
+          align-self: start;
+        }
+      }
+
+      .aside-section-title {
+        @apply flex items-center gap-x-2 text-lg font-medium text-gray-300;
+        padding: .45rem .35rem;
+        margin-bottom: .4rem;
+        color: var(--color-gray-200);
+      }
+
+      .aside-section-title svg {
+        color: var(--color-red-500);
+        width: 1.25rem;
+        height: 1.25rem;
+        flex: none;
+      }
+
+      .aside-container img.w-80 {
+        width: 100%;
+        max-width: 11rem;
+        border-radius: 10px;
+        display: block;
+        margin-inline: auto;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+      }
+
+      .aside-container p {
+        color: var(--color-gray-400);
+      }
+
+      /* Posts list */
+      .aside-container ul.text-lg li {
+        padding: .45rem .5rem;
+        margin-bottom: .35rem;
+        border-radius: 8px;
+        transition: background-color .18s ease, transform .12s ease;
+        border: none;
+      }
+
+      .aside-container ul.text-lg li a {
+        display: block;
+        color: var(--color-gray-300);
+        padding: 0;
+        transition: color .16s ease;
+      }
+
+      /* Ensure Latest Post list items vertically center their text */
+      .aside-container ul.text-lg li {
+        display: flex;
+        align-items: center;
+      }
+
+      .aside-container ul.text-lg li a {
+        flex: 1 1 auto;
+        display: inline-block;
+      }
+
+      .aside-container ul.text-lg li:hover {
+        background: color-mix(in oklab, var(--color-gray-700) 8%, transparent);
+        transform: translateY(-2px);
+      }
+
+      .aside-container .aside-section-content-empty {
+        color: var(--color-gray-500);
+      }
+
+      /* Categories & counts */
+      .aside-container ul li span {
+        background: rgba(255,255,255,0.02);
+        color: var(--color-gray-400);
+        padding: .2rem .5rem;
+        border-radius: 9999px;
+        font-size: .95rem;
+      }
+
+      /* Tags */
+      .aside-container .flex.flex-wrap a span {
+        transition: transform .16s ease, background-color .16s ease, color .16s ease;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+      }
+
+      .aside-container .flex.flex-wrap a span:hover {
+        transform: translateY(-4px) scale(1.02);
+        background: color-mix(in oklab, var(--color-gray-800) 50%, transparent);
+        color: var(--color-gray-100);
+      }
+
+      /* Archive list */
+      .aside-container ul.leading-10 li a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5rem;
+      }
+
+      /* contact */
+      .aside-container .flex.flex-row.gap-2 {
+        color: var(--color-gray-300);
+        padding: .5rem;
+        border-radius: 8px;
+        background: color-mix(in oklab, var(--color-gray-900) 30%, transparent);
+      }
+    }
+
+/* Additional list refinements for Recommend Posts */
+@layer components {
+  /* make layout grid on large screens for clearer visual rhythm */
+  @media (min-width: 64rem) {
+    .home-recommended-list article {
+      display: grid;
+      grid-template-columns: 18rem 1fr;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .home-recommended-list article .w-full.lg\:w-64 {
+      width: 18rem;
+      height: 12rem;
+    }
+    .home-recommended-list article .w-full.lg\:w-64 img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  /* mobile separators and tighter cards */
+  @media (max-width: 63.99rem) {
+    .home-recommended-list article {
+      border-radius: 10px;
+      padding: .75rem;
+      margin-bottom: .25rem;
+    }
+    .home-recommended-list article + article {
+      margin-top: .5rem;
+    }
+    .home-recommended-list article::after {
+      content: '';
+      display: block;
+      height: 1px;
+      margin-top: .75rem;
+      background: color-mix(in oklab, var(--color-gray-700) 18%, transparent);
+      opacity: .6;
+    }
+  }
+
+  /* title underline animation */
+  .home-recommended-list h3 a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px; /* reserve space for underline pseudo-element */
+  }
+  .home-recommended-list h3 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-red-500), color-mix(in oklab, var(--color-red-500) 60%, transparent));
+    transition: width .26s cubic-bezier(.2,.9,.2,1);
+    border-radius: 2px;
+  }
+  .home-recommended-list h3 a:hover::after {
+    width: 70%;
+  }
+
+  /* meta and summary spacing */
+  .home-recommended-list .flex.flex-row.items-center {
+    gap: .5rem;
+  }
+  .home-recommended-list .line-clamp-3 {
+    margin-top: .6rem;
+  }
+
+  /* subtle tint for alternating rows on small screens for readability */
+  @media (max-width: 63.99rem) {
+    .home-recommended-list article:nth-child(odd) {
+      background: linear-gradient(180deg, rgba(255,255,255,0.008), rgba(255,255,255,0.002));
+    }
+  }
+}
+
+/* Mobile menu slide animation (only small screens) */
+@media (max-width: 63.99rem) {
+  .relative > nav > div {
+    /* Force block so we can animate; Tailwind's .hidden will be overridden here on small screens */
+    display: block !important;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform-origin: top center;
+    transition: max-height .36s cubic-bezier(.2,.9,.2,1), opacity .24s ease;
+    will-change: max-height, opacity, transform;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* When Alpine removes .hidden (menu open) the :not(.hidden) rule applies */
+  .relative > nav > div:not(.hidden) {
+    max-height: 720px; /* large enough to contain menu */
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* When Alpine adds .hidden (menu closed) keep display but animate collapse */
+  .relative > nav > div.hidden {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px) scaleY(0.95);
+  }
+}
+
+/* Elastic open/close keyframes for mobile menu */
+@keyframes nav-open {
+  0% { transform: translateY(-10px) scaleY(0.9); opacity: 0; }
+  55% { transform: translateY(6px) scaleY(1.06); opacity: 1; }
+  80% { transform: translateY(-3px) scaleY(0.985); }
+  100% { transform: translateY(0) scaleY(1); opacity: 1; }
+}
+
+@keyframes nav-close {
+  0% { transform: translateY(0) scaleY(1); opacity: 1; }
+  100% { transform: translateY(-10px) scaleY(0.9); opacity: 0; }
+}
+
+@media (max-width: 63.99rem) {
+  .relative > nav > div:not(.hidden) {
+    animation: nav-open .52s cubic-bezier(.2,.9,.2,1) both;
+  }
+
+  .relative > nav > div.hidden {
+    animation: nav-close .28s ease both;
+  }
 }

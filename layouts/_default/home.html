@@ -17,7 +17,7 @@
 {{ partial "banner.html" . }}
 
 <!-- Posts Content -->
-<div class="flex flex-col space-y-8 mt-8">
+<div class="home-recommended-list flex flex-col space-y-8 mt-8">
 
     {{ range $index, $element := (.Paginator 10).Pages }}
 

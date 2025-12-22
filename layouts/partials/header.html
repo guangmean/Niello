@@ -1,23 +1,20 @@
 <header class="flex flex-col w-full items-center justify-center text-white py-1 lg:py-8">
     <div class="w-full">
         <div class="flex flex-1 flex-row justify-between">
-            <h2 class="w-full text-center text-3xl sm:text-5xl font-crimson font-medium lg:font-bold tracking-tight text-gray-300">
-                <a href="{{ site.BaseURL }}">{{ i18n "sitename" }}</a>
-            </h2>
+            <h3 class="w-full text-center text-2xl sm:text-5xl font-thin tracking-tight text-gray-300 py-3 leading-8 sm:leading-9 lg:leading-12">
+                {{ i18n "siteslogan" | safeHTML }}
+            </h3>
         </div>
-        <p
-            class="w-full text-center pl-1 pb-4 sm:pt-3 sm:pb-0 font-crimson font-normal text-xl sm:text-2xl leading-8 text-gray-500">
-            {{ i18n "siteslogan" }}</p>
     </div>
 
     <div class="relative w-full lg:w-1/2 h-12 my-1 lg:my-5">
-        <form action="/{{.Lang}}/search" method="get">
+        <form action="/{{.Lang}}/search" method="get" class="h-full flex items-center">
             <input
-                class="bg-gray-800 placeholder:italic placeholder:text-gray-600 w-full h-12 rounded-full mt-1 pl-5 pr-5 border border-gray-800 text-gray-100"
+                class="bg-gray-800 placeholder:italic placeholder:text-gray-600 w-full h-12 rounded-full pl-5 pr-5 border border-gray-800 text-gray-100"
                 placeholder='{{ i18n "searchplaceholder" }}' type="text" name="q" id="search-query" />
 
             <button
-                class="absolute inset-y-2 right-1 w-28 h-10 font-light bg-gray-900 hover:bg-red-500 text-gray-500 hover:text-gray-100 rounded-full cursor-pointer"
+                class="absolute right-1 top-1/2 -translate-y-1/2 w-28 h-10 font-medium text-white rounded-full cursor-pointer flex items-center justify-center"
                 type="submit">{{ i18n "search" }}</button>
         </form>
     </div>

@@ -30,7 +30,7 @@
         {{ range .Site.RegularPages.ByPublishDate.Reverse.Limit 5 }}
         {{ if not (intersect .Params.categories site.Params.ignore.categories) }}
         <li class="leading-10 line-clamp-1 mb-3 font-light border-b border-b-white/10 border-dashed">
-            <a href="{{ .RelPermalink }}" class="py-5 hover:text-gray-300">{{ .LinkTitle }}</a>
+            <a href="{{ .RelPermalink }}" class="hover:text-gray-300">{{ .LinkTitle }}</a>
         </li>
         {{ end }}
         {{ else }}
