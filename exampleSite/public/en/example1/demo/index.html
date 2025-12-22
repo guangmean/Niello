@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us"
-    dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=55868&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
@@ -21,8 +21,8 @@
     
     <meta name="keywords" content="SEO , Keywords , Here">
     <meta name="description" content="SEO Description Here">
-    <link rel="canonical" href="http://localhost:1313/en/example1/demo/" />
-    <link rel="icon" href="/favicon.ico?v=1739346188" type="image/x-icon">
+    <link rel="canonical" href="http://localhost:55868/en/example1/demo/" />
+    <link rel="icon" href="http://localhost:55868/favicon.ico?v=1766394288" type="image/x-icon">
     
 <link rel="stylesheet" href="/css/app.css">
     
@@ -66,10 +66,15 @@
 
         <div x-data="{ openMenu: false }" class="relative">
     <nav class="flex flex-1 flex-col lg:flex-row items-center justify-between">
-        <a href="/">
-            <img src="/image/logo.webp?v=1739346188" alt="site logo"
-                class="w-16 h-16 my-5 p-1 bg-gray-100 rounded-full cursor-pointer hover:scale-110" />
-        </a>
+        <div class="flex flex-col lg:flex-row items-center gap-3">
+            <a href="/">
+                <img src="/image/logo.webp?v=1766394288" alt="Logo"
+                    class="w-16 h-16 my-5 p-1 bg-gray-100 rounded-full object-cover cursor-pointer hover:scale-110" />
+            </a>
+            <div class="flex flex-col items-center lg:items-start">
+                <span class="text-lg lg:text-2xl font-medium text-gray-100 leading-tight">Niello - Hugo Dark Theme with Ongoing Updates</span>
+            </div>
+        </div>
         <div class="hidden lg:block" :class="{'hidden': !openMenu}">
             
 
@@ -143,26 +148,23 @@
     </div>
 </div>
 
-        <header class="flex flex-col w-full items-center justify-center text-white pt-8 pb-8">
+        <header class="flex flex-col w-full items-center justify-center text-white py-1 lg:py-8">
     <div class="w-full">
         <div class="flex flex-1 flex-row justify-between">
-            <h2 class="w-full text-center text-3xl sm:text-5xl font-crimson font-bold tracking-tight text-gray-300">
-                <a href="http://localhost:1313/">Niello - Hugo Dark Theme with Ongoing Updates</a>
-            </h2>
+            <h3 class="w-full text-center text-2xl sm:text-5xl font-thin tracking-tight text-gray-400 py-3 leading-8 sm:leading-9 lg:leading-12">
+                Sleek Dark Mode, Responsive Design, Perfect on Any Device.
+            </h3>
         </div>
-        <p
-            class="w-full text-center pl-1 pb-4 sm:pt-3 sm:pb-0 font-crimson font-normal text-xl sm:text-2xl leading-8 text-gray-500">
-            Sleek Dark Mode, Responsive Design, Perfect on Any Device.</p>
     </div>
 
-    <div class="relative w-9/12 lg:w-1/2 h-12 my-5">
-        <form action="/en/search" method="get">
+    <div class="relative w-full lg:w-1/2 h-12 my-1 lg:my-5">
+        <form action="/en/search" method="get" class="h-full flex items-center">
             <input
-                class="bg-gray-800 placeholder:italic placeholder:text-gray-600 w-full h-12 rounded-full mt-1 pl-5 pr-5 border border-gray-800 text-gray-100"
+                class="bg-gray-800 placeholder:italic placeholder:text-gray-600 w-full h-12 rounded-full pl-5 pr-5 border border-gray-800 text-gray-100"
                 placeholder='Input Keywords...' type="text" name="q" id="search-query" />
 
             <button
-                class="absolute inset-y-2 right-1 w-28 h-10 font-light bg-gray-900 hover:bg-red-500 text-gray-500 hover:text-gray-100 rounded-full cursor-pointer"
+                class="absolute right-1 top-1/2 -translate-y-1/2 w-28 h-10 font-medium text-white rounded-full cursor-pointer flex items-center justify-center"
                 type="submit">Search</button>
         </form>
     </div>
@@ -278,33 +280,28 @@
         </div>
     </div>
     <div class="text-gray-500 text-lg">
-        Page link:&nbsp;<a href="http://localhost:1313/en/example1/demo/"
-            class="border-b border-b-gray-500 hover:text-gray-400">http://localhost:1313/en/example1/demo/</a>
+        Page link:&nbsp;<a href="http://localhost:55868/en/example1/demo/"
+            class="border-b border-b-gray-500 hover:text-gray-400">http://localhost:55868/en/example1/demo/</a>
     </div>
-    <div class="my-10 py-5 border-t border-dashed border-t-white/10 text-xl text-gray-600">
-        
-        <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
     
     
+        <div class="my-10 py-5 border-t border-dashed border-t-white/10 text-xl">
+  <div id="disqus_thread"></div>
+  <script>
+      
+
+      
+
+      (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://guangmean.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>
+</div>
     
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "guangmean" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        
-    </div>
 </article>
 
 
@@ -322,7 +319,7 @@
         About
     </div>
 
-    <img src="/image/logo.webp?v=1739346188" class="w-80 self-center" alt="Logo" />
+    <img src="/image/logo.webp?v=1766394288" class="w-80 self-center" alt="Logo" />
 
     <p class="leading-8 text-center text-lg font-light mt-3">
         
@@ -342,13 +339,13 @@
         
         
         <li class="leading-10 line-clamp-1 mb-3 font-light border-b border-b-white/10 border-dashed">
-            <a href="/en/example1/demo2/" class="py-5 hover:text-gray-300">Niello Theme</a>
+            <a href="/en/example1/demo2/" class="hover:text-gray-300">Niello Theme</a>
         </li>
         
         
         
         <li class="leading-10 line-clamp-1 mb-3 font-light border-b border-b-white/10 border-dashed">
-            <a href="/en/example1/demo/" class="py-5 hover:text-gray-300">Niello Theme</a>
+            <a href="/en/example1/demo/" class="hover:text-gray-300">Niello Theme</a>
         </li>
         
         
@@ -459,14 +456,6 @@
         
         
         
-        
-        <li class="mb-1 border-b border-b-white/10 border-dashed">
-            <a href="/en/archives">Oct, 2024<span
-                    class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">2</span></a>
-        </li>
-        
-        
-        
         <li class="mb-1 border-b border-b-white/10 border-dashed">
             <a href="/en/archives">Jan, 2025<span
                     class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">2</span></a>
@@ -476,6 +465,13 @@
         
         <li class="mb-1 border-b border-b-white/10 border-dashed">
             <a href="/en/archives">Dec, 2024<span
+                    class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">2</span></a>
+        </li>
+        
+        
+        
+        <li class="mb-1 border-b border-b-white/10 border-dashed">
+            <a href="/en/archives">Oct, 2024<span
                     class="ml-2 px-2 bg-gray-800 rounded-full text-gray-500">2</span></a>
         </li>
         
@@ -493,26 +489,27 @@
         Contact
     </div>
     <div class="flex flex-row gap-2">
-        Email：niello@gmail.com
+        Email：angularcorp@outlook.com
     </div>
 </aside>
         </div>
 
-        <footer class="p-5 text-xl text-center mt-8 pt-8 pb-8 border-t border-gray-100/10">
-    <div class="text-gray-500">
+        <footer class="flex flex-col lg:flex-row items-center justify-center gap-2 text-xl mt-8 py-8 border-t border-gray-100/10">
+    <div class="text-center text-gray-500/80">
         
-        &#xA9; 2019 ~ 2025 by www.angularcorp.com All Rights Reserved.
+        &#xA9; 2019 ~ 2025 by <a href='https://www.angularcorp.com/'>www.angularcorp.com</a> All Rights Reserved.
         
-
+    </div>
+    <div>
         
-        | <a class="hover:text-gray-100" href=" /en ">🇺🇸EN</a>
+        <a class="hover:text-gray-100" href=" /en ">🇺🇸EN</a>
         
-        | <a class="hover:text-gray-100" href=" /zh ">🇨🇳CN</a>
+        <a class="hover:text-gray-100" href=" /zh ">🇨🇳CN</a>
         
     </div>
 </footer>
 
-        <div class="cookie-container text-center py-12 text-2xl font-thin text-gray-500">
+        <div class="cookie-container text-center py-12 text-xl lg:text-2xl font-thin text-gray-500">
   
   <p>
     <p>Example cookies content from content/en/cookie.md file.</p>
@@ -521,7 +518,7 @@
   </p>
   
   
-  <button class="cookie-btn w-32 h-12 lg:h-22 mt-5 py-2 bg-red-600 text-white rounded-full hover:scale-110">
+  <button class="cookie-btn w-32 h-12 lg:h-16 mt-5 py-2 bg-red-600 text-white rounded-full hover:scale-105">
     Okay
   </button>
 </div>
