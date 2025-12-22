@@ -8,6 +8,85 @@
   --color-dark-200: #0b090a;
 }
 
+/* Archives page: improve archive list visuals (cards, spacing, hover) */
+@layer components {
+  .archive-container {
+    margin-bottom: 1.5rem;
+    padding: 0.6rem;
+    border-radius: 12px;
+    border: 1px solid rgba(148,163,184,0.06);
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(2,6,23,0.01));
+    box-shadow: 0 10px 26px rgba(2,6,23,0.03);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .12s ease;
+  }
+
+  .archive-container h3 {
+    font-size: 1.6rem;
+    color: var(--color-gray-300);
+    margin: 0 0 0.5rem 0;
+    padding: 0.25rem 0.25rem;
+    display: inline-block;
+    border-radius: 8px;
+  }
+
+  .archive-container .px-5.pt-5 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding-left: 0.6rem;
+    padding-top: 0.6rem;
+  }
+
+  .archive-container ul {
+    list-style: none;
+    margin: 0.6rem 0 0 0;
+    padding: 0 0 0 0.4rem;
+  }
+
+  .archive-container ul li {
+    padding: 0.6rem 0.6rem;
+    border-radius: 8px;
+    transition: background .14s ease, transform .12s ease;
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
+  .archive-container ul li + li {
+    margin-top: 0.35rem;
+  }
+
+  .archive-container ul li:hover {
+    background: rgba(148,163,184,0.03);
+    transform: translateY(-3px);
+  }
+
+  .archive-container ul li a {
+    color: var(--color-gray-200);
+    text-decoration: none;
+    transition: color .12s ease, text-decoration .12s ease;
+  }
+
+  .archive-container ul li a:hover {
+    color: var(--color-gray-50);
+    text-decoration: underline;
+  }
+
+  /* Date badge styling inside the small header row */
+  .archive-container .px-5.pt-5 .rounded-full {
+    background: rgba(148,163,184,0.04);
+    color: var(--color-gray-400);
+    padding: 0.2rem 0.5rem;
+  }
+
+  /* Hover lift for the whole archive card */
+  .archive-container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 44px rgba(2,6,23,0.06);
+    border-color: rgba(148,163,184,0.12);
+  }
+}
+
 /* Search results: card border, padding, hover effect (scoped, template unchanged) */
 @layer components {
   /* Target the per-result container rendered into #search-results (ids like summary-0) */
@@ -488,7 +567,8 @@
 
   /* primary menu items */
   .relative > nav ul > li > a {
-    color: var(--color-gray-300);
+    /* reduce contrast: make non-active links lighter */
+    color: var(--color-gray-400);
     padding: .5rem 1rem;
     border-radius: .5rem;
     transition: color .22s ease, background-color .22s ease, transform .22s ease;
@@ -535,7 +615,8 @@
   .relative > nav ul li ul li a {
     display: block;
     padding: .5rem 1rem;
-    color: var(--color-gray-300);
+    /* dropdown items slightly lighter to match reduced contrast */
+    color: var(--color-gray-400);
   }
 
   .relative > nav ul li ul li a:hover {
