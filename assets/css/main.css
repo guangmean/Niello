@@ -552,6 +552,22 @@
     overflow: visible;
   }
 
+  @media (min-width: 40rem) {
+    .relative > nav ul {
+      display: flex;
+      gap: 0;
+    }
+    .relative > nav ul > li {
+      flex: 1 1 0;
+    }
+    .relative > nav ul > li > a {
+      display: block;
+      text-align: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
   /* logo polishing */
   .relative > nav a img {
     @apply w-14 h-14 lg:w-16 lg:h-16 p-2 rounded-full object-cover;
@@ -860,10 +876,11 @@
 
       /* Posts list */
       .aside-container ul.text-lg li {
-        padding: .45rem .5rem;
-        margin-bottom: .35rem;
+        /* slightly tighter vertical padding and smaller gap between items */
+        padding: .35rem .5rem;
+        margin-bottom: .25rem;
         border-radius: 8px;
-        transition: background-color .18s ease, transform .12s ease;
+        transition: background-color .14s ease, transform .12s ease;
         border: none;
       }
 
@@ -872,6 +889,12 @@
         color: var(--color-gray-400);
         padding: 0;
         transition: color .16s ease;
+        /* allow titles to wrap to two lines and use a tighter line-height */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        line-height: 1.5;
       }
 
       /* Ensure Latest Post list items vertically center their text */
@@ -882,7 +905,11 @@
 
       .aside-container ul.text-lg li a {
         flex: 1 1 auto;
-        display: inline-block;
+        /* keep block/box display for line-clamp behavior */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
       }
 
       .aside-container ul.text-lg li:hover {
