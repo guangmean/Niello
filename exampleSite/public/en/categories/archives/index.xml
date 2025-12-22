@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Archives on </title>
-    <link>http://localhost:55868/en/categories/archives/</link>
+    <link>http://localhost:1313/en/categories/archives/</link>
     <description>Recent content in Archives on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 25 Oct 2024 09:16:03 +0800</lastBuildDate>
-    <atom:link href="http://localhost:55868/en/categories/archives/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/en/categories/archives/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Archives</title>
-      <link>http://localhost:55868/en/archives/</link>
+      <link>http://localhost:1313/en/archives/</link>
       <pubDate>Fri, 25 Oct 2024 09:16:03 +0800</pubDate>
-      <guid>http://localhost:55868/en/archives/</guid>
+      <guid>http://localhost:1313/en/archives/</guid>
       <description></description>
     </item>
   </channel>
