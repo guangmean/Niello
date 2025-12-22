@@ -556,15 +556,26 @@
     .relative > nav ul {
       display: flex;
       gap: 0;
+      flex-wrap: nowrap;
     }
     .relative > nav ul > li {
       flex: 1 1 0;
+      white-space: nowrap;
     }
     .relative > nav ul > li > a {
       display: block;
       text-align: center;
       padding-left: 1rem;
       padding-right: 1rem;
+    }
+  }
+
+  /* MacBook Pro 13 */
+  @media (min-width: 40rem) and (max-width: 90rem) {
+    .relative > nav ul > li > a {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      font-size: 1.25rem;
     }
   }
 

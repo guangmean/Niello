@@ -13,7 +13,7 @@ Renders a menu for the given menu ID.
 {{ with index site.Menus $menuID }}
 
 <ul
-    class="flex flex-col lg:flex-row justify-end mt-2 sm:mt-5 mb-5 pb-2 font-light text-xl lg:text-2xl gap-5 lg:gap-1 text-center">
+    class="flex flex-col lg:flex-row flex-nowrap justify-end mt-2 sm:mt-5 mb-5 pb-2 font-light text-xl lg:text-2xl gap-5 lg:gap-0 text-center">
     {{ partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
 </ul>
 
@@ -24,13 +24,13 @@ Renders a menu for the given menu ID.
 {{ range .menuEntries }}
 {{ $attrs := dict "href" .URL }}
 {{ if $page.IsMenuCurrent .Menu . }}
-{{ $attrs = merge $attrs (dict "class" "active px-5 lg:px-10 py-3 font-light border-b-2 border-red-500 text-gray-100"
+{{ $attrs = merge $attrs (dict "class" "active px-3 lg:px-6 py-3 font-light border-b-2 border-red-500 text-gray-100"
 "aria-current" "page")
 }}
 {{ else if $page.HasMenuCurrent .Menu .}}
-{{ $attrs = merge $attrs (dict "class" "ancestor px-5 lg:px-10 font-light" "aria-current" "true") }}
+{{ $attrs = merge $attrs (dict "class" "ancestor px-3 lg:px-6 font-light" "aria-current" "true") }}
 {{ else }}
-{{ $attrs = merge $attrs (dict "class" "px-5 lg:px-10 py-3 font-light hover:border-b-2 hover:border-red-500")
+{{ $attrs = merge $attrs (dict "class" "px-3 lg:px-6 py-3 font-light hover:border-b-2 hover:border-red-500")
 }}
 {{ end }}
 {{ $name := .Name }}
