@@ -73,7 +73,7 @@
 </li>
 {{- else }}
 <li class="page-item px-3 hover:bg-gray-600 hover:rounded-full hover:cursor-pointer">
-    <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link"
+    <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link text-gray-400 hover:text-gray-300"
         role="button">{{ $k }}</a>
 </li>
 {{- end }}
@@ -142,7 +142,7 @@
 </li>
 {{- else }}
 <li class="page-item">
-    <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link"
+    <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link text-gray-400 hover:text-gray-300"
         role="button">{{ $k }}</a>
 </li>
 {{- end }}
