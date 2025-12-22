@@ -6,17 +6,18 @@
 {{ $page = 20 }}
 {{ end }}
 
-<div class="{{ if eq .Kind "taxonomy" }}list-container-rows{{ else }}list-container{{ end }}">
+{{ $kind := .Kind }}
+
+<div class="{{ if eq $kind "taxonomy" }}list-container-rows{{ else }}list-container{{ end }}">
     {{ range $index, $element := (.Paginator $page).Pages }}
 
-    {{ if eq .Kind "term" }}
-    <!-- Taxonomy Preview -->
-    {{ partial "masonry.html" (dict "context" . "index" $index) }}
+    {{ if eq $kind "taxonomy" }}
+    <!-- Taxonomy (list of terms) preview -->
+    {{ partial "masonry.html" (dict "context" $element "index" $index) }}
     {{ else }}
-    <!-- Article Preview -->
-    {{ partial "preview.html" (dict "context" . "index" $index) }}
+    <!-- Article preview for a single term -->
+    {{ partial "preview.html" (dict "context" $element "index" $index) }}
     {{ end }}
-
 
     {{ end }}
     <!-- More posts... -->
