@@ -1,39 +1,25 @@
-<!doctype html>
-<html class="no-js" lang="">
+{{ define "main" }}
 
-{{ partial "head.html" . }}
-
-<body>
-    {{ `<!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->` | safeHTML }}
-
-  <!-- Add your site or application content here -->
-    <div class="flex-column">
-        {{ partial "banner.html" . }}
-        <div class="home">
-            <div class="logo">
-                <h1><a href="/">{{.Title}}</a></h1>
-            </div>
-            {{ partial "nav.html" . }}
-            <div>
-			<h1>{{ len .Data.Terms }} Tags</h1>
-				{{ $data := .Data }}
-				{{ range .Data.Terms.ByCount }}
-				{{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
-				<div class="tag">
-				    <a href="{{ $termLink }}">{{ .Term }} ({{ .Count }})</a>
-				</div>
-				{{ end }}
-            </div>
-            <div class="line-dotted"></div>
-            {{ partial "footer.html" . }}
-        </div>
-        {{ partial "banner.html" . }}
-		{{- partial "cookie.html" . -}}
+<!-- Tags/Categories Overview -->
+<div class="mb-8">
+    <h1 class="text-3xl font-bold mb-6">{{ .Title }}</h1>
+    <div class="flex flex-wrap gap-3">
+        {{ $data := .Data }}
+        {{ range .Data.Terms.ByCount }}
+        {{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
+        <a href="{{ $termLink }}" class="
+            inline-flex items-center
+            px-4 py-2
+            bg-gray-100 hover:bg-gray-200
+            dark:bg-gray-800 dark:hover:bg-gray-700
+            rounded-lg
+            transition-colors
+            text-sm font-medium
+        ">
+            {{ .Term }} <span class="ml-2 text-gray-500 dark:text-gray-400">({{ .Count }})</span>
+        </a>
+        {{ end }}
     </div>
+</div>
 
-
-  {{ partial "foot.html" . }}
-</body>
-</html>
+{{ end }}
