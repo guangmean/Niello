@@ -271,7 +271,7 @@ Niello supports sharing your content to other platforms via [ShareThis](https://
 
 ## Live Demo
 
-A full demo is available here:	[https://www.angularcorp.com](https://www.angularcorp.com) 
+A full demo is available here:	[https://www.angularcorp.com]([https://www.angularcorp.com](https://www.angularcorp.com/en/post/)) 
 
 ---
 
